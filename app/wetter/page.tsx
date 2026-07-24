@@ -1,5 +1,4 @@
-import { getAnalysis, getObservations } from "@/lib/data";
-import { binnedTrend } from "@/lib/chart-data";
+import { getAnalysis, getCharts } from "@/lib/data";
 import { BarBuckets } from "@/components/charts/BarBuckets";
 import { BinnedTrend } from "@/components/charts/BinnedTrend";
 import { SectionHeading, StatTile, VerdictBadge } from "@/components/ui";
@@ -8,18 +7,11 @@ export const metadata = { title: "Blauer Himmel & Nummern — Hornussen-Wetteran
 
 export default function WetterPage() {
   const analysis = getAnalysis();
-  const obs = getObservations();
-  if (!analysis) return <NoData />;
+  const charts = getCharts();
+  if (!analysis || !charts) return <NoData />;
 
   const bs = analysis.blueSky;
-  const trend = binnedTrend(
-    obs,
-    (o) => o.cloudCoverMean,
-    (o) => o.nummern,
-    10,
-    0,
-    100,
-  );
+  const trend = charts.blueSky;
   const corr = bs.correlation;
 
   return (

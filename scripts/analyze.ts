@@ -1,7 +1,9 @@
 // Runs the statistical analysis over the observation dataset and writes
-// data/analysis.json (consumed by the frontend).
+// data/analysis.json plus data/charts.json (small, precomputed chart series so
+// the frontend never has to load the full dataset).
 import type { Observation, PlayingDirectionsConfig } from "../lib/types";
 import { analyze } from "../lib/analysis";
+import { binnedTrend } from "../lib/chart-data";
 import { readConfig, readData, writeJson } from "./lib-scrape";
 
 function main() {
@@ -20,6 +22,16 @@ function main() {
   console.log("Wind verdict:", result.wind.verdict.level, "-", result.wind.verdict.headline);
   console.log("  ", result.wind.verdict.detail);
   writeJson("analysis.json", result);
+
+  // Precomputed chart series (tiny).
+  const windObs = obs.filter(
+    (o) => typeof o.tailwindComponent === "number" && Number.isFinite(o.tailwindComponent as number),
+  );
+  const charts = {
+    blueSky: binnedTrend(obs, (o) => o.cloudCoverMean, (o) => o.nummern, 10, 0, 100),
+    wind: binnedTrend(windObs, (o) => o.tailwindComponent as number, (o) => o.schlagpunkte, 2, -10, 10),
+  };
+  writeJson("charts.json", charts);
 }
 
 main();

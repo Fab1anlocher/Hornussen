@@ -1,5 +1,4 @@
-import { getAnalysis, getObservations, getVenues } from "@/lib/data";
-import { binnedTrend } from "@/lib/chart-data";
+import { getAnalysis, getCharts, getVenues } from "@/lib/data";
 import { BarBuckets } from "@/components/charts/BarBuckets";
 import { BinnedTrend } from "@/components/charts/BinnedTrend";
 import { SectionHeading, StatTile, VerdictBadge } from "@/components/ui";
@@ -9,22 +8,12 @@ export const metadata = { title: "Rückenwind & Schlagpunkte — Hornussen-Wette
 
 export default function WindPage() {
   const analysis = getAnalysis();
-  const obs = getObservations();
+  const charts = getCharts();
   const venues = getVenues();
-  if (!analysis) return <NoData />;
+  if (!analysis || !charts) return <NoData />;
 
   const w = analysis.wind;
-  const windObs = obs.filter(
-    (o) => typeof o.tailwindComponent === "number" && Number.isFinite(o.tailwindComponent as number),
-  );
-  const trend = binnedTrend(
-    windObs,
-    (o) => o.tailwindComponent as number,
-    (o) => o.schlagpunkte,
-    2,
-    -10,
-    10,
-  );
+  const trend = charts.wind;
   const corr = w.correlation;
   const configured = venues.filter((v) => v.playingDirectionDeg != null);
 

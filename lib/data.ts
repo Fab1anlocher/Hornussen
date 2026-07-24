@@ -3,6 +3,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import type { AnalysisResult, Match, Observation, Venue } from "./types";
+import type { TrendData } from "./chart-data";
 
 const DATA_DIR = path.join(process.cwd(), "data");
 
@@ -29,4 +30,13 @@ export function getObservations(): Observation[] {
 
 export function getAnalysis(): AnalysisResult | null {
   return readJson<AnalysisResult | null>("analysis.json", null);
+}
+
+export interface ChartsData {
+  blueSky: TrendData;
+  wind: TrendData;
+}
+
+export function getCharts(): ChartsData | null {
+  return readJson<ChartsData | null>("charts.json", null);
 }
