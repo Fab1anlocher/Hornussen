@@ -1,9 +1,9 @@
 {
-  "_comment": "Spielrichtung = Azimut (0°=N, 90°=O, 180°=S, 270°=W), in die der Nouss geschlagen wird. Wird dem Platz anhand der Koordinaten zugeordnet (gilt für ALLE Teams dieses Platzes). Ergänze weitere Plätze nach Bedarf. 'model.k': Faktor für erwartete Schlagpunkte = 1 + k * Rückenwind[km/h] (Default 0.02 = +2%/km/h, d.h. ~+20% bei 10 km/h Rückenwind). playWindow = angenommenes Spielfenster (Std, lokal), da exakte Anspielzeiten nicht in den PDFs stehen.",
+  "_comment": "Spielrichtung = Azimut (0°=N, 90°=O, 180°=S, 270°=W), in die der Nouss geschlagen wird. Wird dem Platz anhand der Koordinaten zugeordnet (gilt für ALLE Teams dieses Platzes). Ergänze weitere Plätze nach Bedarf. 'model.k': Faktor für erwartete Schlagpunkte = 1 + k * Rückenwind[km/h] (Default 0.02 = +2%/km/h, d.h. ~+20% bei 10 km/h Rückenwind). playWindow = angenommene Anspielzeit (Std, lokal); Default 13–13 = fix 13:00 Uhr, da exakte Anspielzeiten nicht in den PDFs stehen.",
   "model": {
     "k": 0.02,
-    "playWindowStart": 12,
-    "playWindowEnd": 17
+    "playWindowStart": 13,
+    "playWindowEnd": 13
   },
   "directions": [
     { "venue": "Brunnmatt (HG Schüpbach)", "lat": 46.94164, "lng": 7.749682, "directionDeg": 215.96, "note": "Schüpbach A & B" },

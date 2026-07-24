@@ -59,6 +59,11 @@ export function baseName(team: string): string {
     .trim();
 }
 
+/** True for youth / Nachwuchs teams (e.g. "Auswil-Wyssbach NW") — excluded from the analysis. */
+export function isYouthTeam(name: string): boolean {
+  return /\b(NW|Nachwuchs|Junioren|Junior|Jugend)\b/i.test(name);
+}
+
 /** Normalized team key for fuzzy venue matching (handles SG/HG + renames). */
 export function normalizeTeam(s: string): string {
   return s

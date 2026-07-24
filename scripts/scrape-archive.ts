@@ -12,7 +12,7 @@ import { execFileSync } from "node:child_process";
 import fs from "node:fs";
 import path from "node:path";
 import type { Match, TeamMatchResult } from "../lib/types";
-import { CACHE_DIR, ensureDir, fetchWithRetry, slug, writeJson } from "./lib-scrape";
+import { CACHE_DIR, ensureDir, fetchWithRetry, isYouthTeam, slug, writeJson } from "./lib-scrape";
 
 const ARCHIVE_INDEX = "https://www.ehv.ch/listen/resultate_meisterschaft_archiv.php";
 const BASE = "https://www.ehv.ch/listen/";
@@ -111,6 +111,7 @@ function parseMatches(text: string, date: string, season: number): Match[] {
   let league = "?";
 
   const push = (home: TeamMatchResult, away: TeamMatchResult) => {
+    if (isYouthTeam(home.team) || isYouthTeam(away.team)) return; // skip Nachwuchs
     matches.push({
       id: `${date}-${slug(home.team)}-vs-${slug(away.team)}`,
       date,

@@ -50,9 +50,9 @@ export default function DatenPage() {
         <ul className="list-disc space-y-3 pl-5">
           <li>
             <strong>Keine exakten Anspielzeiten.</strong> Die PDFs nennen nur das Rundendatum,
-            nicht die Startzeit. Wir nehmen ein Spielfenster von{" "}
-            <strong>ca. 12–17 Uhr</strong> an und mitteln das Wetter darüber. Wurde früher oder
-            später gespielt, passt das Wetterfenster nicht exakt.
+            nicht die Startzeit. Wir verwenden deshalb den Wetterwert um <strong>13:00 Uhr</strong>{" "}
+            (Ortszeit) am jeweiligen Platz. Wurde deutlich früher oder später gespielt, weicht das
+            tatsächliche Spielwetter ab.
           </li>
           <li>
             <strong>Der Wind dreht.</strong> Über den Nachmittag ändert sich die Richtung. Wir
@@ -88,9 +88,13 @@ export default function DatenPage() {
       <Block title="Rechenweg">
         <p>
           Wir berechnen Pearson- und Spearman-Korrelation, eine lineare Regression sowie ein
-          Bootstrap-Konfidenzintervall. Der p-Wert ist eine Näherung. Als «bestätigt» gilt eine
-          These nur, wenn Richtung <em>und</em> Signifikanz (p &lt; 0.05) stimmen. Alles ist als
-          reproduzierbare Pipeline (öffentliche Quellen → JSON) umgesetzt.
+          Bootstrap-Konfidenzintervall. Weil der Zusammenhang zwischen Bewölkung und Nummern{" "}
+          <strong>nicht linear</strong> ist (Schwelleneffekt bei klarem Himmel), bilden wir
+          zusätzlich vier Kategorien (0–15 % / 15–50 % / 50–85 % / 85–100 % Bewölkung) und vergleichen die
+          mittleren Nummern mit einer <strong>einfaktoriellen ANOVA</strong> (F-Test) sowie{" "}
+          <strong>paarweisen Welch-t-Tests</strong>. Der p-Wert ist bei den grossen Stichproben eine
+          gute Näherung. Als «bestätigt» gilt eine These nur, wenn Richtung <em>und</em> Signifikanz
+          (p &lt; 0.05) stimmen. Alles ist eine reproduzierbare Pipeline (öffentliche Quellen → JSON).
         </p>
       </Block>
 

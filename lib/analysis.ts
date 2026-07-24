@@ -9,14 +9,17 @@ import type {
   Verdict,
   WindAnalysis,
 } from "./types";
+import type { CategoryAnalysis, PairwiseTest } from "./types";
 import {
   bootstrapCI,
   correlationPValue,
   mean,
   ols,
+  oneWayAnova,
   pearson,
   spearman,
   stdErr,
+  welchTTest,
 } from "./stats";
 
 function correlation(xs: number[], ys: number[]): CorrelationResult {
@@ -53,30 +56,75 @@ export function analyzeBlueSky(obs: Observation[]): BlueSkyAnalysis {
   const nummern = withWeather.map((o) => o.nummern);
   const corr = correlation(cloud, nummern);
 
-  const clear = withWeather.filter((o) => (o.cloudCoverMean as number) < 25).map((o) => o.nummern);
-  const mixed = withWeather
-    .filter((o) => (o.cloudCoverMean as number) >= 25 && (o.cloudCoverMean as number) <= 75)
-    .map((o) => o.nummern);
-  const overcast = withWeather
-    .filter((o) => (o.cloudCoverMean as number) > 75)
-    .map((o) => o.nummern);
+  // Categories (threshold view): 0–15 / 15–50 / 50–85 / 85–100 % cloud cover.
+  const inBand = (lo: number, hi: number) =>
+    withWeather
+      .filter((o) => (o.cloudCoverMean as number) >= lo && (o.cloudCoverMean as number) < hi)
+      .map((o) => o.nummern);
+  const clear = inBand(0, 15);
+  const light = inBand(15, 50);
+  const cloudy = inBand(50, 85);
+  const heavy = withWeather.filter((o) => (o.cloudCoverMean as number) >= 85).map((o) => o.nummern);
 
-  const buckets: Bucket[] = [
-    bucketOf(clear, "Blauer Himmel (<25% Wolken)"),
-    bucketOf(mixed, "Gemischt (25–75%)"),
-    bucketOf(overcast, "Bedeckt (>75%)"),
+  const L_CLEAR = "Klar (0–15%)";
+  const L_LIGHT = "Leicht bewölkt (15–50%)";
+  const L_CLOUDY = "Bewölkt (50–85%)";
+  const L_HEAVY = "Stark bewölkt (85–100%)";
+  const groups: [string, number[]][] = [
+    [L_CLEAR, clear],
+    [L_LIGHT, light],
+    [L_CLOUDY, cloudy],
+    [L_HEAVY, heavy],
   ];
+  const buckets: Bucket[] = groups.map(([l, g]) => bucketOf(g, l));
+  const categories = categoryAnalysis(groups);
 
   const clearMean = mean(clear);
-  const overcastMean = mean(overcast);
+  const overcastMean = mean(heavy);
 
   // The wisdom predicts a NEGATIVE correlation (less cloud → more Nummern).
-  const verdict = blueSkyVerdict(corr, clearMean, overcastMean);
+  const verdict = blueSkyVerdict(corr, clearMean, overcastMean, categories);
 
-  return { metric: "nummern", correlation: corr, buckets, clearMean, overcastMean, verdict };
+  return { metric: "nummern", correlation: corr, buckets, clearMean, overcastMean, categories, verdict };
 }
 
-function blueSkyVerdict(corr: CorrelationResult, clearMean: number, overcastMean: number): Verdict {
+/** One-way ANOVA + all pairwise Welch tests across labelled groups. */
+function categoryAnalysis(groups: [string, number[]][]): CategoryAnalysis {
+  const anova = oneWayAnova(groups.map(([, g]) => g));
+  const pairwise: PairwiseTest[] = [];
+  for (let i = 0; i < groups.length; i++) {
+    for (let j = i + 1; j < groups.length; j++) {
+      const [la, ga] = groups[i];
+      const [lb, gb] = groups[j];
+      const t = welchTTest(ga, gb);
+      pairwise.push({
+        a: la,
+        b: lb,
+        meanA: t.meanA,
+        meanB: t.meanB,
+        diff: t.diff,
+        pctDiff: t.pctDiff,
+        t: t.t,
+        p: t.p,
+        significant: t.p < 0.05,
+      });
+    }
+  }
+  return {
+    buckets: groups.map(([label, g]) => bucketOf(g, label)),
+    anovaF: anova.f,
+    anovaP: anova.p,
+    anovaSignificant: anova.p < 0.05,
+    pairwise,
+  };
+}
+
+function blueSkyVerdict(
+  corr: CorrelationResult,
+  clearMean: number,
+  overcastMean: number,
+  cats: CategoryAnalysis,
+): Verdict {
   if (corr.n < 30) {
     return {
       level: "insufficient",
@@ -85,25 +133,35 @@ function blueSkyVerdict(corr: CorrelationResult, clearMean: number, overcastMean
     };
   }
   const diffPct = overcastMean === 0 ? 0 : ((clearMean - overcastMean) / overcastMean) * 100;
-  const sig = corr.pValueApprox < 0.05;
-  // Wisdom = blue sky → MORE Nummern → negative r (cloud↓, nummern↑) & clearMean > overcastMean.
+  // Threshold view: does the CLEAR category differ significantly from the HEAVY one?
+  const clearVsHeavy = cats.pairwise.find((p) => /Klar/.test(p.a) && /Stark/.test(p.b));
+  const threshold = clearVsHeavy && clearVsHeavy.diff > 0 && clearVsHeavy.significant;
+  const linSig = corr.pValueApprox < 0.05;
   const supports = corr.pearson < 0 && clearMean > overcastMean;
 
-  if (supports && sig && Math.abs(corr.pearson) >= 0.1) {
+  // A significant threshold effect (clear > heavy) is the strongest evidence for the wisdom.
+  if (threshold && cats.anovaSignificant) {
+    return {
+      level: "confirmed",
+      headline: "Die Weisheit hält stand – als Schwelleneffekt",
+      detail: `Bei klarem Himmel (0–15% Wolken) fallen im Schnitt ${diffPct >= 0 ? "+" : ""}${diffPct.toFixed(0)}% mehr Nummern als bei stark bewölktem Himmel – der Unterschied ist statistisch signifikant (p<0.05). Der lineare Zusammenhang allein (r=${corr.pearson.toFixed(2)}) unterschätzt diesen Effekt.`,
+    };
+  }
+  if (supports && linSig && Math.abs(corr.pearson) >= 0.1) {
     return {
       level: "confirmed",
       headline: "Die Weisheit hält stand",
       detail: `Bei blauem Himmel werden im Schnitt ${diffPct.toFixed(0)}% mehr Nummern gemacht als bei bedecktem Himmel (r=${corr.pearson.toFixed(2)}, p<0.05).`,
     };
   }
-  if (supports && Math.abs(corr.pearson) >= 0.05) {
+  if ((supports && Math.abs(corr.pearson) >= 0.05) || (clearVsHeavy && clearVsHeavy.diff > 0 && clearVsHeavy.significant)) {
     return {
       level: "weak",
       headline: "Schwacher Hinweis dafür",
-      detail: `Es gibt einen leichten Trend zu mehr Nummern bei blauem Himmel (r=${corr.pearson.toFixed(2)}), statistisch aber nicht klar gesichert.`,
+      detail: `Es gibt einen Trend zu mehr Nummern bei blauem Himmel (r=${corr.pearson.toFixed(2)}); im Kategorienvergleich liegt Klar ${diffPct >= 0 ? "+" : ""}${diffPct.toFixed(0)}% über Bedeckt.`,
     };
   }
-  if (corr.pearson > 0 && sig) {
+  if (corr.pearson > 0 && linSig) {
     return {
       level: "contradicted",
       headline: "Das Gegenteil zeigt sich",

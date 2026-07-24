@@ -2,7 +2,15 @@
 // into physical fields (one per coordinate). Applies playing directions from
 // config/playing-directions.json.
 import type { PlayingDirectionsConfig, RawVenue, Venue } from "../lib/types";
-import { baseName, coordKey, fetchWithRetry, readConfig, slug, writeJson } from "./lib-scrape";
+import {
+  baseName,
+  coordKey,
+  fetchWithRetry,
+  isYouthTeam,
+  readConfig,
+  slug,
+  writeJson,
+} from "./lib-scrape";
 
 const LOCATIONS_URL = "https://www.hgverwaltung.ch/api/1/clubs/locations/alle";
 
@@ -30,7 +38,8 @@ async function main() {
 
   const venues: Venue[] = [];
   for (const [key, group] of byCoord) {
-    const teams = group.map((g) => g.name).sort();
+    const teams = group.map((g) => g.name).filter((n) => !isYouthTeam(n)).sort();
+    if (teams.length === 0) continue; // youth-only location → drop
     // Canonical name = most common base name in the group.
     const bases = teams.map(baseName);
     const name = bases.sort(

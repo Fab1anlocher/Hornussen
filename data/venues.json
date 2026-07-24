@@ -21,8 +21,7 @@
     "homepage": "http://hgaeschi.ch/",
     "teams": [
       "Aeschi A",
-      "Aeschi B",
-      "Aeschi Nachwuchs"
+      "Aeschi B"
     ],
     "playingDirectionDeg": null
   },
@@ -52,8 +51,7 @@
     "lng": 7.589388,
     "homepage": "http://www.hgalchenstorf.ch",
     "teams": [
-      "Alchenstorf",
-      "Alchenstorf NW"
+      "Alchenstorf"
     ],
     "playingDirectionDeg": null
   },
@@ -67,8 +65,7 @@
     "lng": 7.438254,
     "homepage": "http://hg-arch.ch/",
     "teams": [
-      "Arch",
-      "Arch NW"
+      "Arch"
     ],
     "playingDirectionDeg": null
   },
@@ -83,8 +80,7 @@
     "homepage": "https://www.hg-auswil-wyssbach.ch/",
     "teams": [
       "Auswil-Wyssbach A",
-      "Auswil-Wyssbach B",
-      "Auswil-Wyssbach NW"
+      "Auswil-Wyssbach B"
     ],
     "playingDirectionDeg": null
   },
@@ -99,8 +95,7 @@
     "homepage": "https://www.hgbalzenwil.ch/",
     "teams": [
       "Balzenwil A",
-      "Balzenwil B",
-      "Balzenwil Nachwuchs"
+      "Balzenwil B"
     ],
     "playingDirectionDeg": null
   },
@@ -128,8 +123,7 @@
     "lng": 7.494095,
     "homepage": "http://www.hgbelp-toffen.ch/",
     "teams": [
-      "Belp-Toffen",
-      "Belp-Toffen NW"
+      "Belp-Toffen"
     ],
     "playingDirectionDeg": null
   },
@@ -145,8 +139,7 @@
     "teams": [
       "Bern-Beundenfeld A",
       "Bern-Beundenfeld B",
-      "Bern-Beundenfeld C",
-      "Bern-Beundenfeld NW"
+      "Bern-Beundenfeld C"
     ],
     "playingDirectionDeg": 230.39
   },
@@ -168,8 +161,7 @@
     "lat": 46.972927,
     "lng": 7.250405,
     "teams": [
-      "Biberen-Ulmiz-Wileroltigen B",
-      "Wileroltigen NW"
+      "Biberen-Ulmiz-Wileroltigen B"
     ],
     "playingDirectionDeg": null
   },
@@ -198,8 +190,7 @@
     "homepage": "http://www.hg-biel-schwadernau.ch/",
     "teams": [
       "Biel-Schwadernau A",
-      "Biel-Schwadernau B",
-      "Biel-Schwadernau NW"
+      "Biel-Schwadernau B"
     ],
     "playingDirectionDeg": null
   },
@@ -213,8 +204,7 @@
     "lng": 7.669986,
     "homepage": "http://www.hg-bigel-goldbach.ch/",
     "teams": [
-      "Bigel-Goldbach",
-      "Bigel-Goldbach NW"
+      "Bigel-Goldbach"
     ],
     "playingDirectionDeg": null
   },
@@ -229,8 +219,7 @@
     "homepage": "http://www.hgbigenthal-walkringen.ch/",
     "teams": [
       "Bigenthal-Walkringen A",
-      "Bigenthal-Walkringen B",
-      "Bigenthal-Walkringen NW"
+      "Bigenthal-Walkringen B"
     ],
     "playingDirectionDeg": null
   },
@@ -246,8 +235,7 @@
     "teams": [
       "Biglen-Arni A",
       "Biglen-Arni B",
-      "Biglen-Arni C",
-      "Biglen-Arni NW"
+      "Biglen-Arni C"
     ],
     "playingDirectionDeg": 265.96
   },
@@ -261,8 +249,7 @@
     "lng": 7.7626,
     "homepage": "http://hg-bleienbach.ch",
     "teams": [
-      "Bleienbach",
-      "Bleienbach Bleienbach NW"
+      "Bleienbach"
     ],
     "playingDirectionDeg": null
   },
@@ -276,8 +263,7 @@
     "lng": 7.711287,
     "homepage": "http://www.hgbb.ch/",
     "teams": [
-      "Bollodingen-Bettenhausen",
-      "Bollodingen-Bettenhausen Nachwuchs"
+      "Bollodingen-Bettenhausen"
     ],
     "playingDirectionDeg": null
   },
@@ -291,8 +277,7 @@
     "lng": 7.69168,
     "homepage": "",
     "teams": [
-      "Bowil",
-      "Bowil NW"
+      "Bowil"
     ],
     "playingDirectionDeg": null
   },
@@ -307,8 +292,7 @@
     "homepage": "https://hg.bramberg.ch/",
     "teams": [
       "Bramberg A",
-      "Bramberg B",
-      "Bramberg Nachwuchs"
+      "Bramberg B"
     ],
     "playingDirectionDeg": null
   },
@@ -323,8 +307,7 @@
     "homepage": "http://www.hornusser.ch/",
     "teams": [
       "Büren zum Hof A",
-      "Büren zum Hof B",
-      "Büren zum Hof NW"
+      "Büren zum Hof B"
     ],
     "playingDirectionDeg": null
   },
@@ -352,8 +335,7 @@
     "lng": 7.653989,
     "homepage": "https://www.hgbusswilbeiheimiswil.ch/",
     "teams": [
-      "Busswil b. Heimiswil",
-      "Busswil b. Heimiswil NW"
+      "Busswil b. Heimiswil"
     ],
     "playingDirectionDeg": null
   },
@@ -368,8 +350,7 @@
     "homepage": "http://www.hg-busswil.ch/",
     "teams": [
       "Busswil b. Büren A",
-      "Busswil b. Büren B",
-      "Busswil b. Büren NW"
+      "Busswil b. Büren B"
     ],
     "playingDirectionDeg": null
   },
@@ -383,8 +364,7 @@
     "lng": 7.591435,
     "homepage": "http://www.hgdieboldshausen.ch/",
     "teams": [
-      "Dieboldshausen",
-      "Dieboldshausen NW"
+      "Dieboldshausen"
     ],
     "playingDirectionDeg": null
   },
@@ -398,8 +378,7 @@
     "lng": 7.371531,
     "homepage": "https://www.hgdiessbach.info",
     "teams": [
-      "Diessbach b. Büren",
-      "Diessbach b. Büren NW"
+      "Diessbach b. Büren"
     ],
     "playingDirectionDeg": null
   },
@@ -413,8 +392,7 @@
     "lng": 7.339894,
     "homepage": "http://www.hg-dotzigen.clubdesk.com",
     "teams": [
-      "Dotzigen",
-      "Dotzigen NW"
+      "Dotzigen"
     ],
     "playingDirectionDeg": null
   },
@@ -428,7 +406,6 @@
     "lng": 7.777359,
     "homepage": "http://www.hgduerrenroth.ch/",
     "teams": [
-      "Dürrenroth NW",
       "Dürrenroth-Schmidigen A",
       "Dürrenroth-Schmidigen B",
       "Dürrenroth-Schmidigen C"
@@ -446,8 +423,7 @@
     "homepage": "http://www.hg-epsach.ch/",
     "teams": [
       "Epsach A",
-      "Epsach B",
-      "Epsach NW"
+      "Epsach B"
     ],
     "playingDirectionDeg": null
   },
@@ -462,8 +438,7 @@
     "homepage": "http://www.hgeriswil.ch/",
     "teams": [
       "Eriswil A",
-      "Eriswil B",
-      "Eriswil NW"
+      "Eriswil B"
     ],
     "playingDirectionDeg": null
   },
@@ -478,8 +453,7 @@
     "homepage": "https://www.hgersigen.ch/",
     "teams": [
       "Ersigen A",
-      "Ersigen B",
-      "Ersigen NW"
+      "Ersigen B"
     ],
     "playingDirectionDeg": null
   },
@@ -507,37 +481,7 @@
     "lng": 7.539408,
     "homepage": "http://www.hgferenberg.ch/",
     "teams": [
-      "Ferenberg",
-      "Ferenberg Nachwuchs"
-    ],
-    "playingDirectionDeg": null
-  },
-  {
-    "id": "frauchwil-zimlisberg-47-0580-7-3819",
-    "name": "Frauchwil-Zimlisberg",
-    "ort": "Rapperswil BE",
-    "strasse": "Rüberi",
-    "plz": "3255",
-    "lat": 47.058014,
-    "lng": 7.381876,
-    "homepage": "https://www.hornusser-frauchwil.ch/",
-    "teams": [
-      "Frauchwil-Zimlisberg NW",
-      "Thörishaus-Frauchwil-Zimlisberg A"
-    ],
-    "playingDirectionDeg": null
-  },
-  {
-    "id": "frauenfeld-47-5717-8-8953",
-    "name": "Frauenfeld",
-    "ort": "Frauenfeld",
-    "strasse": "Allmendweg",
-    "plz": "8500",
-    "lat": 47.57168,
-    "lng": 8.895348,
-    "homepage": "http://www.hornusserfrauenfeld.ch/jo/index.php",
-    "teams": [
-      "Frauenfeld NW"
+      "Ferenberg"
     ],
     "playingDirectionDeg": null
   },
@@ -549,8 +493,7 @@
     "lng": 7.738444,
     "teams": [
       "Frittenbach-Emmenmatt-Ilfis A",
-      "Frittenbach-Emmenmatt-Ilfis C",
-      "Unterfrittenbach-Emmenmatt Nachwuchs"
+      "Frittenbach-Emmenmatt-Ilfis C"
     ],
     "playingDirectionDeg": null
   },
@@ -561,8 +504,7 @@
     "lat": 46.940839,
     "lng": 7.760194,
     "teams": [
-      "Frittenbach-Emmenmatt-Ilfis B",
-      "Ilfis NW"
+      "Frittenbach-Emmenmatt-Ilfis B"
     ],
     "playingDirectionDeg": null
   },
@@ -606,8 +548,7 @@
     "homepage": "http://www.hggz.ch/",
     "teams": [
       "Gerlafingen-Zielebach A",
-      "Gerlafingen-Zielebach B",
-      "Gerlafingen-Zielebach NW"
+      "Gerlafingen-Zielebach B"
     ],
     "playingDirectionDeg": null
   },
@@ -621,8 +562,7 @@
     "lng": 7.815852,
     "homepage": "http://www.hg-gohl.ch/",
     "teams": [
-      "Gohl",
-      "Gohl NW Gohl"
+      "Gohl"
     ],
     "playingDirectionDeg": null
   },
@@ -637,8 +577,7 @@
     "homepage": "http://www.hggondiswil.ch/",
     "teams": [
       "Gondiswil A",
-      "Gondiswil B",
-      "Gondiswil NW"
+      "Gondiswil B"
     ],
     "playingDirectionDeg": null
   },
@@ -653,8 +592,7 @@
     "homepage": "https://www.hggossau.ch/",
     "teams": [
       "Gossau A",
-      "Gossau B",
-      "Gossau NW"
+      "Gossau B"
     ],
     "playingDirectionDeg": null
   },
@@ -668,8 +606,7 @@
     "lng": 7.727653,
     "homepage": "http://www.hggraben.ch/",
     "teams": [
-      "Graben",
-      "Graben NW"
+      "Graben"
     ],
     "playingDirectionDeg": null
   },
@@ -712,8 +649,7 @@
     "lng": 7.389765,
     "homepage": "http://www.hg-grenchen.ch/",
     "teams": [
-      "Grenchen",
-      "Grenchen Nachwuchs"
+      "Grenchen"
     ],
     "playingDirectionDeg": null
   },
@@ -728,9 +664,7 @@
     "homepage": "https://www.hg-gruenenmatt.ch",
     "teams": [
       "Grünenmatt-Brandis A",
-      "Grünenmatt-Brandis B",
-      "Grünenmatt-Brandis NW",
-      "Grünenmatt-Gümligen NW"
+      "Grünenmatt-Brandis B"
     ],
     "playingDirectionDeg": null
   },
@@ -773,8 +707,7 @@
     "homepage": "http://www.hg-hasle.ch/",
     "teams": [
       "Hasle b. Burgdorf A",
-      "Hasle b. Burgdorf B",
-      "Hasle b. Burgdorf NW"
+      "Hasle b. Burgdorf B"
     ],
     "playingDirectionDeg": null
   },
@@ -812,8 +745,7 @@
     "teams": [
       "Heimiswil A",
       "Heimiswil C",
-      "Heimiswil D",
-      "Heimiswil Nachwuchs"
+      "Heimiswil D"
     ],
     "playingDirectionDeg": null
   },
@@ -841,8 +773,7 @@
     "lng": 7.955486,
     "homepage": "http://www.hghergiswil.ch/home.html",
     "teams": [
-      "Hergiswil am Napf",
-      "Hergiswil am Napf Nachwuchs"
+      "Hergiswil am Napf"
     ],
     "playingDirectionDeg": null
   },
@@ -856,7 +787,6 @@
     "lng": 7.57933,
     "homepage": "http://www.hornusser-hettiswil.ch/",
     "teams": [
-      "Hettiswil-Eintracht NW",
       "Hettiswil-Eintracht-Moosseedorf A",
       "Hettiswil-Eintracht-Moosseedorf B"
     ],
@@ -880,8 +810,7 @@
     "lat": 47.044112,
     "lng": 7.563714,
     "teams": [
-      "Hindelbank-Zollikofen B",
-      "Hindelbank-Zollikofen NW"
+      "Hindelbank-Zollikofen B"
     ],
     "playingDirectionDeg": null
   },
@@ -904,8 +833,7 @@
     "lng": 8.008652,
     "teams": [
       "Hintermoos-Reiden A",
-      "Hintermoos-Reiden B",
-      "Hintermoos-Reiden Nachwuchs"
+      "Hintermoos-Reiden B"
     ],
     "playingDirectionDeg": null
   },
@@ -920,9 +848,7 @@
     "homepage": "http://www.hghoechstetten.ch/",
     "teams": [
       "Höchstetten A",
-      "Höchstetten B",
-      "Höchstetten Nachwuchs",
-      "Höchstetten_alt Nachwuchs"
+      "Höchstetten B"
     ],
     "playingDirectionDeg": 129.42
   },
@@ -936,8 +862,7 @@
     "lng": 7.867796,
     "homepage": "https://hghuttwil.ch",
     "teams": [
-      "Huttwil",
-      "Huttwil NW"
+      "Huttwil"
     ],
     "playingDirectionDeg": null
   },
@@ -951,8 +876,7 @@
     "lng": 7.285671,
     "homepage": "https://hgkappelen-saurenhorn.ch",
     "teams": [
-      "Kappelen-Saurenhorn",
-      "Kappelen-Saurenhorn NW"
+      "Kappelen-Saurenhorn"
     ],
     "playingDirectionDeg": null
   },
@@ -966,8 +890,7 @@
     "lng": 7.580233,
     "homepage": "http://www.hgkirchberg.ch/",
     "teams": [
-      "Kirchberg",
-      "Kirchberg NW"
+      "Kirchberg"
     ],
     "playingDirectionDeg": null
   },
@@ -982,9 +905,7 @@
     "homepage": "",
     "teams": [
       "Kirchdorf-Herbligen",
-      "Kirchdorf-Herbligen NW",
-      "Münsingen",
-      "Münsingen NW"
+      "Münsingen"
     ],
     "playingDirectionDeg": null
   },
@@ -998,8 +919,7 @@
     "lng": 7.544367,
     "homepage": "http://www.hgkb.ch/wordpress/",
     "teams": [
-      "Kräiligen-Bätterkinden",
-      "Kräiligen-Bätterkinden Nachwuchs"
+      "Kräiligen-Bätterkinden"
     ],
     "playingDirectionDeg": null
   },
@@ -1069,8 +989,7 @@
     "lat": 47.19323,
     "lng": 7.781488,
     "teams": [
-      "Lotzwil",
-      "Lotzwil NW"
+      "Lotzwil"
     ],
     "playingDirectionDeg": null
   },
@@ -1084,8 +1003,7 @@
     "lng": 7.714379,
     "homepage": "http://www.hglueg.ch/",
     "teams": [
-      "Lueg i. E.",
-      "Lueg i. E. NW"
+      "Lueg i. E."
     ],
     "playingDirectionDeg": null
   },
@@ -1099,22 +1017,7 @@
     "lng": 7.496043,
     "homepage": "http://www.hgluesslingen-nennigkofen.ch/",
     "teams": [
-      "Lüsslingen-Nennigkofen",
-      "Lüsslingen-Nennigkofen NW"
-    ],
-    "playingDirectionDeg": null
-  },
-  {
-    "id": "luzern-47-0332-8-3005",
-    "name": "Luzern",
-    "ort": "Meggen",
-    "strasse": "Gotthardstrasse 59",
-    "plz": "6045",
-    "lat": 47.033156,
-    "lng": 8.300457,
-    "homepage": "http://www.hgluzern.ch/",
-    "teams": [
-      "Luzern NW"
+      "Lüsslingen-Nennigkofen"
     ],
     "playingDirectionDeg": null
   },
@@ -1129,8 +1032,7 @@
     "homepage": "http://www.hornusser-lyss.ch/HGL/",
     "teams": [
       "Lyss A",
-      "Lyss B",
-      "Lyss NW"
+      "Lyss B"
     ],
     "playingDirectionDeg": null
   },
@@ -1145,8 +1047,7 @@
     "homepage": "http://hglyssach.ch/",
     "teams": [
       "Lyssach A",
-      "Lyssach B",
-      "Lyssach Nachwuchs"
+      "Lyssach B"
     ],
     "playingDirectionDeg": null
   },
@@ -1161,8 +1062,7 @@
     "homepage": "http://www.hgmb.ch/cms/",
     "teams": [
       "Mättenwil-Brittnau A",
-      "Mättenwil-Brittnau B",
-      "Mättenwil-Brittnau NW"
+      "Mättenwil-Brittnau B"
     ],
     "playingDirectionDeg": null
   },
@@ -1176,8 +1076,7 @@
     "lng": 7.461173,
     "homepage": "https://www.hgmessen.ch/",
     "teams": [
-      "Messen",
-      "Messen NW"
+      "Messen"
     ],
     "playingDirectionDeg": null
   },
@@ -1202,8 +1101,7 @@
     "lat": 47.017733,
     "lng": 7.433485,
     "teams": [
-      "Münchenbuchsee-Wohlen B",
-      "Münchenbuchsee-Wohlen NW"
+      "Münchenbuchsee-Wohlen B"
     ],
     "playingDirectionDeg": null
   },
@@ -1228,8 +1126,7 @@
     "lng": 7.705576,
     "homepage": "http://hgmn.ch/wp/",
     "teams": [
-      "Mützlenberg-Nesselgraben A",
-      "Mützlenberg-Nesselgraben NW"
+      "Mützlenberg-Nesselgraben A"
     ],
     "playingDirectionDeg": null
   },
@@ -1240,8 +1137,7 @@
     "lat": 46.929612,
     "lng": 7.334994,
     "teams": [
-      "Oberbottigen",
-      "Oberbottigen NW"
+      "Oberbottigen"
     ],
     "playingDirectionDeg": null
   },
@@ -1257,8 +1153,7 @@
     "teams": [
       "Oberdiessbach A",
       "Oberdiessbach B",
-      "Oberdiessbach C",
-      "Oberdiessbach NW"
+      "Oberdiessbach C"
     ],
     "playingDirectionDeg": null
   },
@@ -1273,8 +1168,7 @@
     "homepage": "http://www.hgobergerlafingen.ch/",
     "teams": [
       "Obergerlafingen A",
-      "Obergerlafingen B",
-      "Obergerlafingen NW"
+      "Obergerlafingen B"
     ],
     "playingDirectionDeg": null
   },
@@ -1285,8 +1179,7 @@
     "lat": 46.962525,
     "lng": 7.677472,
     "teams": [
-      "Obergoldbach",
-      "Obergoldbach NW"
+      "Obergoldbach"
     ],
     "playingDirectionDeg": null
   },
@@ -1301,8 +1194,7 @@
     "homepage": "https://www.hornusser-oenz.ch/",
     "teams": [
       "Oberönz-Niederönz A",
-      "Oberönz-Niederönz B",
-      "Oberönz-Niederönz NW"
+      "Oberönz-Niederönz B"
     ],
     "playingDirectionDeg": null
   },
@@ -1330,8 +1222,7 @@
     "lng": 7.680704,
     "homepage": "www.hornusseroberthal.ch",
     "teams": [
-      "Oberthal",
-      "Oberthal NW"
+      "Oberthal"
     ],
     "playingDirectionDeg": null
   },
@@ -1342,8 +1233,7 @@
     "lat": 47.130405,
     "lng": 7.3898,
     "teams": [
-      "Oberwil",
-      "Oberwil NW"
+      "Oberwil"
     ],
     "playingDirectionDeg": null
   },
@@ -1357,8 +1247,7 @@
     "lng": 8.440166,
     "homepage": "http://www.hgobfelden.ch/",
     "teams": [
-      "Obfelden",
-      "Obfelden HG Obfelden NW"
+      "Obfelden"
     ],
     "playingDirectionDeg": null
   },
@@ -1386,8 +1275,7 @@
     "lng": 7.792418,
     "homepage": "http://www.hgoeschenbach-kleindietwil.ch/",
     "teams": [
-      "Oeschenbach-Kleindietwil B",
-      "Oeschenbach-Kleindietwil NW"
+      "Oeschenbach-Kleindietwil B"
     ],
     "playingDirectionDeg": null
   },
@@ -1402,8 +1290,7 @@
     "homepage": "https://www.hgoschwandbiembach.ch",
     "teams": [
       "Oschwand-Biembach A",
-      "Oschwand-Biembach B",
-      "Oschwand-Biembach NW"
+      "Oschwand-Biembach B"
     ],
     "playingDirectionDeg": null
   },
@@ -1419,8 +1306,7 @@
     "teams": [
       "Recherswil-Kriegstetten A",
       "Recherswil-Kriegstetten B",
-      "Recherswil-Kriegstetten C",
-      "Recherswil-Kriegstetten NW"
+      "Recherswil-Kriegstetten C"
     ],
     "playingDirectionDeg": null
   },
@@ -1434,8 +1320,7 @@
     "lng": 8.159696,
     "homepage": "http://www.hgreinach.ch/",
     "teams": [
-      "Reinach",
-      "Reinach Nachwuchs"
+      "Reinach"
     ],
     "playingDirectionDeg": null
   },
@@ -1451,8 +1336,7 @@
     "teams": [
       "Richigen A",
       "Richigen B",
-      "Richigen C",
-      "Richigen NW"
+      "Richigen C"
     ],
     "playingDirectionDeg": null
   },
@@ -1466,8 +1350,7 @@
     "lng": 7.824323,
     "homepage": "https://www.hg-rohrbach.ch/",
     "teams": [
-      "Rohrbach",
-      "Rohrbach Nachwuchs"
+      "Rohrbach"
     ],
     "playingDirectionDeg": null
   },
@@ -1482,8 +1365,7 @@
     "homepage": "http://www.hg-rohrbachgraben.ch/de/",
     "teams": [
       "Rohrbachgraben A",
-      "Rohrbachgraben B",
-      "Rohrbachgraben NW"
+      "Rohrbachgraben B"
     ],
     "playingDirectionDeg": null
   },
@@ -1499,8 +1381,7 @@
     "teams": [
       "Röthenbach i. E. A",
       "Röthenbach i. E. B",
-      "Röthenbach i. E. C",
-      "Röthenbach i. E. Nachwuchs"
+      "Röthenbach i. E. C"
     ],
     "playingDirectionDeg": null
   },
@@ -1514,8 +1395,7 @@
     "lng": 7.855898,
     "homepage": "http://www.hg-rothrist-olten.ch/",
     "teams": [
-      "Rothrist-Olten",
-      "Rothrist-Olten NW"
+      "Rothrist-Olten"
     ],
     "playingDirectionDeg": null
   },
@@ -1531,8 +1411,7 @@
     "teams": [
       "Rüderswil A",
       "Rüderswil B",
-      "Rüderswil C",
-      "Rüderswil NW"
+      "Rüderswil C"
     ],
     "playingDirectionDeg": 237.33
   },
@@ -1547,8 +1426,7 @@
     "homepage": "http://www.hgra.ch/",
     "teams": [
       "Rüdtligen-Alchenflüh A",
-      "Rüdtligen-Alchenflüh B",
-      "Rüdtligen-Alchenflüh NW"
+      "Rüdtligen-Alchenflüh B"
     ],
     "playingDirectionDeg": null
   },
@@ -1562,8 +1440,7 @@
     "lng": 7.698597,
     "homepage": "http://www.hgruedisbach.ch/",
     "teams": [
-      "Rüedisbach",
-      "Rüedisbach NW"
+      "Rüedisbach"
     ],
     "playingDirectionDeg": null
   },
@@ -1594,22 +1471,7 @@
     "homepage": "http://www.hg-ruetschelen.ch/",
     "teams": [
       "Rütschelen A",
-      "Rütschelen B",
-      "Rütschelen NW"
-    ],
-    "playingDirectionDeg": null
-  },
-  {
-    "id": "saurenhorn-47-0440-7-3562",
-    "name": "Saurenhorn",
-    "ort": "Schüpfen",
-    "strasse": "Ziegelried",
-    "plz": "3054",
-    "lat": 47.044002,
-    "lng": 7.356237,
-    "homepage": "http://hg-saurenhorn.ch/",
-    "teams": [
-      "Saurenhorn NW"
+      "Rütschelen B"
     ],
     "playingDirectionDeg": null
   },
@@ -1624,8 +1486,7 @@
     "homepage": "https://www.hgschafhausen.ch/",
     "teams": [
       "Schafhausen i. E. A",
-      "Schafhausen i. E. B",
-      "Schafhausen i. E. NW"
+      "Schafhausen i. E. B"
     ],
     "playingDirectionDeg": null
   },
@@ -1639,22 +1500,7 @@
     "lng": 7.62302,
     "homepage": "https://www.hgsg.ch",
     "teams": [
-      "Schlosswil-Gysenstein",
-      "Schlosswil-Gysenstein NW"
-    ],
-    "playingDirectionDeg": null
-  },
-  {
-    "id": "schmidigen-47-0851-7-7604",
-    "name": "Schmidigen",
-    "ort": "Walterswil",
-    "strasse": "Dennlisboden",
-    "plz": "4952",
-    "lat": 47.085098,
-    "lng": 7.7604,
-    "homepage": "",
-    "teams": [
-      "Schmidigen NW"
+      "Schlosswil-Gysenstein"
     ],
     "playingDirectionDeg": null
   },
@@ -1669,8 +1515,7 @@
     "homepage": "https://www.hgschoren.ch/",
     "teams": [
       "Schoren A",
-      "Schoren B",
-      "Schoren NW"
+      "Schoren B"
     ],
     "playingDirectionDeg": null
   },
@@ -1685,8 +1530,7 @@
     "homepage": "http://www.hornusser-schuepbach.ch/",
     "teams": [
       "Schüpbach A",
-      "Schüpbach B",
-      "Schüpbach Nachwuchs"
+      "Schüpbach B"
     ],
     "playingDirectionDeg": 215.96,
     "playingDirectionNote": "Schüpbach A & B"
@@ -1698,8 +1542,7 @@
     "lat": 46.808459,
     "lng": 7.347863,
     "teams": [
-      "Schwarzenburg A",
-      "Schwarzenburg NW"
+      "Schwarzenburg A"
     ],
     "playingDirectionDeg": null
   },
@@ -1713,8 +1556,7 @@
     "lng": 7.763633,
     "homepage": "https://www.hg-schwarzhaeusern.ch/",
     "teams": [
-      "Schwarzhäusern-Aarwangen",
-      "Schwarzhäusern-Aarwangen NW"
+      "Schwarzhäusern-Aarwangen"
     ],
     "playingDirectionDeg": null
   },
@@ -1729,8 +1571,7 @@
     "homepage": "https://www.hgsinneringen-vechigen.ch/",
     "teams": [
       "Sinneringen-Vechigen A",
-      "Sinneringen-Vechigen B",
-      "Sinneringen-Vechigen NW"
+      "Sinneringen-Vechigen B"
     ],
     "playingDirectionDeg": null
   },
@@ -1757,8 +1598,7 @@
     "homepage": "www.stalden-dorf.ch",
     "teams": [
       "Stalden-Dorf A",
-      "Stalden-Dorf B",
-      "Stalden-Dorf NW"
+      "Stalden-Dorf B"
     ],
     "playingDirectionDeg": null
   },
@@ -1774,8 +1614,7 @@
     "teams": [
       "Steinen b. Signau A",
       "Steinen b. Signau B",
-      "Steinen b. Signau C",
-      "Steinen b. Signau NW"
+      "Steinen b. Signau C"
     ],
     "playingDirectionDeg": null
   },
@@ -1803,8 +1642,7 @@
     "lng": 7.317313,
     "homepage": "",
     "teams": [
-      "Studen-Madretsch",
-      "Studen-Madretsch NW"
+      "Studen-Madretsch"
     ],
     "playingDirectionDeg": null
   },
@@ -1832,8 +1670,7 @@
     "lng": 7.315988,
     "homepage": "http://www.hgsueri.ch/",
     "teams": [
-      "Süri-Spengelried",
-      "Süri-Spengelried Nachwuchs"
+      "Süri-Spengelried"
     ],
     "playingDirectionDeg": null
   },
@@ -1847,8 +1684,7 @@
     "lng": 7.605986,
     "homepage": "http://www.taegertschi-haeutligen.ch/",
     "teams": [
-      "Tägertschi-Häutligen",
-      "Tägertschi-Häutligen NW"
+      "Tägertschi-Häutligen"
     ],
     "playingDirectionDeg": null
   },
@@ -1862,8 +1698,7 @@
     "lng": 7.80144,
     "homepage": "http://www.hgtl.ch/",
     "teams": [
-      "Tenniken",
-      "Tenniken NW"
+      "Tenniken"
     ],
     "playingDirectionDeg": null
   },
@@ -1877,8 +1712,7 @@
     "lng": 7.659456,
     "homepage": "http://www.hg-thalgraben.ch",
     "teams": [
-      "Thalgraben",
-      "Thalgraben NW"
+      "Thalgraben"
     ],
     "playingDirectionDeg": null
   },
@@ -1894,14 +1728,27 @@
     "teams": [
       "Thörigen A",
       "Thörigen B",
-      "Thörigen C",
-      "Thörigen NW"
+      "Thörigen C"
     ],
     "playingDirectionDeg": null
   },
   {
-    "id": "thoerishaus-46-8922-7-3382",
-    "name": "Thörishaus",
+    "id": "thoerishaus-frauchwil-zimlisberg-47-0580-7-3819",
+    "name": "Thörishaus-Frauchwil-Zimlisberg",
+    "ort": "Rapperswil BE",
+    "strasse": "Rüberi",
+    "plz": "3255",
+    "lat": 47.058014,
+    "lng": 7.381876,
+    "homepage": "https://www.hornusser-frauchwil.ch/",
+    "teams": [
+      "Thörishaus-Frauchwil-Zimlisberg A"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "thoerishaus-frauchwil-zimlisberg-46-8922-7-3382",
+    "name": "Thörishaus-Frauchwil-Zimlisberg",
     "ort": "Thörishaus",
     "strasse": "Freiburgstrasse 57",
     "plz": "3174",
@@ -1909,7 +1756,6 @@
     "lng": 7.338221,
     "homepage": "http://www.hornusse.ch/",
     "teams": [
-      "Thörishaus NW",
       "Thörishaus-Frauchwil-Zimlisberg B"
     ],
     "playingDirectionDeg": null
@@ -1924,8 +1770,7 @@
     "lng": 7.605616,
     "homepage": "http://www.hornusserthun.ch/",
     "teams": [
-      "Thun",
-      "Thun Nachwuchs"
+      "Thun"
     ],
     "playingDirectionDeg": null
   },
@@ -1970,8 +1815,7 @@
     "homepage": "http://www.hgtrimstein.ch/",
     "teams": [
       "Trimstein A",
-      "Trimstein B",
-      "Trimstein NW"
+      "Trimstein B"
     ],
     "playingDirectionDeg": null
   },
@@ -1986,8 +1830,7 @@
     "homepage": "http://www.hornusser-urtenen.ch/",
     "teams": [
       "Urtenen A",
-      "Urtenen B",
-      "Urtenen NW"
+      "Urtenen B"
     ],
     "playingDirectionDeg": null
   },
@@ -2002,8 +1845,7 @@
     "homepage": "https://www.hguk.ch/",
     "teams": [
       "Utzenstorf-Koppigen A",
-      "Utzenstorf-Koppigen B",
-      "Utzenstorf-Koppigen NW"
+      "Utzenstorf-Koppigen B"
     ],
     "playingDirectionDeg": null
   },
@@ -2019,8 +1861,7 @@
     "teams": [
       "Utzigen A",
       "Utzigen B",
-      "Utzigen C",
-      "Utzigen NW"
+      "Utzigen C"
     ],
     "playingDirectionDeg": 210.76
   },
@@ -2048,8 +1889,7 @@
     "lng": 7.68955,
     "homepage": "https://hgwangenried.clubs.localcities.ch",
     "teams": [
-      "Wangenried-Wanzwil",
-      "Wangenried-Wanzwil Nachwuchs"
+      "Wangenried-Wanzwil"
     ],
     "playingDirectionDeg": null
   },
@@ -2065,8 +1905,7 @@
     "teams": [
       "Wäseli A",
       "Wäseli B",
-      "Wäseli C",
-      "Wäseli NW"
+      "Wäseli C"
     ],
     "playingDirectionDeg": 278.46
   },
@@ -2083,8 +1922,7 @@
       "Wasen-Lugenbach A",
       "Wasen-Lugenbach B",
       "Wasen-Lugenbach C",
-      "Wasen-Lugenbach D",
-      "Wasen-Lugenbach Nachwuchs"
+      "Wasen-Lugenbach D"
     ],
     "playingDirectionDeg": null
   },
@@ -2099,8 +1937,7 @@
     "homepage": "https://www.hgwattenwil.ch/",
     "teams": [
       "Wattenwil A",
-      "Wattenwil B",
-      "Wattenwil NW"
+      "Wattenwil B"
     ],
     "playingDirectionDeg": null
   },
@@ -2115,8 +1952,7 @@
     "homepage": "http://www.hgwichtrach.ch/",
     "teams": [
       "Wichtrach A",
-      "Wichtrach B",
-      "Wichtrach Nachwuchs"
+      "Wichtrach B"
     ],
     "playingDirectionDeg": null
   },
@@ -2144,8 +1980,7 @@
     "lng": 7.556942,
     "homepage": "http://www.hornusser-wiler.ch/",
     "teams": [
-      "Wiler",
-      "Wiler NW"
+      "Wiler"
     ],
     "playingDirectionDeg": null
   },
@@ -2173,8 +2008,7 @@
     "lng": 7.665413,
     "homepage": "http://www.hgwinistorf.ch/",
     "teams": [
-      "Winistorf-Seeberg B",
-      "Winistorf-Seeberg NW"
+      "Winistorf-Seeberg B"
     ],
     "playingDirectionDeg": null
   },
@@ -2189,8 +2023,7 @@
     "homepage": "http://www.hgwinterthur.ch/",
     "teams": [
       "Winterthur A",
-      "Winterthur B",
-      "Winterthur NW"
+      "Winterthur B"
     ],
     "playingDirectionDeg": null
   },
@@ -2218,8 +2051,7 @@
     "lng": 7.639835,
     "homepage": "http://hgwynigenrumendingen.ch/",
     "teams": [
-      "Wynigen-Rumendingen",
-      "Wynigen-Rumendingen NW"
+      "Wynigen-Rumendingen"
     ],
     "playingDirectionDeg": null
   },
@@ -2230,8 +2062,7 @@
     "lat": 47.100227,
     "lng": 7.818025,
     "teams": [
-      "Wyssachen",
-      "Wyssachen NW"
+      "Wyssachen"
     ],
     "playingDirectionDeg": null
   },
@@ -2262,8 +2093,7 @@
     "homepage": "http://hgzaeziwilreutenen.ch/",
     "teams": [
       "Zäziwil-Reutenen A",
-      "Zäziwil-Reutenen C",
-      "Zäziwil-Reutenen NW"
+      "Zäziwil-Reutenen C"
     ],
     "playingDirectionDeg": 184.43
   },
@@ -2292,8 +2122,7 @@
     "homepage": "http://www.hornusserzimmerwald.ch/",
     "teams": [
       "Zimmerwald A",
-      "Zimmerwald B",
-      "Zimmerwald NW"
+      "Zimmerwald B"
     ],
     "playingDirectionDeg": null
   },
@@ -2322,8 +2151,7 @@
     "homepage": "https://www.hgzuchwil.ch/",
     "teams": [
       "Zuchwil A",
-      "Zuchwil B",
-      "Zuchwil NW"
+      "Zuchwil B"
     ],
     "playingDirectionDeg": null
   }

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-24T00:55:59.412Z",
+  "generatedAt": "2026-07-24T01:22:43.427Z",
   "seasons": [
     2013,
     2014,
@@ -39,83 +39,188 @@
   ],
   "totalMatches": 13905,
   "totalObservations": 27810,
-  "observationsWithWeather": 24678,
+  "observationsWithWeather": 23366,
   "observationsWithWind": 2314,
   "blueSky": {
     "metric": "nummern",
     "correlation": {
-      "n": 24678,
-      "pearson": -0.09125224210813404,
-      "spearman": -0.07726388685711486,
-      "slope": -0.005009767131942028,
-      "intercept": 1.4964575144159533,
-      "ciLow": -0.09225819438807654,
-      "ciHigh": -0.08646228629427015,
-      "pValueApprox": 5.629403580121419e-47
+      "n": 23366,
+      "pearson": -0.07295195065571732,
+      "spearman": -0.06524527631047182,
+      "slope": -0.0035148826464248837,
+      "intercept": 1.385415936806807,
+      "ciLow": -0.05995785547955354,
+      "ciHigh": -0.054868292383795175,
+      "pValueApprox": 6.003356541256304e-29
     },
     "buckets": [
       {
-        "label": "Blauer Himmel (<25% Wolken)",
-        "count": 4298,
-        "mean": 1.504885993485342,
-        "stdErr": 0.03218276918079109
+        "label": "Klar (0–15%)",
+        "count": 3976,
+        "mean": 1.48817907444668,
+        "stdErr": 0.03293881321748368
       },
       {
-        "label": "Gemischt (25–75%)",
-        "count": 8176,
-        "mean": 1.1728228962818004,
-        "stdErr": 0.020218470067933945
+        "label": "Leicht bewölkt (15–50%)",
+        "count": 3930,
+        "mean": 1.1048346055979643,
+        "stdErr": 0.02759588729904778
       },
       {
-        "label": "Bedeckt (>75%)",
-        "count": 12204,
-        "mean": 1.0517043592264832,
-        "stdErr": 0.015131959472902886
+        "label": "Bewölkt (50–85%)",
+        "count": 4348,
+        "mean": 1.1205151793928243,
+        "stdErr": 0.026805498561062773
+      },
+      {
+        "label": "Stark bewölkt (85–100%)",
+        "count": 11112,
+        "mean": 1.0714542836573073,
+        "stdErr": 0.01617823623441448
       }
     ],
-    "clearMean": 1.504885993485342,
-    "overcastMean": 1.0517043592264832,
+    "clearMean": 1.48817907444668,
+    "overcastMean": 1.0714542836573073,
+    "categories": {
+      "buckets": [
+        {
+          "label": "Klar (0–15%)",
+          "count": 3976,
+          "mean": 1.48817907444668,
+          "stdErr": 0.03293881321748368
+        },
+        {
+          "label": "Leicht bewölkt (15–50%)",
+          "count": 3930,
+          "mean": 1.1048346055979643,
+          "stdErr": 0.02759588729904778
+        },
+        {
+          "label": "Bewölkt (50–85%)",
+          "count": 4348,
+          "mean": 1.1205151793928243,
+          "stdErr": 0.026805498561062773
+        },
+        {
+          "label": "Stark bewölkt (85–100%)",
+          "count": 11112,
+          "mean": 1.0714542836573073,
+          "stdErr": 0.01617823623441448
+        }
+      ],
+      "anovaF": 55.580473206450556,
+      "anovaP": 8.613378454420118e-36,
+      "anovaSignificant": true,
+      "pairwise": [
+        {
+          "a": "Klar (0–15%)",
+          "b": "Leicht bewölkt (15–50%)",
+          "meanA": 1.48817907444668,
+          "meanB": 1.1048346055979643,
+          "diff": 0.38334446884871576,
+          "pctDiff": 34.69700051993213,
+          "t": 8.921024500340664,
+          "p": 5.698317001174662e-19,
+          "significant": true
+        },
+        {
+          "a": "Klar (0–15%)",
+          "b": "Bewölkt (50–85%)",
+          "meanA": 1.48817907444668,
+          "meanB": 1.1205151793928243,
+          "diff": 0.36766389505385577,
+          "pctDiff": 32.81204055201488,
+          "t": 8.657507772482164,
+          "p": 5.788773995865115e-18,
+          "significant": true
+        },
+        {
+          "a": "Klar (0–15%)",
+          "b": "Stark bewölkt (85–100%)",
+          "meanA": 1.48817907444668,
+          "meanB": 1.0714542836573073,
+          "diff": 0.41672479078937275,
+          "pctDiff": 38.89338044054687,
+          "t": 11.355696773711353,
+          "p": 1.390531239828753e-29,
+          "significant": true
+        },
+        {
+          "a": "Leicht bewölkt (15–50%)",
+          "b": "Bewölkt (50–85%)",
+          "meanA": 1.1048346055979643,
+          "meanB": 1.1205151793928243,
+          "diff": -0.015680573794859987,
+          "pctDiff": -1.3994075299682105,
+          "t": -0.4075877782725153,
+          "p": 0.683586947980365,
+          "significant": false
+        },
+        {
+          "a": "Leicht bewölkt (15–50%)",
+          "b": "Stark bewölkt (85–100%)",
+          "meanA": 1.1048346055979643,
+          "meanB": 1.0714542836573073,
+          "diff": 0.03338032194065699,
+          "pctDiff": 3.115421950315643,
+          "t": 1.0435079350070393,
+          "p": 0.2967501513673454,
+          "significant": false
+        },
+        {
+          "a": "Bewölkt (50–85%)",
+          "b": "Stark bewölkt (85–100%)",
+          "meanA": 1.1205151793928243,
+          "meanB": 1.0714542836573073,
+          "diff": 0.049060895735516974,
+          "pctDiff": 4.578907050336508,
+          "t": 1.5669769184069926,
+          "p": 0.11716122464973022,
+          "significant": false
+        }
+      ]
+    },
     "verdict": {
-      "level": "weak",
-      "headline": "Schwacher Hinweis dafür",
-      "detail": "Es gibt einen leichten Trend zu mehr Nummern bei blauem Himmel (r=-0.09), statistisch aber nicht klar gesichert."
+      "level": "confirmed",
+      "headline": "Die Weisheit hält stand – als Schwelleneffekt",
+      "detail": "Bei klarem Himmel (0–20% Wolken) fallen im Schnitt +39% mehr Nummern als bei stark bewölktem Himmel – der Unterschied ist statistisch signifikant (p<0.05). Der lineare Zusammenhang allein (r=-0.07) unterschätzt diesen Effekt."
     }
   },
   "wind": {
     "metric": "schlagpunkte",
     "correlation": {
       "n": 2314,
-      "pearson": 0.06443946496642368,
-      "spearman": 0.0584505429976447,
-      "slope": 2.459697830683127,
-      "intercept": 1007.1751478459929,
-      "ciLow": 0.044726086606496865,
-      "ciHigh": 0.09637688726540625,
-      "pValueApprox": 0.002072460384344285
+      "pearson": 0.060774497047785044,
+      "spearman": 0.06097529711873593,
+      "slope": 2.2811440221964556,
+      "intercept": 1007.7439328837825,
+      "ciLow": 0.03976364961490032,
+      "ciHigh": 0.09295519200460163,
+      "pValueApprox": 0.0034487308207662186
     },
     "buckets": [
       {
         "label": "Gegenwind (≤ −1 km/h)",
-        "count": 980,
-        "mean": 1005.9663265306123,
-        "stdErr": 8.379894528442895
+        "count": 1036,
+        "mean": 1002.7972972972973,
+        "stdErr": 8.268686036888388
       },
       {
         "label": "Windstill (±1 km/h)",
-        "count": 296,
-        "mean": 990.2128378378378,
-        "stdErr": 18.115748493046315
+        "count": 256,
+        "mean": 1017.984375,
+        "stdErr": 16.403396431341964
       },
       {
         "label": "Rückenwind (≥ +1 km/h)",
-        "count": 1038,
-        "mean": 1014.3911368015414,
-        "stdErr": 8.848243524085317
+        "count": 1022,
+        "mean": 1010.1624266144814,
+        "stdErr": 9.261748812481008
       }
     ],
-    "tailwindMean": 1014.3911368015414,
-    "headwindMean": 1005.9663265306123,
-    "ratio": 1.0083748432216262,
+    "tailwindMean": 1010.1624266144814,
+    "headwindMean": 1002.7972972972973,
+    "ratio": 1.0073445843312845,
     "modelK": 0.02,
     "verdict": {
       "level": "weak",

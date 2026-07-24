@@ -115,12 +115,33 @@ export interface CorrelationResult {
   pValueApprox: number;
 }
 
+export interface PairwiseTest {
+  a: string; // category label A
+  b: string; // category label B
+  meanA: number;
+  meanB: number;
+  diff: number;
+  pctDiff: number;
+  t: number;
+  p: number;
+  significant: boolean; // p < 0.05
+}
+
+export interface CategoryAnalysis {
+  buckets: Bucket[]; // the 3 categories (0–20 / 20–80 / 80–100 %)
+  anovaF: number;
+  anovaP: number;
+  anovaSignificant: boolean;
+  pairwise: PairwiseTest[];
+}
+
 export interface BlueSkyAnalysis {
   metric: "nummern";
-  correlation: CorrelationResult; // cloudCover vs nummern
+  correlation: CorrelationResult; // cloudCover vs nummern (linear)
   buckets: Bucket[]; // by cloud cover class
-  clearMean: number; // mean nummern when clear (<25% cloud)
-  overcastMean: number; // mean nummern when overcast (>75% cloud)
+  clearMean: number; // mean nummern when clear (<20% cloud)
+  overcastMean: number; // mean nummern when overcast (>80% cloud)
+  categories: CategoryAnalysis; // non-linear / threshold view
   verdict: Verdict;
 }
 

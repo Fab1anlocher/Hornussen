@@ -10,7 +10,14 @@ import type {
   Venue,
 } from "../lib/types";
 import { tailwindFromVector } from "../lib/wind";
-import { buildVenueResolver, coordKey, readConfig, readData, writeJson } from "./lib-scrape";
+import {
+  buildVenueResolver,
+  coordKey,
+  isYouthTeam,
+  readConfig,
+  readData,
+  writeJson,
+} from "./lib-scrape";
 
 function makeObservation(
   m: Match,
@@ -66,6 +73,7 @@ function main() {
 
   const observations: Observation[] = [];
   for (const m of matches) {
+    if (isYouthTeam(m.home.team) || isYouthTeam(m.away.team)) continue; // exclude Nachwuchs
     const venue = resolve(m.home.team); // match location = home field
     const weatherRec = venue
       ? weatherByKey.get(`${coordKey(venue.lat, venue.lng)}@${m.date}`)

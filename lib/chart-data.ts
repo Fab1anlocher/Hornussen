@@ -39,16 +39,17 @@ export function binnedTrend(
     if (!buckets.has(b)) buckets.set(b, []);
     buckets.get(b)!.push(y);
   }
+  const round = (v: number, d = 3) => Math.round(v * 10 ** d) / 10 ** d;
   const bins: BinPoint[] = [];
   for (const [b, vals] of [...buckets.entries()].sort((a, c) => a[0] - c[0])) {
     const mid = xMin + b * binWidth;
     if (mid < xMin || mid > xMax) continue;
-    bins.push({ x: Math.round(mid * 100) / 100, y: mean(vals), count: vals.length, se: stdErr(vals) });
+    bins.push({ x: round(mid, 2), y: round(mean(vals)), count: vals.length, se: round(stdErr(vals)) });
   }
   const { slope, intercept } = ols(xs, ys);
   const line = [
-    { x: xMin, y: intercept + slope * xMin },
-    { x: xMax, y: intercept + slope * xMax },
+    { x: xMin, y: round(intercept + slope * xMin) },
+    { x: xMax, y: round(intercept + slope * xMax) },
   ];
-  return { bins, line, slope };
+  return { bins, line, slope: round(slope, 5) };
 }
