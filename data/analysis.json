@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-24T14:03:28.782Z",
+  "generatedAt": "2026-07-24T14:27:59.534Z",
   "seasons": [
     2013,
     2014,
@@ -40,7 +40,7 @@
   "totalMatches": 13905,
   "totalObservations": 27810,
   "observationsWithWeather": 27242,
-  "observationsWithWind": 2314,
+  "observationsWithWind": 4432,
   "blueSky": {
     "metric": "nummern",
     "correlation": {
@@ -182,43 +182,43 @@
   "wind": {
     "metric": "schlagpunkte",
     "correlation": {
-      "n": 2314,
-      "pearson": 0.060774497047785044,
-      "spearman": 0.06097529711873593,
-      "slope": 2.2811440221964556,
-      "intercept": 1007.7439328837825,
-      "ciLow": 0.03976364961490032,
-      "ciHigh": 0.09295519200460163,
-      "pValueApprox": 0.0034487308207662186
+      "n": 4432,
+      "pearson": 0.08091749425264906,
+      "spearman": 0.05943647476479013,
+      "slope": 2.877403405773135,
+      "intercept": 981.7096071220747,
+      "ciLow": 0.05196866307433121,
+      "ciHigh": 0.09703000803532999,
+      "pValueApprox": 6.880287924078641e-8
     },
     "buckets": [
       {
         "label": "Gegenwind (≤ −1 km/h)",
-        "count": 1036,
-        "mean": 1002.7972972972973,
-        "stdErr": 8.268686036888388
+        "count": 1802,
+        "mean": 974.3823529411765,
+        "stdErr": 6.319517037191904
       },
       {
         "label": "Windstill (±1 km/h)",
-        "count": 256,
-        "mean": 1017.984375,
-        "stdErr": 16.403396431341964
+        "count": 500,
+        "mean": 989.604,
+        "stdErr": 11.962057180601676
       },
       {
         "label": "Rückenwind (≥ +1 km/h)",
-        "count": 1022,
-        "mean": 1010.1624266144814,
-        "stdErr": 9.261748812481008
+        "count": 2130,
+        "mean": 988.6657276995305,
+        "stdErr": 6.0599206788504985
       }
     ],
-    "tailwindMean": 1010.1624266144814,
-    "headwindMean": 1002.7972972972973,
-    "ratio": 1.0073445843312845,
+    "tailwindMean": 988.6657276995305,
+    "headwindMean": 974.3823529411765,
+    "ratio": 1.0146589013186043,
     "modelK": 0.02,
     "verdict": {
       "level": "weak",
       "headline": "Leichter Rückenwind-Vorteil",
-      "detail": "Rückenwind geht tendenziell mit mehr Schlagpunkten einher (r=0.06), aber nicht klar gesichert."
+      "detail": "Rückenwind geht tendenziell mit mehr Schlagpunkten einher (r=0.08), aber nicht klar gesichert."
     }
   }
 }

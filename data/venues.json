@@ -8,7 +8,8 @@
     "teams": [
       "Aefligen"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "aeschi-47-1750-7-6669",
@@ -23,7 +24,8 @@
       "Aeschi A",
       "Aeschi B"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "aetingen-limpach-47-1223-7-5041",
@@ -39,7 +41,8 @@
       "Aetingen-Limpach B",
       "Aetingen-Limpach N"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "alchenstorf-47-1279-7-5894",
@@ -53,7 +56,8 @@
     "teams": [
       "Alchenstorf"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "arch-47-1823-7-4383",
@@ -67,7 +71,8 @@
     "teams": [
       "Arch"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "auswil-wyssbach-47-1539-7-8140",
@@ -82,7 +87,8 @@
       "Auswil-Wyssbach A",
       "Auswil-Wyssbach B"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "balzenwil-47-2301-7-8555",
@@ -97,7 +103,8 @@
       "Balzenwil A",
       "Balzenwil B"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "baeriswil-junghornusser-47-0132-7-5340",
@@ -111,7 +118,8 @@
     "teams": [
       "Bäriswil Junghornusser"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "belp-toffen-46-9101-7-4941",
@@ -125,7 +133,8 @@
     "teams": [
       "Belp-Toffen"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "bern-beundenfeld-46-9621-7-4771",
@@ -141,7 +150,8 @@
       "Bern-Beundenfeld B",
       "Bern-Beundenfeld C"
     ],
-    "playingDirectionDeg": 230.39
+    "playingDirectionDeg": 230.39,
+    "source": "directory"
   },
   {
     "id": "biberen-ulmiz-wileroltigen-46-9398-7-1948",
@@ -152,7 +162,8 @@
     "teams": [
       "Biberen-Ulmiz-Wileroltigen A"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "biberen-ulmiz-wileroltigen-46-9729-7-2504",
@@ -163,7 +174,8 @@
     "teams": [
       "Biberen-Ulmiz-Wileroltigen B"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "biberist-dorf-47-1915-7-5769",
@@ -177,7 +189,8 @@
     "teams": [
       "Biberist-Dorf"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "biel-schwadernau-47-1180-7-3169",
@@ -192,7 +205,8 @@
       "Biel-Schwadernau A",
       "Biel-Schwadernau B"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "bigel-goldbach-47-0070-7-6700",
@@ -206,7 +220,8 @@
     "teams": [
       "Bigel-Goldbach"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "bigenthal-walkringen-46-9405-7-6128",
@@ -221,7 +236,8 @@
       "Bigenthal-Walkringen A",
       "Bigenthal-Walkringen B"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "biglen-arni-46-9363-7-6531",
@@ -237,7 +253,8 @@
       "Biglen-Arni B",
       "Biglen-Arni C"
     ],
-    "playingDirectionDeg": 265.96
+    "playingDirectionDeg": 265.96,
+    "source": "directory"
   },
   {
     "id": "bleienbach-47-1948-7-7626",
@@ -251,7 +268,8 @@
     "teams": [
       "Bleienbach"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "bollodingen-bettenhausen-47-1784-7-7113",
@@ -265,7 +283,8 @@
     "teams": [
       "Bollodingen-Bettenhausen"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "bowil-46-9025-7-6917",
@@ -279,7 +298,8 @@
     "teams": [
       "Bowil"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "bramberg-46-9149-7-2841",
@@ -294,7 +314,8 @@
       "Bramberg A",
       "Bramberg B"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "bueren-zum-hof-47-1007-7-5195",
@@ -309,7 +330,8 @@
       "Büren zum Hof A",
       "Büren zum Hof B"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "burgdorf-47-0431-7-5932",
@@ -323,7 +345,8 @@
     "teams": [
       "Burgdorf"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "busswil-b-heimiswil-47-0600-7-6540",
@@ -337,7 +360,8 @@
     "teams": [
       "Busswil b. Heimiswil"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "busswil-b-ueren-47-0993-7-3105",
@@ -352,7 +376,8 @@
       "Busswil b. Büren A",
       "Busswil b. Büren B"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "dieboldshausen-46-9675-7-5914",
@@ -366,7 +391,8 @@
     "teams": [
       "Dieboldshausen"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "diessbach-b-ueren-47-1023-7-3715",
@@ -380,7 +406,8 @@
     "teams": [
       "Diessbach b. Büren"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "dotzigen-47-1257-7-3399",
@@ -394,7 +421,8 @@
     "teams": [
       "Dotzigen"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "duerrenroth-schmidigen-47-0842-7-7774",
@@ -410,7 +438,8 @@
       "Dürrenroth-Schmidigen B",
       "Dürrenroth-Schmidigen C"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "epsach-47-0760-7-2176",
@@ -425,7 +454,8 @@
       "Epsach A",
       "Epsach B"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "eriswil-47-0707-7-8790",
@@ -440,7 +470,8 @@
       "Eriswil A",
       "Eriswil B"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "ersigen-47-1168-7-5835",
@@ -455,7 +486,8 @@
       "Ersigen A",
       "Ersigen B"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "etzelkofen-47-0809-7-4836",
@@ -469,7 +501,8 @@
     "teams": [
       "Etzelkofen A"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "ferenberg-46-9695-7-5394",
@@ -483,7 +516,8 @@
     "teams": [
       "Ferenberg"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "frittenbach-emmenmatt-ilfis-46-9505-7-7384",
@@ -495,7 +529,8 @@
       "Frittenbach-Emmenmatt-Ilfis A",
       "Frittenbach-Emmenmatt-Ilfis C"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "frittenbach-emmenmatt-ilfis-46-9408-7-7602",
@@ -506,7 +541,8 @@
     "teams": [
       "Frittenbach-Emmenmatt-Ilfis B"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "gammen-46-9276-7-2129",
@@ -520,7 +556,8 @@
     "teams": [
       "Gammen"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "gasel-46-8921-7-4144",
@@ -535,7 +572,8 @@
       "Gasel",
       "Gasel NWH"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "gerlafingen-zielebach-47-1650-7-5656",
@@ -550,7 +588,8 @@
       "Gerlafingen-Zielebach A",
       "Gerlafingen-Zielebach B"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": 168.92,
+    "source": "directory"
   },
   {
     "id": "gohl-46-9435-7-8159",
@@ -564,7 +603,8 @@
     "teams": [
       "Gohl"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "gondiswil-47-1511-7-8582",
@@ -579,7 +619,8 @@
       "Gondiswil A",
       "Gondiswil B"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "gossau-47-2996-8-7493",
@@ -594,7 +635,8 @@
       "Gossau A",
       "Gossau B"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "graben-47-2235-7-7277",
@@ -608,7 +650,8 @@
     "teams": [
       "Graben"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "grafenried-jegenstorf-47-0731-7-4953",
@@ -622,7 +665,8 @@
     "teams": [
       "Grafenried-Jegenstorf"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "grasswil-47-1492-7-6613",
@@ -637,7 +681,8 @@
       "Grasswil B",
       "Höchstetten C"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "grenchen-47-1780-7-3898",
@@ -651,7 +696,8 @@
     "teams": [
       "Grenchen"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "gruenenmatt-brandis-46-9967-7-7042",
@@ -666,7 +712,8 @@
       "Grünenmatt-Brandis A",
       "Grünenmatt-Brandis B"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "habstetten-46-9780-7-5167",
@@ -680,7 +727,8 @@
     "teams": [
       "Habstetten"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "halten-47-1669-7-6174",
@@ -694,7 +742,8 @@
     "teams": [
       "Halten"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "hasle-b-burgdorf-47-0207-7-6479",
@@ -709,7 +758,8 @@
       "Hasle b. Burgdorf A",
       "Hasle b. Burgdorf B"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "haeusernmoos-47-0563-7-7599",
@@ -720,7 +770,8 @@
     "teams": [
       "Häusernmoos"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "heimberg-46-7597-7-6070",
@@ -731,7 +782,8 @@
     "teams": [
       "Heimberg"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "heimiswil-47-0921-7-6633",
@@ -747,7 +799,8 @@
       "Heimiswil C",
       "Heimiswil D"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": 258.62,
+    "source": "directory"
   },
   {
     "id": "heimiswil-47-0660-7-6659",
@@ -761,7 +814,8 @@
     "teams": [
       "Heimiswil B"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "hergiswil-am-napf-47-0699-7-9555",
@@ -775,7 +829,8 @@
     "teams": [
       "Hergiswil am Napf"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "hettiswil-eintracht-moosseedorf-47-0385-7-5793",
@@ -790,7 +845,8 @@
       "Hettiswil-Eintracht-Moosseedorf A",
       "Hettiswil-Eintracht-Moosseedorf B"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "hettiswil-eintracht-moosseedorf-47-0119-7-4980",
@@ -801,7 +857,8 @@
     "teams": [
       "Hettiswil-Eintracht-Moosseedorf C"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "hindelbank-zollikofen-47-0441-7-5637",
@@ -812,7 +869,8 @@
     "teams": [
       "Hindelbank-Zollikofen B"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "hindelbank-zollikofen-46-9868-7-4539",
@@ -823,7 +881,8 @@
     "teams": [
       "Hindelbank-Zollikofen A"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "hintermoos-reiden-47-2556-8-0087",
@@ -835,7 +894,8 @@
       "Hintermoos-Reiden A",
       "Hintermoos-Reiden B"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "hoechstetten-47-1520-7-6397",
@@ -850,7 +910,8 @@
       "Höchstetten A",
       "Höchstetten B"
     ],
-    "playingDirectionDeg": 129.42
+    "playingDirectionDeg": 129.42,
+    "source": "directory"
   },
   {
     "id": "huttwil-47-1123-7-8678",
@@ -864,7 +925,8 @@
     "teams": [
       "Huttwil"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "kappelen-saurenhorn-47-0651-7-2857",
@@ -878,7 +940,8 @@
     "teams": [
       "Kappelen-Saurenhorn"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "kirchberg-47-0984-7-5802",
@@ -892,7 +955,8 @@
     "teams": [
       "Kirchberg"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "kirchdorf-herbligen-46-8817-7-5456",
@@ -907,7 +971,8 @@
       "Kirchdorf-Herbligen",
       "Münsingen"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "kraeiligen-baetterkinden-47-1511-7-5444",
@@ -921,7 +986,8 @@
     "teams": [
       "Kräiligen-Bätterkinden"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "krauchthal-hub-47-0043-7-5554",
@@ -937,7 +1003,8 @@
       "Krauchthal-Hub B",
       "Krauchthal-Hub NWH"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "kriechenwil-46-9120-7-2120",
@@ -951,7 +1018,8 @@
     "teams": [
       "Kriechenwil"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "langnau-berge-46-9699-7-8058",
@@ -966,7 +1034,8 @@
       "Langnau-Berge",
       "Langnau-Berge NWH"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "lohn-47-1757-7-5241",
@@ -980,7 +1049,8 @@
     "teams": [
       "Lohn"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "lotzwil-47-1932-7-7815",
@@ -991,7 +1061,8 @@
     "teams": [
       "Lotzwil"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "lueg-i-47-0772-7-7144",
@@ -1005,7 +1076,8 @@
     "teams": [
       "Lueg i. E."
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "luesslingen-nennigkofen-47-1973-7-4960",
@@ -1019,7 +1091,8 @@
     "teams": [
       "Lüsslingen-Nennigkofen"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "lyss-47-0813-7-2978",
@@ -1034,7 +1107,8 @@
       "Lyss A",
       "Lyss B"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": 197.65,
+    "source": "directory"
   },
   {
     "id": "lyssach-47-0786-7-5858",
@@ -1049,7 +1123,8 @@
       "Lyssach A",
       "Lyssach B"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "maettenwil-brittnau-47-2428-7-9195",
@@ -1064,7 +1139,8 @@
       "Mättenwil-Brittnau A",
       "Mättenwil-Brittnau B"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "messen-47-0902-7-4612",
@@ -1078,7 +1154,8 @@
     "teams": [
       "Messen"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "muelchi-47-1085-7-4715",
@@ -1092,7 +1169,8 @@
     "teams": [
       "Mülchi"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "muenchenbuchsee-wohlen-47-0177-7-4335",
@@ -1103,7 +1181,8 @@
     "teams": [
       "Münchenbuchsee-Wohlen B"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "muenchenbuchsee-wohlen-46-9933-7-3493",
@@ -1114,7 +1193,8 @@
     "teams": [
       "Münchenbuchsee-Wohlen A"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "muetzlenberg-nesselgraben-46-9701-7-7056",
@@ -1128,7 +1208,8 @@
     "teams": [
       "Mützlenberg-Nesselgraben A"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "oberbottigen-46-9296-7-3350",
@@ -1139,7 +1220,8 @@
     "teams": [
       "Oberbottigen"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "oberdiessbach-46-8363-7-6096",
@@ -1155,7 +1237,8 @@
       "Oberdiessbach B",
       "Oberdiessbach C"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "obergerlafingen-47-1497-7-5896",
@@ -1170,7 +1253,8 @@
       "Obergerlafingen A",
       "Obergerlafingen B"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "obergoldbach-46-9625-7-6775",
@@ -1181,7 +1265,8 @@
     "teams": [
       "Obergoldbach"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "oberoenz-niederoenz-47-1811-7-6786",
@@ -1196,7 +1281,8 @@
       "Oberönz-Niederönz A",
       "Oberönz-Niederönz B"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "obersteckholz-47-2223-7-8375",
@@ -1210,7 +1296,8 @@
     "teams": [
       "Obersteckholz"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "oberthal-46-9289-7-6807",
@@ -1224,7 +1311,8 @@
     "teams": [
       "Oberthal"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "oberwil-47-1304-7-3898",
@@ -1235,7 +1323,8 @@
     "teams": [
       "Oberwil"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "obfelden-47-2582-8-4402",
@@ -1249,7 +1338,8 @@
     "teams": [
       "Obfelden"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "oeschenbach-kleindietwil-47-1106-7-7467",
@@ -1263,7 +1353,8 @@
     "teams": [
       "Oeschenbach-Kleindietwil A"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "oeschenbach-kleindietwil-47-1410-7-7924",
@@ -1277,7 +1368,8 @@
     "teams": [
       "Oeschenbach-Kleindietwil B"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "oschwand-biembach-47-0089-7-5877",
@@ -1292,7 +1384,8 @@
       "Oschwand-Biembach A",
       "Oschwand-Biembach B"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "recherswil-kriegstetten-47-1599-7-6052",
@@ -1308,7 +1401,8 @@
       "Recherswil-Kriegstetten B",
       "Recherswil-Kriegstetten C"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "reinach-47-2652-8-1597",
@@ -1322,7 +1416,8 @@
     "teams": [
       "Reinach"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "richigen-46-9155-7-5731",
@@ -1338,7 +1433,8 @@
       "Richigen B",
       "Richigen C"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "rohrbach-47-1242-7-8243",
@@ -1352,7 +1448,8 @@
     "teams": [
       "Rohrbach"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "rohrbachgraben-47-1114-7-8025",
@@ -1367,7 +1464,8 @@
       "Rohrbachgraben A",
       "Rohrbachgraben B"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "roethenbach-i-46-8601-7-7526",
@@ -1383,7 +1481,8 @@
       "Röthenbach i. E. B",
       "Röthenbach i. E. C"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "rothrist-olten-47-2925-7-8559",
@@ -1397,7 +1496,8 @@
     "teams": [
       "Rothrist-Olten"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "ruederswil-46-9899-7-7010",
@@ -1413,7 +1513,8 @@
       "Rüderswil B",
       "Rüderswil C"
     ],
-    "playingDirectionDeg": 237.33
+    "playingDirectionDeg": 237.33,
+    "source": "directory"
   },
   {
     "id": "ruedtligen-alchenflueh-47-0778-7-5642",
@@ -1428,7 +1529,8 @@
       "Rüdtligen-Alchenflüh A",
       "Rüdtligen-Alchenflüh B"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "rueedisbach-47-1197-7-6986",
@@ -1442,7 +1544,8 @@
     "teams": [
       "Rüedisbach"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "rueegsau-affoltern-47-0596-7-7329",
@@ -1458,7 +1561,8 @@
       "Rüegsau-Affoltern B",
       "Rüegsau-Affoltern NH"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "ruetschelen-47-1724-7-7663",
@@ -1473,7 +1577,8 @@
       "Rütschelen A",
       "Rütschelen B"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "schafhausen-i-46-9922-7-6441",
@@ -1488,7 +1593,8 @@
       "Schafhausen i. E. A",
       "Schafhausen i. E. B"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "schlosswil-gysenstein-46-9053-7-6230",
@@ -1502,7 +1608,8 @@
     "teams": [
       "Schlosswil-Gysenstein"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "schoren-47-2247-7-7728",
@@ -1517,7 +1624,8 @@
       "Schoren A",
       "Schoren B"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "schuepbach-46-9416-7-7497",
@@ -1533,7 +1641,8 @@
       "Schüpbach B"
     ],
     "playingDirectionDeg": 215.96,
-    "playingDirectionNote": "Schüpbach A & B"
+    "playingDirectionNote": "Schüpbach A & B",
+    "source": "directory"
   },
   {
     "id": "schwarzenburg-46-8085-7-3479",
@@ -1544,7 +1653,8 @@
     "teams": [
       "Schwarzenburg A"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "schwarzhaeusern-aarwangen-47-2541-7-7636",
@@ -1558,7 +1668,8 @@
     "teams": [
       "Schwarzhäusern-Aarwangen"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "sinneringen-vechigen-46-9463-7-5476",
@@ -1573,7 +1684,8 @@
       "Sinneringen-Vechigen A",
       "Sinneringen-Vechigen B"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "sparring-47-0873-7-5893",
@@ -1585,7 +1697,8 @@
       "Sparring",
       "Sparring SN"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "stalden-dorf-46-8750-7-6371",
@@ -1600,7 +1713,8 @@
       "Stalden-Dorf A",
       "Stalden-Dorf B"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "steinen-b-signau-46-8973-7-7144",
@@ -1616,7 +1730,8 @@
       "Steinen b. Signau B",
       "Steinen b. Signau C"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "steingrube-zimmerberg-47-0205-7-5944",
@@ -1630,7 +1745,8 @@
     "teams": [
       "Steingrube-Zimmerberg"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "studen-madretsch-47-1163-7-3173",
@@ -1644,7 +1760,8 @@
     "teams": [
       "Studen-Madretsch"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "sumiswald-47-0307-7-7615",
@@ -1658,7 +1775,8 @@
     "teams": [
       "Sumiswald"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "sueri-spengelried-46-9183-7-3160",
@@ -1672,7 +1790,8 @@
     "teams": [
       "Süri-Spengelried"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "taegertschi-haeutligen-46-8614-7-6060",
@@ -1686,7 +1805,8 @@
     "teams": [
       "Tägertschi-Häutligen"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "tenniken-47-4320-7-8014",
@@ -1700,7 +1820,8 @@
     "teams": [
       "Tenniken"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "thalgraben-46-9783-7-6595",
@@ -1714,7 +1835,8 @@
     "teams": [
       "Thalgraben"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "thoerigen-47-1744-7-7413",
@@ -1730,7 +1852,8 @@
       "Thörigen B",
       "Thörigen C"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": 241.16,
+    "source": "directory"
   },
   {
     "id": "thoerishaus-frauchwil-zimlisberg-47-0580-7-3819",
@@ -1744,7 +1867,8 @@
     "teams": [
       "Thörishaus-Frauchwil-Zimlisberg A"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "thoerishaus-frauchwil-zimlisberg-46-8922-7-3382",
@@ -1758,7 +1882,8 @@
     "teams": [
       "Thörishaus-Frauchwil-Zimlisberg B"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "thun-46-7597-7-6056",
@@ -1772,7 +1897,8 @@
     "teams": [
       "Thun"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "thunstetten-47-1959-7-7332",
@@ -1787,7 +1913,8 @@
       "Thunstetten",
       "Thunstetten N"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "tramelan-47-2302-7-0651",
@@ -1802,7 +1929,8 @@
       "Tramelan",
       "Tramelan Nachwuchshornusser"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "trimstein-46-8985-7-5674",
@@ -1817,7 +1945,8 @@
       "Trimstein A",
       "Trimstein B"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "urtenen-47-0327-7-4842",
@@ -1832,7 +1961,8 @@
       "Urtenen A",
       "Urtenen B"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": 219.2,
+    "source": "directory"
   },
   {
     "id": "utzenstorf-koppigen-47-1143-7-5388",
@@ -1847,7 +1977,8 @@
       "Utzenstorf-Koppigen A",
       "Utzenstorf-Koppigen B"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "utzigen-46-9598-7-5518",
@@ -1863,7 +1994,8 @@
       "Utzigen B",
       "Utzigen C"
     ],
-    "playingDirectionDeg": 210.76
+    "playingDirectionDeg": 210.86,
+    "source": "directory"
   },
   {
     "id": "walliswil-47-2239-7-6852",
@@ -1877,7 +2009,8 @@
     "teams": [
       "Walliswil"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "wangenried-wanzwil-47-1987-7-6895",
@@ -1891,7 +2024,8 @@
     "teams": [
       "Wangenried-Wanzwil"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "waeseli-46-9477-7-5836",
@@ -1907,7 +2041,8 @@
       "Wäseli B",
       "Wäseli C"
     ],
-    "playingDirectionDeg": 278.46
+    "playingDirectionDeg": 278.46,
+    "source": "directory"
   },
   {
     "id": "wasen-lugenbach-47-0355-7-7665",
@@ -1924,7 +2059,8 @@
       "Wasen-Lugenbach C",
       "Wasen-Lugenbach D"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": 225.52,
+    "source": "directory"
   },
   {
     "id": "wattenwil-46-7561-7-5180",
@@ -1939,7 +2075,8 @@
       "Wattenwil A",
       "Wattenwil B"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "wichtrach-46-8351-7-5753",
@@ -1954,7 +2091,8 @@
       "Wichtrach A",
       "Wichtrach B"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "wiedlisbach-47-2566-7-6429",
@@ -1968,7 +2106,8 @@
     "teams": [
       "Wiedlisbach"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "wiler-47-1591-7-5569",
@@ -1982,7 +2121,8 @@
     "teams": [
       "Wiler"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "winistorf-seeberg-47-1540-7-6471",
@@ -1996,7 +2136,8 @@
     "teams": [
       "Winistorf-Seeberg A"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "winistorf-seeberg-47-1675-7-6654",
@@ -2010,7 +2151,8 @@
     "teams": [
       "Winistorf-Seeberg B"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "winterthur-47-4823-8-6928",
@@ -2025,7 +2167,8 @@
       "Winterthur A",
       "Winterthur B"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "worb-46-9153-7-5728",
@@ -2039,7 +2182,8 @@
     "teams": [
       "Worb"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "wynigen-rumendingen-47-0978-7-6398",
@@ -2053,7 +2197,8 @@
     "teams": [
       "Wynigen-Rumendingen"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "wyssachen-47-1002-7-8180",
@@ -2064,7 +2209,8 @@
     "teams": [
       "Wyssachen"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "zauggenried-kernenried-47-0717-7-5539",
@@ -2080,7 +2226,8 @@
       "Zauggenried-Kernenried B",
       "Zauggenried-Kernenried Nachwuchshornusser"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "zaeziwil-reutenen-46-9011-7-6715",
@@ -2095,7 +2242,8 @@
       "Zäziwil-Reutenen A",
       "Zäziwil-Reutenen C"
     ],
-    "playingDirectionDeg": 184.43
+    "playingDirectionDeg": 184.43,
+    "source": "directory"
   },
   {
     "id": "zaeziwil-reutenen-46-8927-7-6485",
@@ -2109,7 +2257,8 @@
     "teams": [
       "Zäziwil-Reutenen B"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "zimmerwald-46-8865-7-4732",
@@ -2124,7 +2273,8 @@
       "Zimmerwald A",
       "Zimmerwald B"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "zollbrueck-46-9635-7-7463",
@@ -2138,7 +2288,8 @@
     "teams": [
       "Zollbrück"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   },
   {
     "id": "zuchwil-47-2055-7-5722",
@@ -2153,6 +2304,7 @@
       "Zuchwil A",
       "Zuchwil B"
     ],
-    "playingDirectionDeg": null
+    "playingDirectionDeg": null,
+    "source": "directory"
   }
 ]

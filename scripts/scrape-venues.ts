@@ -6,6 +6,7 @@ import {
   baseName,
   coordKey,
   fetchWithRetry,
+  findDirection,
   isYouthTeam,
   readConfig,
   slug,
@@ -47,10 +48,7 @@ async function main() {
     )[0];
     const rep = group[0];
 
-    // Match a configured playing direction by nearest coordinate (≤ ~60 m).
-    const dir = cfg.directions.find(
-      (d) => Math.abs(d.lat - rep.lat) < 0.0006 && Math.abs(d.lng - rep.lng) < 0.0009,
-    );
+    const dir = findDirection(rep.lat, rep.lng, cfg.directions);
 
     venues.push({
       id: slug(`${name}-${key}`),
@@ -64,6 +62,7 @@ async function main() {
       teams,
       playingDirectionDeg: dir ? dir.directionDeg : null,
       playingDirectionNote: dir?.note,
+      source: "directory",
     });
   }
 

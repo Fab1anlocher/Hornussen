@@ -59,6 +59,18 @@ export function baseName(team: string): string {
     .trim();
 }
 
+/** Find a configured playing direction for a coordinate (≤ ~70 m tolerance). */
+export function findDirection(
+  lat: number,
+  lng: number,
+  directions: { lat: number; lng: number; directionDeg: number; note?: string }[],
+): { directionDeg: number; note?: string } | null {
+  const d = directions.find(
+    (x) => Math.abs(x.lat - lat) < 0.0006 && Math.abs(x.lng - lng) < 0.0009,
+  );
+  return d ? { directionDeg: d.directionDeg, note: d.note } : null;
+}
+
 /** True for youth / Nachwuchs teams (e.g. "Auswil-Wyssbach NW") — excluded from the analysis. */
 export function isYouthTeam(name: string): boolean {
   return /\b(NW|Nachwuchs|Junioren|Junior|Jugend)\b/i.test(name);

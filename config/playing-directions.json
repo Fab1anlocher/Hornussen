@@ -1,5 +1,5 @@
 {
-  "_comment": "Spielrichtung = Azimut (0°=N, 90°=O, 180°=S, 270°=W), in die der Nouss geschlagen wird. Wird dem Platz anhand der Koordinaten zugeordnet (gilt für ALLE Teams dieses Platzes). Ergänze weitere Plätze nach Bedarf. 'model.k': Faktor für erwartete Schlagpunkte = 1 + k * Rückenwind[km/h] (Default 0.02 = +2%/km/h, d.h. ~+20% bei 10 km/h Rückenwind). playWindow = angenommene Anspielzeit (Std, lokal); Default 13–13 = fix 13:00 Uhr, da exakte Anspielzeiten nicht in den PDFs stehen.",
+  "_comment": "Spielrichtung = Azimut (0°=N, 90°=O, 180°=S, 270°=W), in die der Nouss geschlagen wird. Wird dem Platz anhand der Koordinaten zugeordnet (gilt für ALLE Teams dieses Platzes, auch geocodete). Koordinaten aus data/venues.json bzw. data/geo-venues.json. 'model.k': Faktor erwartete Schlagpunkte = 1 + k * Rückenwind[km/h] (Default 0.02 = +2%/km/h). playWindow = angenommene Anspielzeit (Std, lokal); Default 13–13 = fix 13:00 Uhr, da exakte Anspielzeiten nicht in den PDFs stehen.",
   "model": {
     "k": 0.02,
     "playWindowStart": 13,
@@ -13,6 +13,14 @@
     { "venue": "Bern-Beundenfeld", "lat": 46.962126, "lng": 7.47714, "directionDeg": 230.39 },
     { "venue": "Biglen-Arni (Arni)", "lat": 46.936316, "lng": 7.653124, "directionDeg": 265.96 },
     { "venue": "Zäziwil-Reutenen", "lat": 46.901111, "lng": 7.671547, "directionDeg": 184.43 },
-    { "venue": "Utzigen", "lat": 46.959782, "lng": 7.551792, "directionDeg": 210.76 }
+    { "venue": "Utzigen", "lat": 46.959782, "lng": 7.551792, "directionDeg": 210.86 },
+    { "venue": "Wasen-Lugenbach", "lat": 47.035499, "lng": 7.766508, "directionDeg": 225.52 },
+    { "venue": "Frauenfeld", "lat": 47.55776, "lng": 8.89893, "directionDeg": 170.62, "note": "Ort-Koordinaten (geocodet)" },
+    { "venue": "Dürrenroth", "lat": 47.08953, "lng": 7.7917, "directionDeg": 181.34, "note": "Ort-Koordinaten (geocodet)" },
+    { "venue": "Lyss", "lat": 47.08133, "lng": 7.297779, "directionDeg": 197.65 },
+    { "venue": "Gerlafingen-Zielebach", "lat": 47.164994, "lng": 7.5656, "directionDeg": 168.92 },
+    { "venue": "Thörigen", "lat": 47.174399, "lng": 7.741327, "directionDeg": 241.16 },
+    { "venue": "Heimiswil", "lat": 47.092056, "lng": 7.663259, "directionDeg": 258.62 },
+    { "venue": "Urtenen", "lat": 47.032744, "lng": 7.484152, "directionDeg": 219.2 }
   ]
 }

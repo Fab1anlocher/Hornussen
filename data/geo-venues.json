@@ -44,7 +44,8 @@
     "teams": [
       "Dürrenroth A"
     ],
-    "playingDirectionDeg": null,
+    "playingDirectionDeg": 181.34,
+    "playingDirectionNote": "Ort-Koordinaten (geocodet)",
     "source": "geocoded"
   },
   {
@@ -128,7 +129,8 @@
     "teams": [
       "Dürrenroth B"
     ],
-    "playingDirectionDeg": null,
+    "playingDirectionDeg": 181.34,
+    "playingDirectionNote": "Ort-Koordinaten (geocodet)",
     "source": "geocoded"
   },
   {
@@ -644,7 +646,8 @@
     "teams": [
       "Frauenfeld"
     ],
-    "playingDirectionDeg": null,
+    "playingDirectionDeg": 170.62,
+    "playingDirectionNote": "Ort-Koordinaten (geocodet)",
     "source": "geocoded"
   },
   {
@@ -692,7 +695,8 @@
     "teams": [
       "Frauenfeld-Schaffhausen A"
     ],
-    "playingDirectionDeg": null,
+    "playingDirectionDeg": 170.62,
+    "playingDirectionNote": "Ort-Koordinaten (geocodet)",
     "source": "geocoded"
   },
   {
@@ -704,7 +708,8 @@
     "teams": [
       "Frauenfeld-Schaffhausen"
     ],
-    "playingDirectionDeg": null,
+    "playingDirectionDeg": 170.62,
+    "playingDirectionNote": "Ort-Koordinaten (geocodet)",
     "source": "geocoded"
   },
   {

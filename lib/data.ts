@@ -2,7 +2,7 @@
 // pipeline scripts. Used by React Server Components.
 import fs from "node:fs";
 import path from "node:path";
-import type { AnalysisResult, Match, Observation, Venue } from "./types";
+import type { AnalysisResult, Match, Observation, PlayingDirectionEntry, Venue } from "./types";
 import type { TrendData } from "./chart-data";
 
 const DATA_DIR = path.join(process.cwd(), "data");
@@ -18,6 +18,16 @@ function readJson<T>(file: string, fallback: T): T {
 
 export function getVenues(): Venue[] {
   return readJson<Venue[]>("venues.json", []);
+}
+
+/** User-configured playing directions (from config/, source of truth). */
+export function getPlayingDirections(): PlayingDirectionEntry[] {
+  try {
+    const p = path.join(process.cwd(), "config", "playing-directions.json");
+    return (JSON.parse(fs.readFileSync(p, "utf-8")).directions ?? []) as PlayingDirectionEntry[];
+  } catch {
+    return [];
+  }
 }
 
 export function getMatches(): Match[] {

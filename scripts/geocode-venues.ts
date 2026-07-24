@@ -6,14 +6,16 @@
 // Reads data/venues.json + data/matches.json, writes data/geo-venues.json.
 import fs from "node:fs";
 import path from "node:path";
-import type { Match, Venue } from "../lib/types";
+import type { Match, PlayingDirectionsConfig, Venue } from "../lib/types";
 import {
   buildVenueResolver,
   CACHE_DIR,
   coordKey,
   ensureDir,
   fetchWithRetry,
+  findDirection,
   isYouthTeam,
+  readConfig,
   readData,
   slug,
   sleep,
@@ -64,6 +66,10 @@ async function geocode(
 async function main() {
   const venues = readData<Venue[]>("venues.json", []);
   const matches = readData<Match[]>("matches.json", []);
+  const cfg = readConfig<PlayingDirectionsConfig>("playing-directions.json", {
+    model: { k: 0.02, playWindowStart: 13, playWindowEnd: 13 },
+    directions: [],
+  });
   const resolve = buildVenueResolver(venues);
 
   // Unresolved home teams (these determine match location) with match counts.
@@ -92,6 +98,7 @@ async function main() {
     fs.writeFileSync(cachePath, JSON.stringify(cache, null, 2));
     if (!hit) continue;
     ok++;
+    const dir = findDirection(hit.latitude, hit.longitude, cfg.directions);
     geoVenues.push({
       id: slug(`geo-${team}-${coordKey(hit.latitude, hit.longitude)}`),
       name: team,
@@ -99,7 +106,8 @@ async function main() {
       lat: hit.latitude,
       lng: hit.longitude,
       teams: [team],
-      playingDirectionDeg: null,
+      playingDirectionDeg: dir ? dir.directionDeg : null,
+      playingDirectionNote: dir?.note,
       source: "geocoded",
     });
   }

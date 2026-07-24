@@ -1,4 +1,4 @@
-import { getAnalysis, getCharts, getVenues } from "@/lib/data";
+import { getAnalysis, getCharts, getPlayingDirections } from "@/lib/data";
 import { BarBuckets } from "@/components/charts/BarBuckets";
 import { BinnedTrend } from "@/components/charts/BinnedTrend";
 import { SectionHeading, StatTile, VerdictBadge } from "@/components/ui";
@@ -9,13 +9,14 @@ export const metadata = { title: "Rückenwind & Schlagpunkte — Hornussen-Wette
 export default function WindPage() {
   const analysis = getAnalysis();
   const charts = getCharts();
-  const venues = getVenues();
   if (!analysis || !charts) return <NoData />;
 
   const w = analysis.wind;
   const trend = charts.wind;
   const corr = w.correlation;
-  const configured = venues.filter((v) => v.playingDirectionDeg != null);
+  const configured = getPlayingDirections()
+    .slice()
+    .sort((a, b) => a.venue.localeCompare(b.venue, "de"));
 
   return (
     <div className="mx-auto max-w-5xl px-4 py-12">
@@ -115,12 +116,12 @@ export default function WindPage() {
           <div className="flex flex-wrap gap-2">
             {configured.map((v) => (
               <span
-                key={v.id}
+                key={v.venue}
                 className="inline-flex items-center gap-1.5 rounded-full border border-[var(--border)] bg-[var(--surface-2)] px-3 py-1 text-sm"
               >
-                <span className="font-medium">{v.name}</span>
+                <span className="font-medium">{v.venue}</span>
                 <span className="text-[var(--text-muted)]">
-                  {Math.round(v.playingDirectionDeg!)}° {cardinal(v.playingDirectionDeg!)}
+                  {Math.round(v.directionDeg)}° {cardinal(v.directionDeg)}
                 </span>
               </span>
             ))}
