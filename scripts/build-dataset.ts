@@ -75,8 +75,15 @@ function main() {
   for (const w of weather) weatherByKey.set(w.key, w);
 
   const observations: Observation[] = [];
+  let skippedNotPlayed = 0;
   for (const m of matches) {
     if (isYouthTeam(m.home.team) || isYouthTeam(m.away.team)) continue; // exclude Nachwuchs
+    // Non-played rounds are recorded as 0:0 in the PDFs (postponed/rain); a real
+    // game always scores Schlagpunkte, so exclude these from the analysis.
+    if (m.home.schlagpunkte === 0 || m.away.schlagpunkte === 0) {
+      skippedNotPlayed++;
+      continue;
+    }
     const venue = resolve(m.home.team); // match location = home field
     const weatherRec = venue
       ? weatherByKey.get(`${coordKey(venue.lat, venue.lng)}@${m.date}`)
@@ -93,6 +100,7 @@ function main() {
   ).length;
   console.log(
     `Built ${observations.length} observations from ${matches.length} matches\n` +
+      `  skipped (not played, 0:0): ${skippedNotPlayed} matches\n` +
       `  with weather: ${withWeather}\n  with wind (direction set): ${withWind}`,
   );
   writeJson("dataset.json", observations);
