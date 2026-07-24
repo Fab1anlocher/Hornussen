@@ -18,10 +18,12 @@ interface Props {
   unit: string;
   /** Color each bar; defaults to sequential blue. Diverging: pass colors. */
   colors?: string[];
+  /** If set, that bar is fully saturated and the rest are dimmed. */
+  highlightIndex?: number;
   domainPad?: number;
 }
 
-export function BarBuckets({ buckets, unit, colors, domainPad = 0.08 }: Props) {
+export function BarBuckets({ buckets, unit, colors, highlightIndex, domainPad = 0.08 }: Props) {
   const data = buckets
     .filter((b) => b.count > 0)
     .map((b) => ({ ...b, mean: Math.round(b.mean * 100) / 100, se: Math.round(b.stdErr * 100) / 100 }));
@@ -65,7 +67,11 @@ export function BarBuckets({ buckets, unit, colors, domainPad = 0.08 }: Props) {
           />
           <Bar dataKey="mean" radius={[4, 4, 0, 0]} maxBarSize={90} isAnimationActive={false}>
             {data.map((_, i) => (
-              <Cell key={i} fill={colors?.[i] ?? "var(--series-1)"} />
+              <Cell
+                key={i}
+                fill={colors?.[i] ?? "var(--series-1)"}
+                fillOpacity={highlightIndex === undefined || i === highlightIndex ? 1 : 0.4}
+              />
             ))}
             <ErrorBar dataKey="se" width={4} strokeWidth={1.5} stroke="var(--text-muted)" direction="y" />
             <LabelList

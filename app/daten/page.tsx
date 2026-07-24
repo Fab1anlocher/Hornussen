@@ -71,6 +71,12 @@ export default function DatenPage() {
             Zuordnung im Einzelfall daneben liegen.
           </li>
           <li>
+            <strong>Ort-Koordinaten für alte Vereine.</strong> Clubs, die nicht (mehr) im
+            EHV-Platzverzeichnis stehen, verorten wir über den Ortsnamen (Geocoding). Das ergibt
+            den Dorf-Mittelpunkt statt den exakten Platz — für die grossräumige Bewölkung genügt
+            das, für Wind/Spielrichtung werden diese Spiele nicht verwendet.
+          </li>
+          <li>
             <strong>Spielrichtungen sind unvollständig.</strong> Die Wind-Analyse deckt nur
             Plätze mit manuell erfasster Schlagrichtung ab. Mehr Plätze = aussagekräftiger.
           </li>
@@ -89,9 +95,10 @@ export default function DatenPage() {
         <p>
           Wir berechnen Pearson- und Spearman-Korrelation, eine lineare Regression sowie ein
           Bootstrap-Konfidenzintervall. Weil der Zusammenhang zwischen Bewölkung und Nummern{" "}
-          <strong>nicht linear</strong> ist (Schwelleneffekt bei klarem Himmel), bilden wir
-          zusätzlich vier Kategorien (0–15 % / 15–50 % / 50–85 % / 85–100 % Bewölkung) und vergleichen die
-          mittleren Nummern mit einer <strong>einfaktoriellen ANOVA</strong> (F-Test) sowie{" "}
+          <strong>nicht linear</strong> ist (Schwelleneffekt beim wolkenlosen Himmel), werten wir die
+          Bewölkung zusätzlich auf der amtlichen <strong>Okta-Skala</strong> (Achtel, 0/8 wolkenlos …
+          8/8 bedeckt) aus und vergleichen die mittleren Nummern mit einer{" "}
+          <strong>einfaktoriellen ANOVA</strong> (F-Test) sowie{" "}
           <strong>paarweisen Welch-t-Tests</strong>. Der p-Wert ist bei den grossen Stichproben eine
           gute Näherung. Als «bestätigt» gilt eine These nur, wenn Richtung <em>und</em> Signifikanz
           (p &lt; 0.05) stimmen. Alles ist eine reproduzierbare Pipeline (öffentliche Quellen → JSON).

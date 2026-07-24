@@ -60,7 +60,10 @@ function makeObservation(
 
 function main() {
   const matches = readData<Match[]>("matches.json", []);
-  const venues = readData<Venue[]>("venues.json", []);
+  const venues = [
+    ...readData<Venue[]>("venues.json", []),
+    ...readData<Venue[]>("geo-venues.json", []),
+  ];
   const weather = readData<MatchWeather[]>("weather.json", []);
   readConfig<PlayingDirectionsConfig>("playing-directions.json", {
     model: { k: 0.02, playWindowStart: 12, playWindowEnd: 17 },

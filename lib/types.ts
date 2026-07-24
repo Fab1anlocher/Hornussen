@@ -25,6 +25,8 @@ export interface Venue {
   /** Azimuth (deg, 0=N, 90=E) the Nouss is hit toward. null until user sets it. */
   playingDirectionDeg: number | null;
   playingDirectionNote?: string;
+  /** "directory" = EHV/hgverwaltung venue; "geocoded" = town-centroid fallback for weather. */
+  source?: "directory" | "geocoded";
 }
 
 /** One team's line in a single match. */
@@ -138,10 +140,12 @@ export interface CategoryAnalysis {
 export interface BlueSkyAnalysis {
   metric: "nummern";
   correlation: CorrelationResult; // cloudCover vs nummern (linear)
-  buckets: Bucket[]; // by cloud cover class
-  clearMean: number; // mean nummern when clear (<20% cloud)
-  overcastMean: number; // mean nummern when overcast (>80% cloud)
-  categories: CategoryAnalysis; // non-linear / threshold view
+  buckets: Bucket[]; // official okta scale 0/8 … 8/8 (dose-response)
+  oktaAnovaF: number; // ANOVA across the 9 oktas
+  oktaAnovaP: number;
+  clearMean: number; // mean nummern, wolkenlos (0/8)
+  overcastMean: number; // mean nummern, bedeckt (8/8)
+  categories: CategoryAnalysis; // coarse official groups + pairwise tests
   verdict: Verdict;
 }
 

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-24T01:22:43.427Z",
+  "generatedAt": "2026-07-24T14:03:28.782Z",
   "seasons": [
     2013,
     2014,
@@ -39,151 +39,144 @@
   ],
   "totalMatches": 13905,
   "totalObservations": 27810,
-  "observationsWithWeather": 23366,
+  "observationsWithWeather": 27242,
   "observationsWithWind": 2314,
   "blueSky": {
     "metric": "nummern",
     "correlation": {
-      "n": 23366,
-      "pearson": -0.07295195065571732,
-      "spearman": -0.06524527631047182,
-      "slope": -0.0035148826464248837,
-      "intercept": 1.385415936806807,
-      "ciLow": -0.05995785547955354,
-      "ciHigh": -0.054868292383795175,
-      "pValueApprox": 6.003356541256304e-29
+      "n": 27242,
+      "pearson": -0.07636079854054166,
+      "spearman": -0.06767791861768344,
+      "slope": -0.003766413403842524,
+      "intercept": 1.4438477134419563,
+      "ciLow": -0.07421263452471984,
+      "ciHigh": -0.06797866933928226,
+      "pValueApprox": 1.6110497501412233e-36
     },
     "buckets": [
       {
-        "label": "Klar (0–15%)",
-        "count": 3976,
-        "mean": 1.48817907444668,
-        "stdErr": 0.03293881321748368
+        "label": "0/8",
+        "count": 3636,
+        "mean": 1.6504400440044005,
+        "stdErr": 0.037137598325134094
       },
       {
-        "label": "Leicht bewölkt (15–50%)",
-        "count": 3930,
-        "mean": 1.1048346055979643,
-        "stdErr": 0.02759588729904778
+        "label": "1/8",
+        "count": 1574,
+        "mean": 1.1912325285895806,
+        "stdErr": 0.0433996698010377
       },
       {
-        "label": "Bewölkt (50–85%)",
-        "count": 4348,
-        "mean": 1.1205151793928243,
-        "stdErr": 0.026805498561062773
+        "label": "2/8",
+        "count": 1736,
+        "mean": 1.1682027649769586,
+        "stdErr": 0.04408190840330071
       },
       {
-        "label": "Stark bewölkt (85–100%)",
-        "count": 11112,
-        "mean": 1.0714542836573073,
-        "stdErr": 0.01617823623441448
+        "label": "3/8",
+        "count": 1538,
+        "mean": 1.1241872561768531,
+        "stdErr": 0.044491231403902584
+      },
+      {
+        "label": "4/8",
+        "count": 1398,
+        "mean": 1.1180257510729614,
+        "stdErr": 0.045647827349107405
+      },
+      {
+        "label": "5/8",
+        "count": 1524,
+        "mean": 1.2933070866141732,
+        "stdErr": 0.04944223415351209
+      },
+      {
+        "label": "6/8",
+        "count": 2328,
+        "mean": 1.111254295532646,
+        "stdErr": 0.03554959358040072
+      },
+      {
+        "label": "7/8",
+        "count": 2832,
+        "mean": 1.1560734463276836,
+        "stdErr": 0.03401633992577751
+      },
+      {
+        "label": "8/8",
+        "count": 10676,
+        "mean": 1.0903896590483326,
+        "stdErr": 0.016573872680494775
       }
     ],
-    "clearMean": 1.48817907444668,
-    "overcastMean": 1.0714542836573073,
+    "oktaAnovaF": 34.687180523408145,
+    "oktaAnovaP": 4.9212218009837854e-55,
+    "clearMean": 1.6504400440044005,
+    "overcastMean": 1.0903896590483326,
     "categories": {
       "buckets": [
         {
-          "label": "Klar (0–15%)",
-          "count": 3976,
-          "mean": 1.48817907444668,
-          "stdErr": 0.03293881321748368
+          "label": "Heiter (0–2/8)",
+          "count": 6946,
+          "mean": 1.4258566081197812,
+          "stdErr": 0.024573616963835244
         },
         {
-          "label": "Leicht bewölkt (15–50%)",
-          "count": 3930,
-          "mean": 1.1048346055979643,
-          "stdErr": 0.02759588729904778
+          "label": "Bewölkt (3–5/8)",
+          "count": 4460,
+          "mean": 1.1800448430493273,
+          "stdErr": 0.02695778352013566
         },
         {
-          "label": "Bewölkt (50–85%)",
-          "count": 4348,
-          "mean": 1.1205151793928243,
-          "stdErr": 0.026805498561062773
-        },
-        {
-          "label": "Stark bewölkt (85–100%)",
-          "count": 11112,
-          "mean": 1.0714542836573073,
-          "stdErr": 0.01617823623441448
+          "label": "Bedeckt (6–8/8)",
+          "count": 15836,
+          "mean": 1.1052033341752967,
+          "stdErr": 0.013754181539389756
         }
       ],
-      "anovaF": 55.580473206450556,
-      "anovaP": 8.613378454420118e-36,
+      "anovaF": 74.57413083543665,
+      "anovaP": 5.0258864882621685e-33,
       "anovaSignificant": true,
       "pairwise": [
         {
-          "a": "Klar (0–15%)",
-          "b": "Leicht bewölkt (15–50%)",
-          "meanA": 1.48817907444668,
-          "meanB": 1.1048346055979643,
-          "diff": 0.38334446884871576,
-          "pctDiff": 34.69700051993213,
-          "t": 8.921024500340664,
-          "p": 5.698317001174662e-19,
+          "a": "Heiter (0–2/8)",
+          "b": "Bewölkt (3–5/8)",
+          "meanA": 1.4258566081197812,
+          "meanB": 1.1800448430493273,
+          "diff": 0.24581176507045388,
+          "pctDiff": 20.830713893487065,
+          "t": 6.7387818212073185,
+          "p": 1.682115719040683e-11,
           "significant": true
         },
         {
-          "a": "Klar (0–15%)",
-          "b": "Bewölkt (50–85%)",
-          "meanA": 1.48817907444668,
-          "meanB": 1.1205151793928243,
-          "diff": 0.36766389505385577,
-          "pctDiff": 32.81204055201488,
-          "t": 8.657507772482164,
-          "p": 5.788773995865115e-18,
+          "a": "Heiter (0–2/8)",
+          "b": "Bedeckt (6–8/8)",
+          "meanA": 1.4258566081197812,
+          "meanB": 1.1052033341752967,
+          "diff": 0.3206532739444845,
+          "pctDiff": 29.013057057392622,
+          "t": 11.386443303104253,
+          "p": 7.064085804614519e-30,
           "significant": true
         },
         {
-          "a": "Klar (0–15%)",
-          "b": "Stark bewölkt (85–100%)",
-          "meanA": 1.48817907444668,
-          "meanB": 1.0714542836573073,
-          "diff": 0.41672479078937275,
-          "pctDiff": 38.89338044054687,
-          "t": 11.355696773711353,
-          "p": 1.390531239828753e-29,
+          "a": "Bewölkt (3–5/8)",
+          "b": "Bedeckt (6–8/8)",
+          "meanA": 1.1800448430493273,
+          "meanB": 1.1052033341752967,
+          "diff": 0.07484150887403063,
+          "pctDiff": 6.771741141179002,
+          "t": 2.472968585650958,
+          "p": 0.013423332287018148,
           "significant": true
-        },
-        {
-          "a": "Leicht bewölkt (15–50%)",
-          "b": "Bewölkt (50–85%)",
-          "meanA": 1.1048346055979643,
-          "meanB": 1.1205151793928243,
-          "diff": -0.015680573794859987,
-          "pctDiff": -1.3994075299682105,
-          "t": -0.4075877782725153,
-          "p": 0.683586947980365,
-          "significant": false
-        },
-        {
-          "a": "Leicht bewölkt (15–50%)",
-          "b": "Stark bewölkt (85–100%)",
-          "meanA": 1.1048346055979643,
-          "meanB": 1.0714542836573073,
-          "diff": 0.03338032194065699,
-          "pctDiff": 3.115421950315643,
-          "t": 1.0435079350070393,
-          "p": 0.2967501513673454,
-          "significant": false
-        },
-        {
-          "a": "Bewölkt (50–85%)",
-          "b": "Stark bewölkt (85–100%)",
-          "meanA": 1.1205151793928243,
-          "meanB": 1.0714542836573073,
-          "diff": 0.049060895735516974,
-          "pctDiff": 4.578907050336508,
-          "t": 1.5669769184069926,
-          "p": 0.11716122464973022,
-          "significant": false
         }
       ]
     },
     "verdict": {
       "level": "confirmed",
       "headline": "Die Weisheit hält stand – als Schwelleneffekt",
-      "detail": "Bei klarem Himmel (0–20% Wolken) fallen im Schnitt +39% mehr Nummern als bei stark bewölktem Himmel – der Unterschied ist statistisch signifikant (p<0.05). Der lineare Zusammenhang allein (r=-0.07) unterschätzt diesen Effekt."
+      "detail": "Bei wolkenlosem Himmel (0/8) fallen im Schnitt +51% mehr Nummern als bei bedecktem Himmel (8/8) – der Unterschied ist statistisch signifikant (p<0.05). Der lineare Zusammenhang allein (r=-0.08) unterschätzt diesen Schwelleneffekt, weil fast der gesamte Effekt beim ganz klaren Himmel auftritt."
     }
   },
   "wind": {

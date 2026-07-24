@@ -1,0 +1,902 @@
+[
+  {
+    "id": "geo-aetingen-a-47-1322-7-5059",
+    "name": "Aetingen A",
+    "ort": "Aetingen",
+    "lat": 47.13222,
+    "lng": 7.50589,
+    "teams": [
+      "Aetingen A"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-busswil-be-a-47-0997-7-3222",
+    "name": "Busswil BE A",
+    "ort": "Busswil",
+    "lat": 47.09966,
+    "lng": 7.32222,
+    "teams": [
+      "Busswil BE A"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-hettiswil-eintracht-a-47-0313-7-5571",
+    "name": "Hettiswil-Eintracht A",
+    "ort": "Hettiswil",
+    "lat": 47.03133,
+    "lng": 7.55705,
+    "teams": [
+      "Hettiswil-Eintracht A"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-duerrenroth-a-47-0895-7-7917",
+    "name": "Dürrenroth A",
+    "ort": "Dürrenroth",
+    "lat": 47.08953,
+    "lng": 7.7917,
+    "teams": [
+      "Dürrenroth A"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-schmidigen-47-0943-7-7459",
+    "name": "Schmidigen",
+    "ort": "Schmidigen-Mühleweg",
+    "lat": 47.09426,
+    "lng": 7.74588,
+    "teams": [
+      "Schmidigen"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-biberen-ulmiz-46-9404-7-2130",
+    "name": "Biberen-Ulmiz",
+    "ort": "Biberen",
+    "lat": 46.94036,
+    "lng": 7.21295,
+    "teams": [
+      "Biberen-Ulmiz"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-rueti-bueren-47-2560-8-8555",
+    "name": "Rüti-Büren",
+    "ort": "Rüti ZH",
+    "lat": 47.25603,
+    "lng": 8.85552,
+    "teams": [
+      "Rüti-Büren"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-heimiswil-berg-a-47-0675-7-6666",
+    "name": "Heimiswil-Berg A",
+    "ort": "Heimiswil",
+    "lat": 47.06755,
+    "lng": 7.66665,
+    "teams": [
+      "Heimiswil-Berg A"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-frauchwil-zimlisberg-47-0671-7-3941",
+    "name": "Frauchwil-Zimlisberg",
+    "ort": "Frauchwil",
+    "lat": 47.0671,
+    "lng": 7.39411,
+    "teams": [
+      "Frauchwil-Zimlisberg"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-thoerishaus-46-8939-7-3513",
+    "name": "Thörishaus",
+    "ort": "Thörishaus",
+    "lat": 46.89387,
+    "lng": 7.35131,
+    "teams": [
+      "Thörishaus"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-duerrenroth-b-47-0895-7-7917",
+    "name": "Dürrenroth B",
+    "ort": "Dürrenroth",
+    "lat": 47.08953,
+    "lng": 7.7917,
+    "teams": [
+      "Dürrenroth B"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-aetingen-b-47-1322-7-5059",
+    "name": "Aetingen B",
+    "ort": "Aetingen",
+    "lat": 47.13222,
+    "lng": 7.50589,
+    "teams": [
+      "Aetingen B"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-limpach-47-1077-7-4979",
+    "name": "Limpach",
+    "ort": "Limpach BE",
+    "lat": 47.10768,
+    "lng": 7.49786,
+    "teams": [
+      "Limpach"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-wileroltigen-a-46-9709-7-2392",
+    "name": "Wileroltigen A",
+    "ort": "Wileroltigen",
+    "lat": 46.97094,
+    "lng": 7.23922,
+    "teams": [
+      "Wileroltigen A"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-hindelbank-a-47-0427-7-5414",
+    "name": "Hindelbank A",
+    "ort": "Hindelbank",
+    "lat": 47.0427,
+    "lng": 7.54143,
+    "teams": [
+      "Hindelbank A"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-arch-oberwil-a-47-1653-7-4314",
+    "name": "Arch-Oberwil A",
+    "ort": "Arch",
+    "lat": 47.16533,
+    "lng": 7.43139,
+    "teams": [
+      "Arch-Oberwil A"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-zollikofen-46-9990-7-4581",
+    "name": "Zollikofen",
+    "ort": "Zollikofen",
+    "lat": 46.99905,
+    "lng": 7.45809,
+    "teams": [
+      "Zollikofen"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-busswil-be-b-47-0997-7-3222",
+    "name": "Busswil BE B",
+    "ort": "Busswil",
+    "lat": 47.09966,
+    "lng": 7.32222,
+    "teams": [
+      "Busswil BE B"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-guemligen-46-9345-7-5093",
+    "name": "Gümligen",
+    "ort": "Muri-Gümligen",
+    "lat": 46.9345,
+    "lng": 7.50933,
+    "teams": [
+      "Gümligen"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-wohlen-murzelen-47-3507-8-2752",
+    "name": "Wohlen-Murzelen",
+    "ort": "Wohlen AG",
+    "lat": 47.35066,
+    "lng": 8.27517,
+    "teams": [
+      "Wohlen-Murzelen"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-baeriswil-47-0195-7-5271",
+    "name": "Bäriswil",
+    "ort": "Bäriswil",
+    "lat": 47.01947,
+    "lng": 7.52709,
+    "teams": [
+      "Bäriswil"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-leimiswil-47-1508-7-7634",
+    "name": "Leimiswil",
+    "ort": "Leimiswil",
+    "lat": 47.15079,
+    "lng": 7.76339,
+    "teams": [
+      "Leimiswil"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-langenthal-wynau-47-2153-7-7961",
+    "name": "Langenthal-Wynau",
+    "ort": "Langenthal",
+    "lat": 47.21526,
+    "lng": 7.79607,
+    "teams": [
+      "Langenthal-Wynau"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-moosseedorf-47-0156-7-4781",
+    "name": "Moosseedorf",
+    "ort": "Moosseedorf",
+    "lat": 47.01562,
+    "lng": 7.47811,
+    "teams": [
+      "Moosseedorf"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-saurenhorn-47-0347-7-3464",
+    "name": "Saurenhorn",
+    "ort": "Saurenhorn",
+    "lat": 47.03472,
+    "lng": 7.34635,
+    "teams": [
+      "Saurenhorn"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-hettiswil-eintracht-b-47-0313-7-5571",
+    "name": "Hettiswil-Eintracht B",
+    "ort": "Hettiswil",
+    "lat": 47.03133,
+    "lng": 7.55705,
+    "teams": [
+      "Hettiswil-Eintracht B"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-dentenberg-46-9430-7-5333",
+    "name": "Dentenberg",
+    "ort": "Dentenberg",
+    "lat": 46.943,
+    "lng": 7.53327,
+    "teams": [
+      "Dentenberg"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-heimiswil-berg-b-47-0675-7-6666",
+    "name": "Heimiswil-Berg B",
+    "ort": "Heimiswil",
+    "lat": 47.06755,
+    "lng": 7.66665,
+    "teams": [
+      "Heimiswil-Berg B"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-muenchenbuchsee-diemerswil-a-47-0217-7-4504",
+    "name": "Münchenbuchsee-Diemerswil A",
+    "ort": "Münchenbuchsee",
+    "lat": 47.02175,
+    "lng": 7.45036,
+    "teams": [
+      "Münchenbuchsee-Diemerswil A"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-kappelen-47-0602-7-2686",
+    "name": "Kappelen",
+    "ort": "Kappelen BE",
+    "lat": 47.06015,
+    "lng": 7.2686,
+    "teams": [
+      "Kappelen"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-baden-brugg-47-4733-8-3059",
+    "name": "Baden-Brugg",
+    "ort": "Baden AG",
+    "lat": 47.47333,
+    "lng": 8.30592,
+    "teams": [
+      "Baden-Brugg"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-gerzensee-kirchdorf-46-8402-7-5450",
+    "name": "Gerzensee-Kirchdorf",
+    "ort": "Gerzensee BE",
+    "lat": 46.84023,
+    "lng": 7.54503,
+    "teams": [
+      "Gerzensee-Kirchdorf"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-herbligen-46-8299-7-6063",
+    "name": "Herbligen",
+    "ort": "Herbligen",
+    "lat": 46.8299,
+    "lng": 7.60632,
+    "teams": [
+      "Herbligen"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-heimisbach-47-0125-7-7605",
+    "name": "Heimisbach",
+    "ort": "Heimisbach",
+    "lat": 47.01249,
+    "lng": 7.76051,
+    "teams": [
+      "Heimisbach"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-heimiswil-dorf-47-0675-7-6666",
+    "name": "Heimiswil-Dorf",
+    "ort": "Heimiswil",
+    "lat": 47.06755,
+    "lng": 7.66665,
+    "teams": [
+      "Heimiswil-Dorf"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-selzach-solothurn-47-2053-7-4552",
+    "name": "Selzach-Solothurn",
+    "ort": "Selzach",
+    "lat": 47.20531,
+    "lng": 7.45521,
+    "teams": [
+      "Selzach-Solothurn"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-wileroltigen-b-46-9709-7-2392",
+    "name": "Wileroltigen B",
+    "ort": "Wileroltigen",
+    "lat": 46.97094,
+    "lng": 7.23922,
+    "teams": [
+      "Wileroltigen B"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-hettiswil-eintracht-c-47-0313-7-5571",
+    "name": "Hettiswil-Eintracht C",
+    "ort": "Hettiswil",
+    "lat": 47.03133,
+    "lng": 7.55705,
+    "teams": [
+      "Hettiswil-Eintracht C"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-luzern-47-0505-8-3064",
+    "name": "Luzern",
+    "ort": "Luzern",
+    "lat": 47.05048,
+    "lng": 8.30635,
+    "teams": [
+      "Luzern"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-zaeziwil-a-46-9020-7-6619",
+    "name": "Zäziwil A",
+    "ort": "Zäziwil",
+    "lat": 46.90196,
+    "lng": 7.66185,
+    "teams": [
+      "Zäziwil A"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-hindelbank-b-47-0427-7-5414",
+    "name": "Hindelbank B",
+    "ort": "Hindelbank",
+    "lat": 47.0427,
+    "lng": 7.54143,
+    "teams": [
+      "Hindelbank B"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-arch-oberwil-b-47-1653-7-4314",
+    "name": "Arch-Oberwil B",
+    "ort": "Arch",
+    "lat": 47.16533,
+    "lng": 7.43139,
+    "teams": [
+      "Arch-Oberwil B"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-muenchenbuchsee-diemerswil-b-47-0217-7-4504",
+    "name": "Münchenbuchsee-Diemerswil B",
+    "ort": "Münchenbuchsee",
+    "lat": 47.02175,
+    "lng": 7.45036,
+    "teams": [
+      "Münchenbuchsee-Diemerswil B"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-utzenstorf-a-47-1325-7-5536",
+    "name": "Utzenstorf A",
+    "ort": "Utzenstorf",
+    "lat": 47.13248,
+    "lng": 7.55355,
+    "teams": [
+      "Utzenstorf A"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-reutenen-a-47-6522-9-0297",
+    "name": "Reutenen A",
+    "ort": "Reutenen",
+    "lat": 47.65218,
+    "lng": 9.0297,
+    "teams": [
+      "Reutenen A"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-koppigen-47-1313-7-6052",
+    "name": "Koppigen",
+    "ort": "Koppigen",
+    "lat": 47.13125,
+    "lng": 7.60525,
+    "teams": [
+      "Koppigen"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-zuchwil-wiedlisbach-a-47-2017-7-5665",
+    "name": "Zuchwil-Wiedlisbach A",
+    "ort": "Zuchwil",
+    "lat": 47.20173,
+    "lng": 7.56649,
+    "teams": [
+      "Zuchwil-Wiedlisbach A"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-wileroltigen-46-9709-7-2392",
+    "name": "Wileroltigen",
+    "ort": "Wileroltigen",
+    "lat": 46.97094,
+    "lng": 7.23922,
+    "teams": [
+      "Wileroltigen"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-reutenen-b-47-6522-9-0297",
+    "name": "Reutenen B",
+    "ort": "Reutenen",
+    "lat": 47.65218,
+    "lng": 9.0297,
+    "teams": [
+      "Reutenen B"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-zaeziwil-b-46-9020-7-6619",
+    "name": "Zäziwil B",
+    "ort": "Zäziwil",
+    "lat": 46.90196,
+    "lng": 7.66185,
+    "teams": [
+      "Zäziwil B"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-utzenstorf-b-47-1325-7-5536",
+    "name": "Utzenstorf B",
+    "ort": "Utzenstorf",
+    "lat": 47.13248,
+    "lng": 7.55355,
+    "teams": [
+      "Utzenstorf B"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-hettiswil-eintracht-moosseedor-a-47-0313-7-5571",
+    "name": "Hettiswil-Eintracht-Moosseedor A",
+    "ort": "Hettiswil",
+    "lat": 47.03133,
+    "lng": 7.55705,
+    "teams": [
+      "Hettiswil-Eintracht-Moosseedor A"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-lenzburg-47-3885-8-1750",
+    "name": "Lenzburg",
+    "ort": "Lenzburg",
+    "lat": 47.38853,
+    "lng": 8.17503,
+    "teams": [
+      "Lenzburg"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-frauenfeld-47-5578-8-8989",
+    "name": "Frauenfeld",
+    "ort": "Frauenfeld",
+    "lat": 47.55776,
+    "lng": 8.89893,
+    "teams": [
+      "Frauenfeld"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-thoerishaus-frauchwil-z-berg-a-46-8939-7-3513",
+    "name": "Thörishaus-Frauchwil-Z'berg A",
+    "ort": "Thörishaus",
+    "lat": 46.89387,
+    "lng": 7.35131,
+    "teams": [
+      "Thörishaus-Frauchwil-Z'berg A"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-thoerishaus-frauchwil-z-berg-b-46-8939-7-3513",
+    "name": "Thörishaus-Frauchwil-Z'berg B",
+    "ort": "Thörishaus",
+    "lat": 46.89387,
+    "lng": 7.35131,
+    "teams": [
+      "Thörishaus-Frauchwil-Z'berg B"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-zuchwil-wiedlisbach-b-47-2017-7-5665",
+    "name": "Zuchwil-Wiedlisbach B",
+    "ort": "Zuchwil",
+    "lat": 47.20173,
+    "lng": 7.56649,
+    "teams": [
+      "Zuchwil-Wiedlisbach B"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-frauenfeld-schaffhausen-a-47-5578-8-8989",
+    "name": "Frauenfeld-Schaffhausen A",
+    "ort": "Frauenfeld",
+    "lat": 47.55776,
+    "lng": 8.89893,
+    "teams": [
+      "Frauenfeld-Schaffhausen A"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-frauenfeld-schaffhausen-47-5578-8-8989",
+    "name": "Frauenfeld-Schaffhausen",
+    "ort": "Frauenfeld",
+    "lat": 47.55776,
+    "lng": 8.89893,
+    "teams": [
+      "Frauenfeld-Schaffhausen"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-gerzensee-kirchdorf-herbligen-46-8402-7-5450",
+    "name": "Gerzensee-Kirchdorf-Herbligen",
+    "ort": "Gerzensee BE",
+    "lat": 46.84023,
+    "lng": 7.54503,
+    "teams": [
+      "Gerzensee-Kirchdorf-Herbligen"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-hettiswil-eintracht-moosseedor-b-47-0313-7-5571",
+    "name": "Hettiswil-Eintracht-Moosseedor B",
+    "ort": "Hettiswil",
+    "lat": 47.03133,
+    "lng": 7.55705,
+    "teams": [
+      "Hettiswil-Eintracht-Moosseedor B"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-oeschenbach-47-1029-7-7476",
+    "name": "Oeschenbach",
+    "ort": "Oeschenbach",
+    "lat": 47.10287,
+    "lng": 7.74756,
+    "teams": [
+      "Oeschenbach"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-hettiswil-eintracht-moosseedor-c-47-0313-7-5571",
+    "name": "Hettiswil-Eintracht-Moosseedor C",
+    "ort": "Hettiswil",
+    "lat": 47.03133,
+    "lng": 7.55705,
+    "teams": [
+      "Hettiswil-Eintracht-Moosseedor C"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-schlosswil-46-9087-7-6117",
+    "name": "Schlosswil",
+    "ort": "Schlosswil",
+    "lat": 46.90869,
+    "lng": 7.61171,
+    "teams": [
+      "Schlosswil"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-tenniken-liestal-47-4371-7-8115",
+    "name": "Tenniken-Liestal",
+    "ort": "Tenniken",
+    "lat": 47.43712,
+    "lng": 7.81149,
+    "teams": [
+      "Tenniken-Liestal"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-muenchenbuchsee-oberlindach-a-47-0217-7-4504",
+    "name": "Münchenbuchsee-Oberlindach A",
+    "ort": "Münchenbuchsee",
+    "lat": 47.02175,
+    "lng": 7.45036,
+    "teams": [
+      "Münchenbuchsee-Oberlindach A"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-hergiswil-lu-46-9843-8-3094",
+    "name": "Hergiswil LU",
+    "ort": "Hergiswil NW",
+    "lat": 46.98429,
+    "lng": 8.30944,
+    "teams": [
+      "Hergiswil LU"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-emmenmatt-46-9487-7-7493",
+    "name": "Emmenmatt",
+    "ort": "Emmenmatt",
+    "lat": 46.9487,
+    "lng": 7.74929,
+    "teams": [
+      "Emmenmatt"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-muenchenbuchsee-oberlindach-b-47-0217-7-4504",
+    "name": "Münchenbuchsee-Oberlindach B",
+    "ort": "Münchenbuchsee",
+    "lat": 47.02175,
+    "lng": 7.45036,
+    "teams": [
+      "Münchenbuchsee-Oberlindach B"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-gysenstein-46-8915-7-5924",
+    "name": "Gysenstein",
+    "ort": "Gysenstein",
+    "lat": 46.89148,
+    "lng": 7.59243,
+    "teams": [
+      "Gysenstein"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-kleindietwil-47-1457-7-7896",
+    "name": "Kleindietwil",
+    "ort": "Kleindietwil",
+    "lat": 47.14571,
+    "lng": 7.78965,
+    "teams": [
+      "Kleindietwil"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-gruenenmatt-guemligen-a-47-0090-7-7234",
+    "name": "Grünenmatt-Gümligen A",
+    "ort": "Grünenmatt",
+    "lat": 47.00899,
+    "lng": 7.7234,
+    "teams": [
+      "Grünenmatt-Gümligen A"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-gruenenmatt-guemligen-b-47-0090-7-7234",
+    "name": "Grünenmatt-Gümligen B",
+    "ort": "Grünenmatt",
+    "lat": 47.00899,
+    "lng": 7.7234,
+    "teams": [
+      "Grünenmatt-Gümligen B"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-bern-stadt-stettlen-46-9481-7-4474",
+    "name": "Bern-Stadt-Stettlen",
+    "ort": "Bern",
+    "lat": 46.94809,
+    "lng": 7.44744,
+    "teams": [
+      "Bern-Stadt-Stettlen"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-lohn-derendingen-47-7551-8-6685",
+    "name": "Lohn-Derendingen",
+    "ort": "Lohn SH",
+    "lat": 47.75508,
+    "lng": 8.66847,
+    "teams": [
+      "Lohn-Derendingen"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  }
+]

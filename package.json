@@ -10,10 +10,11 @@
     "lint": "next lint",
     "scrape:venues": "tsx scripts/scrape-venues.ts",
     "scrape:archive": "tsx scripts/scrape-archive.ts",
+    "scrape:geocode": "tsx scripts/geocode-venues.ts",
     "scrape:weather": "tsx scripts/fetch-weather.ts",
     "build:dataset": "tsx scripts/build-dataset.ts",
     "analyze": "tsx scripts/analyze.ts",
-    "pipeline": "npm run scrape:venues && npm run scrape:archive && npm run scrape:weather && npm run build:dataset && npm run analyze"
+    "pipeline": "npm run scrape:venues && npm run scrape:archive && npm run scrape:geocode && npm run scrape:weather && npm run build:dataset && npm run analyze"
   },
   "dependencies": {
     "maplibre-gl": "^4.7.1",

@@ -15,7 +15,9 @@ export default function WetterPage() {
   const corr = bs.correlation;
   const cat = bs.categories;
   const clearVsHeavyPct =
-    cat.pairwise.find((p) => /Klar/.test(p.a) && /Stark/.test(p.b))?.pctDiff ?? 0;
+    cat.pairwise.find((p) => /Heiter/.test(p.a) && /Bedeckt/.test(p.b))?.pctDiff ?? 0;
+  const cloudlessVsOvercast =
+    bs.overcastMean === 0 ? 0 : ((bs.clearMean - bs.overcastMean) / bs.overcastMean) * 100;
 
   return (
     <div className="mx-auto max-w-5xl px-4 py-12">
@@ -30,8 +32,8 @@ export default function WetterPage() {
       </div>
 
       <div className="mb-10 grid grid-cols-2 gap-4 sm:grid-cols-4">
-        <StatTile value={bs.clearMean.toFixed(2)} label="Ø Nummern bei klarem Himmel" sub="0–15 % Wolken" accent="var(--series-1)" />
-        <StatTile value={bs.overcastMean.toFixed(2)} label="Ø Nummern bei bedecktem Himmel" sub="85–100 % Wolken" />
+        <StatTile value={bs.clearMean.toFixed(2)} label="Ø Nummern bei wolkenlosem Himmel" sub="0/8 (Okta)" accent="var(--series-1)" />
+        <StatTile value={bs.overcastMean.toFixed(2)} label="Ø Nummern bei bedecktem Himmel" sub="8/8 (Okta)" />
         <StatTile value={fmtR(corr.pearson)} label="Korrelation (Pearson)" sub={`Spearman ${fmtR(corr.spearman)}`} />
         <StatTile value={corr.pValueApprox < 0.001 ? "< 0.001" : corr.pValueApprox.toFixed(3)} label="p-Wert (ca.)" sub={`n = ${corr.n.toLocaleString("de-CH")}`} />
       </div>
@@ -39,13 +41,17 @@ export default function WetterPage() {
       <div className="grid gap-6 lg:grid-cols-2">
         <figure className="card p-5">
           <figcaption className="mb-1 font-display text-lg font-semibold">
-            Nummern nach Bewölkung
+            Nummern nach Bewölkung (Okta-Skala)
           </figcaption>
           <p className="mb-3 text-sm text-[var(--text-muted)]">
-            Mittlere Nummern pro Team &amp; Spiel, gruppiert nach Bewölkungsgrad. Fehlerbalken =
-            Standardfehler.
+            Mittlere Nummern pro Team &amp; Spiel je Achtel-Bewölkung (amtliche Okta-Skala).
+            Fehlerbalken = Standardfehler.{" "}
+            <span className="text-[var(--text-secondary)]">ANOVA F = {bs.oktaAnovaF.toFixed(1)}, p {fmtP(bs.oktaAnovaP)}.</span>
           </p>
-          <BarBuckets buckets={bs.buckets} unit="Nummern" />
+          <BarBuckets buckets={bs.buckets} unit="Nummern" highlightIndex={0} />
+          <p className="mt-3 text-xs leading-relaxed text-[var(--text-muted)]">
+            {OKTA_NAMES.map((n, i) => `${i}/8 ${n}`).join(" · ")}
+          </p>
         </figure>
 
         <figure className="card p-5">
@@ -76,8 +82,8 @@ export default function WetterPage() {
         </div>
         <p className="mb-5 text-[var(--text-secondary)]">
           Der Zusammenhang ist <strong>nicht linear</strong>: Fast der gesamte Effekt tritt beim
-          <em> klaren</em> Himmel auf. Statt nur die lineare Korrelation zu betrachten, vergleichen
-          wir vier Bewölkungs-Kategorien und testen die Unterschiede paarweise (Welch-t-Test).
+          <em> wolkenlosen</em> Himmel (0/8) auf. Für den Signifikanztest fassen wir die Okta-Skala
+          zu drei amtlichen Gruppen zusammen und vergleichen sie paarweise (Welch-t-Test).
         </p>
 
         <div className="grid gap-6 md:grid-cols-2">
@@ -140,10 +146,11 @@ export default function WetterPage() {
           </div>
         </div>
         <p className="mt-4 text-sm text-[var(--text-muted)]">
-          Lesehilfe: Bei klarem Himmel (0–15 %) fallen rund {Math.abs(clearVsHeavyPct).toFixed(0)} %{" "}
-          {clearVsHeavyPct >= 0 ? "mehr" : "weniger"} Nummern als bei stark bewölktem Himmel. Der
-          Unterschied zwischen «teils» und «stark» bewölkt ist dagegen klein — ein klassischer
-          Schwelleneffekt.
+          Lesehilfe: Am deutlichsten ist der ganz klare Himmel — bei <strong>wolkenlos (0/8)</strong>{" "}
+          fallen rund {Math.abs(cloudlessVsOvercast).toFixed(0)} %{" "}
+          {cloudlessVsOvercast >= 0 ? "mehr" : "weniger"} Nummern als bei bedecktem Himmel (8/8). Die
+          Gruppe «Heiter» liegt {Math.abs(clearVsHeavyPct).toFixed(0)} % über «Bedeckt», während sich
+          «Bewölkt» und «Bedeckt» kaum unterscheiden — ein klassischer Schwelleneffekt.
         </p>
       </div>
 
@@ -172,10 +179,21 @@ function fmtP(p: number): string {
   return `= ${p.toFixed(3)}`;
 }
 
+const OKTA_NAMES = [
+  "wolkenlos",
+  "sonnig",
+  "heiter",
+  "leicht bewölkt",
+  "wolkig",
+  "bewölkt",
+  "stark bewölkt",
+  "fast bedeckt",
+  "bedeckt",
+];
+
 function shortCat(label: string): string {
-  if (/Klar/.test(label)) return "Klar";
-  if (/Leicht/.test(label)) return "Leicht bew.";
-  if (/Stark/.test(label)) return "Stark bew.";
+  if (/Heiter/.test(label)) return "Heiter";
+  if (/Bedeckt/.test(label)) return "Bedeckt";
   if (/Bewölkt/.test(label)) return "Bewölkt";
   return label;
 }

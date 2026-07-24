@@ -119,7 +119,10 @@ function aggregate(
 
 async function main() {
   const matches = readData<Match[]>("matches.json", []);
-  const venues = readData<Venue[]>("venues.json", []);
+  const venues = [
+    ...readData<Venue[]>("venues.json", []),
+    ...readData<Venue[]>("geo-venues.json", []),
+  ];
   const cfg = readConfig<PlayingDirectionsConfig>("playing-directions.json", {
     model: { k: 0.02, playWindowStart: 12, playWindowEnd: 17 },
     directions: [],

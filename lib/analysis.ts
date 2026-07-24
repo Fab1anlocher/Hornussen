@@ -56,36 +56,41 @@ export function analyzeBlueSky(obs: Observation[]): BlueSkyAnalysis {
   const nummern = withWeather.map((o) => o.nummern);
   const corr = correlation(cloud, nummern);
 
-  // Categories (threshold view): 0–15 / 15–50 / 50–85 / 85–100 % cloud cover.
-  const inBand = (lo: number, hi: number) =>
-    withWeather
-      .filter((o) => (o.cloudCoverMean as number) >= lo && (o.cloudCoverMean as number) < hi)
-      .map((o) => o.nummern);
-  const clear = inBand(0, 15);
-  const light = inBand(15, 50);
-  const cloudy = inBand(50, 85);
-  const heavy = withWeather.filter((o) => (o.cloudCoverMean as number) >= 85).map((o) => o.nummern);
+  // Official okta scale (eighths): okta = round(cloudCover% / 12.5), 0..8.
+  const oktaGroups: number[][] = Array.from({ length: 9 }, () => []);
+  for (const o of withWeather) {
+    const k = Math.max(0, Math.min(8, Math.round((o.cloudCoverMean as number) / 12.5)));
+    oktaGroups[k].push(o.nummern);
+  }
+  const buckets: Bucket[] = oktaGroups.map((g, k) => bucketOf(g, `${k}/8`));
+  const okta = oneWayAnova(oktaGroups.filter((g) => g.length > 0));
 
-  const L_CLEAR = "Klar (0–15%)";
-  const L_LIGHT = "Leicht bewölkt (15–50%)";
-  const L_CLOUDY = "Bewölkt (50–85%)";
-  const L_HEAVY = "Stark bewölkt (85–100%)";
-  const groups: [string, number[]][] = [
-    [L_CLEAR, clear],
-    [L_LIGHT, light],
-    [L_CLOUDY, cloudy],
-    [L_HEAVY, heavy],
-  ];
-  const buckets: Bucket[] = groups.map(([l, g]) => bucketOf(g, l));
-  const categories = categoryAnalysis(groups);
+  // Coarse official groups for the pairwise significance test.
+  const clearG = oktaGroups.slice(0, 3).flat(); // 0–2/8 wolkenlos…heiter
+  const midG = oktaGroups.slice(3, 6).flat(); // 3–5/8 leicht bewölkt…bewölkt
+  const overG = oktaGroups.slice(6, 9).flat(); // 6–8/8 stark bewölkt…bedeckt
+  const categories = categoryAnalysis([
+    ["Heiter (0–2/8)", clearG],
+    ["Bewölkt (3–5/8)", midG],
+    ["Bedeckt (6–8/8)", overG],
+  ]);
 
-  const clearMean = mean(clear);
-  const overcastMean = mean(heavy);
+  const clearMean = mean(oktaGroups[0]); // wolkenlos (0/8)
+  const overcastMean = mean(oktaGroups[8]); // bedeckt (8/8)
 
-  // The wisdom predicts a NEGATIVE correlation (less cloud → more Nummern).
   const verdict = blueSkyVerdict(corr, clearMean, overcastMean, categories);
 
-  return { metric: "nummern", correlation: corr, buckets, clearMean, overcastMean, categories, verdict };
+  return {
+    metric: "nummern",
+    correlation: corr,
+    buckets,
+    oktaAnovaF: okta.f,
+    oktaAnovaP: okta.p,
+    clearMean,
+    overcastMean,
+    categories,
+    verdict,
+  };
 }
 
 /** One-way ANOVA + all pairwise Welch tests across labelled groups. */
@@ -133,8 +138,8 @@ function blueSkyVerdict(
     };
   }
   const diffPct = overcastMean === 0 ? 0 : ((clearMean - overcastMean) / overcastMean) * 100;
-  // Threshold view: does the CLEAR category differ significantly from the HEAVY one?
-  const clearVsHeavy = cats.pairwise.find((p) => /Klar/.test(p.a) && /Stark/.test(p.b));
+  // Threshold view: does the CLEAR group differ significantly from the OVERCAST one?
+  const clearVsHeavy = cats.pairwise.find((p) => /Heiter/.test(p.a) && /Bedeckt/.test(p.b));
   const threshold = clearVsHeavy && clearVsHeavy.diff > 0 && clearVsHeavy.significant;
   const linSig = corr.pValueApprox < 0.05;
   const supports = corr.pearson < 0 && clearMean > overcastMean;
@@ -144,7 +149,7 @@ function blueSkyVerdict(
     return {
       level: "confirmed",
       headline: "Die Weisheit hält stand – als Schwelleneffekt",
-      detail: `Bei klarem Himmel (0–15% Wolken) fallen im Schnitt ${diffPct >= 0 ? "+" : ""}${diffPct.toFixed(0)}% mehr Nummern als bei stark bewölktem Himmel – der Unterschied ist statistisch signifikant (p<0.05). Der lineare Zusammenhang allein (r=${corr.pearson.toFixed(2)}) unterschätzt diesen Effekt.`,
+      detail: `Bei wolkenlosem Himmel (0/8) fallen im Schnitt ${diffPct >= 0 ? "+" : ""}${diffPct.toFixed(0)}% mehr Nummern als bei bedecktem Himmel (8/8) – der Unterschied ist statistisch signifikant (p<0.05). Der lineare Zusammenhang allein (r=${corr.pearson.toFixed(2)}) unterschätzt diesen Schwelleneffekt, weil fast der gesamte Effekt beim ganz klaren Himmel auftritt.`,
     };
   }
   if (supports && linSig && Math.abs(corr.pearson) >= 0.1) {
@@ -158,7 +163,7 @@ function blueSkyVerdict(
     return {
       level: "weak",
       headline: "Schwacher Hinweis dafür",
-      detail: `Es gibt einen Trend zu mehr Nummern bei blauem Himmel (r=${corr.pearson.toFixed(2)}); im Kategorienvergleich liegt Klar ${diffPct >= 0 ? "+" : ""}${diffPct.toFixed(0)}% über Bedeckt.`,
+      detail: `Es gibt einen Trend zu mehr Nummern bei blauem Himmel (r=${corr.pearson.toFixed(2)}); wolkenlos liegt ${diffPct >= 0 ? "+" : ""}${diffPct.toFixed(0)}% über bedeckt.`,
     };
   }
   if (corr.pearson > 0 && linSig) {
