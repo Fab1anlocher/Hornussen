@@ -1,0 +1,126 @@
+{
+  "generatedAt": "2026-07-24T00:52:47.974Z",
+  "seasons": [
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "leagues": [
+    "1. Liga Gruppe 1",
+    "1. Liga Gruppe 2",
+    "1. Liga Gruppe 3",
+    "1. Liga Gruppe 4",
+    "2. Liga Gruppe 1",
+    "2. Liga Gruppe 2",
+    "2. Liga Gruppe 3",
+    "2. Liga Gruppe 4",
+    "3. Liga Gruppe 1",
+    "3. Liga Gruppe 2",
+    "3. Liga Gruppe 3",
+    "3. Liga Gruppe 4",
+    "4. Liga Gruppe 1",
+    "4. Liga Gruppe 2",
+    "4. Liga Gruppe 3",
+    "4. Liga Gruppe 4",
+    "5. Liga Gruppe 1",
+    "5. Liga Gruppe 2",
+    "5. Liga Gruppe 3",
+    "NLA",
+    "NLB Gruppe 1",
+    "NLB Gruppe 2"
+  ],
+  "totalMatches": 13905,
+  "totalObservations": 27810,
+  "observationsWithWeather": 24678,
+  "observationsWithWind": 2314,
+  "blueSky": {
+    "metric": "nummern",
+    "correlation": {
+      "n": 24678,
+      "pearson": -0.09125224210813404,
+      "spearman": -0.07726388685711486,
+      "slope": -0.005009767131942028,
+      "intercept": 1.4964575144159533,
+      "ciLow": -0.09225819438807654,
+      "ciHigh": -0.08646228629427015,
+      "pValueApprox": 5.629403580121419e-47
+    },
+    "buckets": [
+      {
+        "label": "Blauer Himmel (<25% Wolken)",
+        "count": 4298,
+        "mean": 1.504885993485342,
+        "stdErr": 0.03218276918079109
+      },
+      {
+        "label": "Gemischt (25–75%)",
+        "count": 8176,
+        "mean": 1.1728228962818004,
+        "stdErr": 0.020218470067933945
+      },
+      {
+        "label": "Bedeckt (>75%)",
+        "count": 12204,
+        "mean": 1.0517043592264832,
+        "stdErr": 0.015131959472902886
+      }
+    ],
+    "clearMean": 1.504885993485342,
+    "overcastMean": 1.0517043592264832,
+    "verdict": {
+      "level": "weak",
+      "headline": "Schwacher Hinweis dafür",
+      "detail": "Es gibt einen leichten Trend zu mehr Nummern bei blauem Himmel (r=-0.09), statistisch aber nicht klar gesichert."
+    }
+  },
+  "wind": {
+    "metric": "schlagpunkte",
+    "correlation": {
+      "n": 2314,
+      "pearson": 0.06443946496642368,
+      "spearman": 0.0584505429976447,
+      "slope": 2.459697830683127,
+      "intercept": 1007.1751478459929,
+      "ciLow": 0.044726086606496865,
+      "ciHigh": 0.09637688726540625,
+      "pValueApprox": 0.002072460384344285
+    },
+    "buckets": [
+      {
+        "label": "Gegenwind (≤ −1 km/h)",
+        "count": 980,
+        "mean": 1005.9663265306123,
+        "stdErr": 8.379894528442895
+      },
+      {
+        "label": "Windstill (±1 km/h)",
+        "count": 296,
+        "mean": 990.2128378378378,
+        "stdErr": 18.115748493046315
+      },
+      {
+        "label": "Rückenwind (≥ +1 km/h)",
+        "count": 1038,
+        "mean": 1014.3911368015414,
+        "stdErr": 8.848243524085317
+      }
+    ],
+    "tailwindMean": 1014.3911368015414,
+    "headwindMean": 1005.9663265306123,
+    "ratio": 1.0083748432216262,
+    "modelK": 0.02,
+    "verdict": {
+      "level": "weak",
+      "headline": "Leichter Rückenwind-Vorteil",
+      "detail": "Rückenwind geht tendenziell mit mehr Schlagpunkten einher (r=0.06), aber nicht klar gesichert."
+    }
+  }
+}

@@ -1,0 +1,50 @@
+name: Daten aktualisieren
+
+# Scrapt wöchentlich (und auf Knopfdruck) die EHV-Meisterschaft + Wetter neu
+# und committet die aktualisierten data/*.json. Vercel deployt den Commit automatisch.
+
+on:
+  schedule:
+    - cron: "0 4 * * 1" # jeden Montag 04:00 UTC
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: poppler (pdftotext) installieren
+        run: sudo apt-get update && sudo apt-get install -y poppler-utils
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      # Wetter-Cache wiederverwenden, damit die Open-Meteo-API geschont wird
+      - name: Wetter-Cache laden
+        uses: actions/cache@v4
+        with:
+          path: .cache
+          key: hornussen-cache
+
+      - name: Pipeline ausführen
+        run: npm run pipeline
+
+      - name: Änderungen committen
+        run: |
+          git config user.name "hornussen-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/
+          if git diff --staged --quiet; then
+            echo "Keine Änderungen."
+          else
+            git commit -m "chore: Daten aktualisiert ($(date -u +%Y-%m-%d))"
+            git push
+          fi

@@ -1,0 +1,178 @@
+// Shared domain types for the Hornussen weather-analysis app.
+
+/** Raw venue record as returned by the hgverwaltung locations API. */
+export interface RawVenue {
+  name: string;
+  ort?: string;
+  strasse?: string;
+  plz?: string;
+  lat: number;
+  lng: number;
+  homepage?: string;
+}
+
+/** A physical Hornussen field (one coordinate), possibly shared by several teams. */
+export interface Venue {
+  id: string; // slug derived from base name + coordinates
+  name: string; // canonical display name (team base name, e.g. "Schüpbach")
+  ort?: string;
+  strasse?: string;
+  plz?: string;
+  lat: number;
+  lng: number;
+  homepage?: string;
+  teams: string[]; // team names whose home field this is
+  /** Azimuth (deg, 0=N, 90=E) the Nouss is hit toward. null until user sets it. */
+  playingDirectionDeg: number | null;
+  playingDirectionNote?: string;
+}
+
+/** One team's line in a single match. */
+export interface TeamMatchResult {
+  team: string;
+  rundenpunkte: number; // first PDF number — duel/round points
+  nummern: number; // middle PDF number — faults (blue-sky hypothesis metric)
+  schlagpunkte: number; // last PDF number — distance points (wind hypothesis metric)
+}
+
+/** A single match (pairing of two teams) on a given round date. */
+export interface Match {
+  id: string;
+  date: string; // ISO yyyy-mm-dd (round date)
+  season: number;
+  league: string; // e.g. "NLA", "NLB", "1. Liga Gruppe 1"
+  home: TeamMatchResult;
+  away: TeamMatchResult;
+  // Resolved location = home team's field (assumption: first-listed team = home).
+  venueId?: string;
+  venueName?: string;
+  lat?: number;
+  lng?: number;
+}
+
+/** Aggregated weather for a match location + date, over the playing window. */
+export interface MatchWeather {
+  key: string; // `${lat.toFixed(4)},${lng.toFixed(4)}@${date}`
+  date: string;
+  lat: number;
+  lng: number;
+  cloudCoverMean: number; // %
+  cloudCoverMin: number; // % (bluest moment)
+  windSpeedMean: number; // km/h — scalar mean magnitude (how windy)
+  windDirectionMean: number; // deg, meteorological FROM (resultant)
+  // Resultant wind-vector (direction wind blows TOWARD), km/h in east/north.
+  // Vector-averaged over the play window, so it correctly handles rotating wind.
+  windU: number; // eastward component
+  windV: number; // northward component
+  windSteadiness: number; // |resultant| / scalarMean, 0=fully rotating … 1=steady
+  windGustMax: number; // km/h
+  temperatureMean: number; // °C
+  hoursUsed: number; // number of hourly samples aggregated
+}
+
+/** One team-match observation joined with weather + wind, the unit of analysis. */
+export interface Observation {
+  matchId: string;
+  date: string;
+  season: number;
+  league: string;
+  team: string;
+  opponent: string;
+  isHome: boolean;
+  nummern: number;
+  schlagpunkte: number;
+  rundenpunkte: number;
+  // location & weather (both teams share the match location & sky)
+  venueId?: string;
+  venueName?: string;
+  lat?: number;
+  lng?: number;
+  cloudCoverMean?: number;
+  cloudCoverMin?: number;
+  windSpeedMean?: number;
+  windDirectionMean?: number;
+  temperatureMean?: number;
+  // wind relative to this venue's playing direction (only if direction set)
+  playingDirectionDeg?: number | null;
+  tailwindComponent?: number | null; // km/h, + = tailwind, − = headwind
+}
+
+export interface Bucket {
+  label: string;
+  count: number;
+  mean: number;
+  stdErr: number;
+}
+
+export interface CorrelationResult {
+  n: number;
+  pearson: number;
+  spearman: number;
+  slope: number; // OLS slope (y per unit x)
+  intercept: number;
+  ciLow: number; // bootstrap 95% CI of pearson
+  ciHigh: number;
+  pValueApprox: number;
+}
+
+export interface BlueSkyAnalysis {
+  metric: "nummern";
+  correlation: CorrelationResult; // cloudCover vs nummern
+  buckets: Bucket[]; // by cloud cover class
+  clearMean: number; // mean nummern when clear (<25% cloud)
+  overcastMean: number; // mean nummern when overcast (>75% cloud)
+  verdict: Verdict;
+}
+
+export interface WindAnalysis {
+  metric: "schlagpunkte";
+  correlation: CorrelationResult; // tailwind vs schlagpunkte
+  buckets: Bucket[]; // by tailwind class
+  tailwindMean: number; // mean schlagpunkte with tailwind
+  headwindMean: number; // mean schlagpunkte with headwind
+  ratio: number; // tailwindMean / headwindMean
+  modelK: number; // configured factor slope (factor = 1 + k * tailwindKmh)
+  verdict: Verdict;
+}
+
+export type VerdictLevel = "confirmed" | "weak" | "none" | "contradicted" | "insufficient";
+
+export interface Verdict {
+  level: VerdictLevel;
+  headline: string;
+  detail: string;
+}
+
+export interface AnalysisResult {
+  generatedAt: string;
+  seasons: number[];
+  leagues: string[];
+  totalMatches: number;
+  totalObservations: number;
+  observationsWithWeather: number;
+  observationsWithWind: number;
+  blueSky: BlueSkyAnalysis;
+  wind: WindAnalysis;
+}
+
+/** User-maintained config: playing direction per physical field. */
+export interface PlayingDirectionEntry {
+  venue: string; // display label
+  lat: number;
+  lng: number;
+  directionDeg: number; // azimuth the Nouss is hit toward
+  note?: string;
+}
+
+export interface WindModelConfig {
+  /** factor = 1 + k * tailwindKmh, applied to expected schlagpunkte. */
+  k: number;
+  /** hours (local) considered the playing window for weather aggregation. */
+  playWindowStart: number;
+  playWindowEnd: number;
+}
+
+export interface PlayingDirectionsConfig {
+  model: WindModelConfig;
+  directions: PlayingDirectionEntry[];
+}

@@ -1,0 +1,2330 @@
+[
+  {
+    "id": "aefligen-47-0970-7-5592",
+    "name": "Aefligen",
+    "ort": "Aefligen",
+    "lat": 47.097006,
+    "lng": 7.559229,
+    "teams": [
+      "Aefligen"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "aeschi-47-1750-7-6669",
+    "name": "Aeschi",
+    "ort": "Aeschi SO",
+    "strasse": "Moosweg 23",
+    "plz": "4556",
+    "lat": 47.175023,
+    "lng": 7.666921,
+    "homepage": "http://hgaeschi.ch/",
+    "teams": [
+      "Aeschi A",
+      "Aeschi B",
+      "Aeschi Nachwuchs"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "aetingen-limpach-47-1223-7-5041",
+    "name": "Aetingen-Limpach",
+    "ort": "Aetingen",
+    "strasse": "Germattenweg",
+    "plz": "4587",
+    "lat": 47.122324,
+    "lng": 7.504064,
+    "homepage": "http://www.hgaetingen.ch/",
+    "teams": [
+      "Aetingen-Limpach A",
+      "Aetingen-Limpach B",
+      "Aetingen-Limpach N"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "alchenstorf-47-1279-7-5894",
+    "name": "Alchenstorf",
+    "ort": "Koppigen",
+    "strasse": "Utzenstorfstrasse",
+    "plz": "3425",
+    "lat": 47.127909,
+    "lng": 7.589388,
+    "homepage": "http://www.hgalchenstorf.ch",
+    "teams": [
+      "Alchenstorf",
+      "Alchenstorf NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "arch-47-1823-7-4383",
+    "name": "Arch",
+    "ort": "Arch",
+    "strasse": "Haselweg/Uferweg (Ries Arch)",
+    "plz": "3296",
+    "lat": 47.182312,
+    "lng": 7.438254,
+    "homepage": "http://hg-arch.ch/",
+    "teams": [
+      "Arch",
+      "Arch NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "auswil-wyssbach-47-1539-7-8140",
+    "name": "Auswil-Wyssbach",
+    "ort": "Madiswil",
+    "strasse": "Hübeli 97",
+    "plz": "4934",
+    "lat": 47.153923,
+    "lng": 7.814031,
+    "homepage": "https://www.hg-auswil-wyssbach.ch/",
+    "teams": [
+      "Auswil-Wyssbach A",
+      "Auswil-Wyssbach B",
+      "Auswil-Wyssbach NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "balzenwil-47-2301-7-8555",
+    "name": "Balzenwil",
+    "ort": "St. Urban",
+    "strasse": "Rotherdstrasse 19",
+    "plz": "4915",
+    "lat": 47.230147,
+    "lng": 7.855517,
+    "homepage": "https://www.hgbalzenwil.ch/",
+    "teams": [
+      "Balzenwil A",
+      "Balzenwil B",
+      "Balzenwil Nachwuchs"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "baeriswil-junghornusser-47-0132-7-5340",
+    "name": "Bäriswil Junghornusser",
+    "ort": "Bäriswil BE",
+    "strasse": "Kirchweg 1",
+    "plz": "3323",
+    "lat": 47.013179,
+    "lng": 7.534001,
+    "homepage": "http://www.hg-bäriswil.ch/",
+    "teams": [
+      "Bäriswil Junghornusser"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "belp-toffen-46-9101-7-4941",
+    "name": "Belp-Toffen",
+    "ort": "Belp",
+    "strasse": "Hohburgstr. 25",
+    "plz": "3123",
+    "lat": 46.910127,
+    "lng": 7.494095,
+    "homepage": "http://www.hgbelp-toffen.ch/",
+    "teams": [
+      "Belp-Toffen",
+      "Belp-Toffen NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "bern-beundenfeld-46-9621-7-4771",
+    "name": "Bern-Beundenfeld",
+    "ort": "Bern",
+    "strasse": "Kleine Allmend",
+    "plz": "3006",
+    "lat": 46.962126,
+    "lng": 7.47714,
+    "homepage": "https://www.bern-beundenfeld.ch/",
+    "teams": [
+      "Bern-Beundenfeld A",
+      "Bern-Beundenfeld B",
+      "Bern-Beundenfeld C",
+      "Bern-Beundenfeld NW"
+    ],
+    "playingDirectionDeg": 230.39
+  },
+  {
+    "id": "biberen-ulmiz-wileroltigen-46-9398-7-1948",
+    "name": "Biberen-Ulmiz-Wileroltigen",
+    "ort": "Gempenach",
+    "lat": 46.939751,
+    "lng": 7.194773,
+    "teams": [
+      "Biberen-Ulmiz-Wileroltigen A"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "biberen-ulmiz-wileroltigen-46-9729-7-2504",
+    "name": "Biberen-Ulmiz-Wileroltigen",
+    "ort": "Wileroltigen",
+    "lat": 46.972927,
+    "lng": 7.250405,
+    "teams": [
+      "Biberen-Ulmiz-Wileroltigen B",
+      "Wileroltigen NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "biberist-dorf-47-1915-7-5769",
+    "name": "Biberist-Dorf",
+    "ort": "Biberist",
+    "strasse": "Girizstr. 94",
+    "plz": "4562",
+    "lat": 47.191472,
+    "lng": 7.576923,
+    "homepage": "www.hgbiberist-dorf.ch",
+    "teams": [
+      "Biberist-Dorf"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "biel-schwadernau-47-1180-7-3169",
+    "name": "Biel-Schwadernau",
+    "ort": "Schwadernau",
+    "strasse": "Weidgasse 26",
+    "plz": "2556",
+    "lat": 47.117982,
+    "lng": 7.316913,
+    "homepage": "http://www.hg-biel-schwadernau.ch/",
+    "teams": [
+      "Biel-Schwadernau A",
+      "Biel-Schwadernau B",
+      "Biel-Schwadernau NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "bigel-goldbach-47-0070-7-6700",
+    "name": "Bigel-Goldbach",
+    "ort": "Lützelflüh-Goldbach",
+    "strasse": "Emmentalstrasse 9",
+    "plz": "3432",
+    "lat": 47.00701,
+    "lng": 7.669986,
+    "homepage": "http://www.hg-bigel-goldbach.ch/",
+    "teams": [
+      "Bigel-Goldbach",
+      "Bigel-Goldbach NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "bigenthal-walkringen-46-9405-7-6128",
+    "name": "Bigenthal-Walkringen",
+    "ort": "Walkringen",
+    "strasse": "Moos 23",
+    "plz": "3512",
+    "lat": 46.940546,
+    "lng": 7.612774,
+    "homepage": "http://www.hgbigenthal-walkringen.ch/",
+    "teams": [
+      "Bigenthal-Walkringen A",
+      "Bigenthal-Walkringen B",
+      "Bigenthal-Walkringen NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "biglen-arni-46-9363-7-6531",
+    "name": "Biglen-Arni",
+    "ort": "Arni",
+    "strasse": "Lützelflühstrasse 9",
+    "plz": "3508",
+    "lat": 46.936316,
+    "lng": 7.653124,
+    "homepage": "http://www.hgbiglenarni.ch/home/",
+    "teams": [
+      "Biglen-Arni A",
+      "Biglen-Arni B",
+      "Biglen-Arni C",
+      "Biglen-Arni NW"
+    ],
+    "playingDirectionDeg": 265.96
+  },
+  {
+    "id": "bleienbach-47-1948-7-7626",
+    "name": "Bleienbach",
+    "ort": "Bleienbach",
+    "strasse": "Langenthalstrasse",
+    "plz": "3368",
+    "lat": 47.194838,
+    "lng": 7.7626,
+    "homepage": "http://hg-bleienbach.ch",
+    "teams": [
+      "Bleienbach",
+      "Bleienbach Bleienbach NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "bollodingen-bettenhausen-47-1784-7-7113",
+    "name": "Bollodingen-Bettenhausen",
+    "ort": "Bettenhausen",
+    "strasse": "Schindmattegg 100",
+    "plz": "3366",
+    "lat": 47.178436,
+    "lng": 7.711287,
+    "homepage": "http://www.hgbb.ch/",
+    "teams": [
+      "Bollodingen-Bettenhausen",
+      "Bollodingen-Bettenhausen Nachwuchs"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "bowil-46-9025-7-6917",
+    "name": "Bowil",
+    "ort": "Bowil",
+    "strasse": "Dorf 139",
+    "plz": "3533",
+    "lat": 46.902544,
+    "lng": 7.69168,
+    "homepage": "",
+    "teams": [
+      "Bowil",
+      "Bowil NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "bramberg-46-9149-7-2841",
+    "name": "Bramberg",
+    "ort": "Neuenegg",
+    "strasse": "",
+    "plz": "3176",
+    "lat": 46.91494,
+    "lng": 7.284062,
+    "homepage": "https://hg.bramberg.ch/",
+    "teams": [
+      "Bramberg A",
+      "Bramberg B",
+      "Bramberg Nachwuchs"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "bueren-zum-hof-47-1007-7-5195",
+    "name": "Büren zum Hof",
+    "ort": "Büren zum Hof",
+    "strasse": "Chrüzmatt 91a",
+    "plz": "3313",
+    "lat": 47.10072,
+    "lng": 7.51946,
+    "homepage": "http://www.hornusser.ch/",
+    "teams": [
+      "Büren zum Hof A",
+      "Büren zum Hof B",
+      "Büren zum Hof NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "burgdorf-47-0431-7-5932",
+    "name": "Burgdorf",
+    "ort": "Oberburg",
+    "strasse": "Rohrmoos 55",
+    "plz": "3414",
+    "lat": 47.043057,
+    "lng": 7.593175,
+    "homepage": "https://www.hornusserburgdorf.ch/",
+    "teams": [
+      "Burgdorf"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "busswil-b-heimiswil-47-0600-7-6540",
+    "name": "Busswil b. Heimiswil",
+    "ort": "Heimiswil",
+    "strasse": "Niederdorf 5",
+    "plz": "3412",
+    "lat": 47.059976,
+    "lng": 7.653989,
+    "homepage": "https://www.hgbusswilbeiheimiswil.ch/",
+    "teams": [
+      "Busswil b. Heimiswil",
+      "Busswil b. Heimiswil NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "busswil-b-ueren-47-0993-7-3105",
+    "name": "Busswil b.üren",
+    "ort": "Worben",
+    "strasse": "Busswilstrasse 85",
+    "plz": "3252",
+    "lat": 47.099333,
+    "lng": 7.310472,
+    "homepage": "http://www.hg-busswil.ch/",
+    "teams": [
+      "Busswil b. Büren A",
+      "Busswil b. Büren B",
+      "Busswil b. Büren NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "dieboldshausen-46-9675-7-5914",
+    "name": "Dieboldshausen",
+    "ort": "Utzigen",
+    "strasse": "Amseldingen 160",
+    "plz": "3068",
+    "lat": 46.967502,
+    "lng": 7.591435,
+    "homepage": "http://www.hgdieboldshausen.ch/",
+    "teams": [
+      "Dieboldshausen",
+      "Dieboldshausen NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "diessbach-b-ueren-47-1023-7-3715",
+    "name": "Diessbach b.üren",
+    "ort": "Diessbach b. Büren",
+    "strasse": "Viehweg 12",
+    "plz": "3264",
+    "lat": 47.102257,
+    "lng": 7.371531,
+    "homepage": "https://www.hgdiessbach.info",
+    "teams": [
+      "Diessbach b. Büren",
+      "Diessbach b. Büren NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "dotzigen-47-1257-7-3399",
+    "name": "Dotzigen",
+    "ort": "Dotzigen",
+    "strasse": "",
+    "plz": "3293",
+    "lat": 47.125732,
+    "lng": 7.339894,
+    "homepage": "http://www.hg-dotzigen.clubdesk.com",
+    "teams": [
+      "Dotzigen",
+      "Dotzigen NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "duerrenroth-schmidigen-47-0842-7-7774",
+    "name": "Dürrenroth-Schmidigen",
+    "ort": "Dürrenroth",
+    "strasse": "Müsle 118",
+    "plz": "3465",
+    "lat": 47.084225,
+    "lng": 7.777359,
+    "homepage": "http://www.hgduerrenroth.ch/",
+    "teams": [
+      "Dürrenroth NW",
+      "Dürrenroth-Schmidigen A",
+      "Dürrenroth-Schmidigen B",
+      "Dürrenroth-Schmidigen C"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "epsach-47-0760-7-2176",
+    "name": "Epsach",
+    "ort": "Epsach",
+    "strasse": "Dorfstr. 10",
+    "plz": "3272",
+    "lat": 47.075991,
+    "lng": 7.217551,
+    "homepage": "http://www.hg-epsach.ch/",
+    "teams": [
+      "Epsach A",
+      "Epsach B",
+      "Epsach NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "eriswil-47-0707-7-8790",
+    "name": "Eriswil",
+    "ort": "Eriswil",
+    "strasse": "Grunholz",
+    "plz": "4952",
+    "lat": 47.070734,
+    "lng": 7.878973,
+    "homepage": "http://www.hgeriswil.ch/",
+    "teams": [
+      "Eriswil A",
+      "Eriswil B",
+      "Eriswil NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "ersigen-47-1168-7-5835",
+    "name": "Ersigen",
+    "ort": "Ersigen",
+    "strasse": "Loon 1",
+    "plz": "3423",
+    "lat": 47.116845,
+    "lng": 7.583536,
+    "homepage": "https://www.hgersigen.ch/",
+    "teams": [
+      "Ersigen A",
+      "Ersigen B",
+      "Ersigen NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "etzelkofen-47-0809-7-4836",
+    "name": "Etzelkofen",
+    "ort": "Etzelkofen",
+    "strasse": "Grafenriedstrasse 40",
+    "plz": "3306",
+    "lat": 47.080859,
+    "lng": 7.483572,
+    "homepage": "http://www.hg-etzelkofen.ch/",
+    "teams": [
+      "Etzelkofen A"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "ferenberg-46-9695-7-5394",
+    "name": "Ferenberg",
+    "ort": "Ferenberg",
+    "strasse": "Wydmatt",
+    "plz": "3066",
+    "lat": 46.969522,
+    "lng": 7.539408,
+    "homepage": "http://www.hgferenberg.ch/",
+    "teams": [
+      "Ferenberg",
+      "Ferenberg Nachwuchs"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "frauchwil-zimlisberg-47-0580-7-3819",
+    "name": "Frauchwil-Zimlisberg",
+    "ort": "Rapperswil BE",
+    "strasse": "Rüberi",
+    "plz": "3255",
+    "lat": 47.058014,
+    "lng": 7.381876,
+    "homepage": "https://www.hornusser-frauchwil.ch/",
+    "teams": [
+      "Frauchwil-Zimlisberg NW",
+      "Thörishaus-Frauchwil-Zimlisberg A"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "frauenfeld-47-5717-8-8953",
+    "name": "Frauenfeld",
+    "ort": "Frauenfeld",
+    "strasse": "Allmendweg",
+    "plz": "8500",
+    "lat": 47.57168,
+    "lng": 8.895348,
+    "homepage": "http://www.hornusserfrauenfeld.ch/jo/index.php",
+    "teams": [
+      "Frauenfeld NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "frittenbach-emmenmatt-ilfis-46-9505-7-7384",
+    "name": "Frittenbach-Emmenmatt-Ilfis",
+    "ort": "Lauperswil",
+    "lat": 46.950482,
+    "lng": 7.738444,
+    "teams": [
+      "Frittenbach-Emmenmatt-Ilfis A",
+      "Frittenbach-Emmenmatt-Ilfis C",
+      "Unterfrittenbach-Emmenmatt Nachwuchs"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "frittenbach-emmenmatt-ilfis-46-9408-7-7602",
+    "name": "Frittenbach-Emmenmatt-Ilfis",
+    "ort": "Langnau i. E.",
+    "lat": 46.940839,
+    "lng": 7.760194,
+    "teams": [
+      "Frittenbach-Emmenmatt-Ilfis B",
+      "Ilfis NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "gammen-46-9276-7-2129",
+    "name": "Gammen",
+    "ort": "Ulmiz",
+    "strasse": "Steinerenweg",
+    "plz": "3214",
+    "lat": 46.927645,
+    "lng": 7.2129,
+    "homepage": "https://hggammen.ch/",
+    "teams": [
+      "Gammen"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "gasel-46-8921-7-4144",
+    "name": "Gasel",
+    "ort": "Gasel",
+    "strasse": "Bodenackerweg 4",
+    "plz": "3144",
+    "lat": 46.892085,
+    "lng": 7.414358,
+    "homepage": "",
+    "teams": [
+      "Gasel",
+      "Gasel NWH"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "gerlafingen-zielebach-47-1650-7-5656",
+    "name": "Gerlafingen-Zielebach",
+    "ort": "Zielebach",
+    "strasse": "Wilerstrasse",
+    "plz": "4564",
+    "lat": 47.164994,
+    "lng": 7.5656,
+    "homepage": "http://www.hggz.ch/",
+    "teams": [
+      "Gerlafingen-Zielebach A",
+      "Gerlafingen-Zielebach B",
+      "Gerlafingen-Zielebach NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "gohl-46-9435-7-8159",
+    "name": "Gohl",
+    "ort": "Gohl",
+    "strasse": "Schattboden",
+    "plz": "3553",
+    "lat": 46.943498,
+    "lng": 7.815852,
+    "homepage": "http://www.hg-gohl.ch/",
+    "teams": [
+      "Gohl",
+      "Gohl NW Gohl"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "gondiswil-47-1511-7-8582",
+    "name": "Gondiswil",
+    "ort": "Gondiswil",
+    "strasse": "Freibachmoos",
+    "plz": "4955",
+    "lat": 47.15110706444213,
+    "lng": 7.858189946144014,
+    "homepage": "http://www.hggondiswil.ch/",
+    "teams": [
+      "Gondiswil A",
+      "Gondiswil B",
+      "Gondiswil NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "gossau-47-2996-8-7493",
+    "name": "Gossau",
+    "ort": "Gossau",
+    "strasse": "Leerütistrasse",
+    "plz": "8625",
+    "lat": 47.299573,
+    "lng": 8.749347,
+    "homepage": "https://www.hggossau.ch/",
+    "teams": [
+      "Gossau A",
+      "Gossau B",
+      "Gossau NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "graben-47-2235-7-7277",
+    "name": "Graben",
+    "ort": "Graben",
+    "strasse": "Schwendiacker 28A",
+    "plz": "3376",
+    "lat": 47.22351,
+    "lng": 7.727653,
+    "homepage": "http://www.hggraben.ch/",
+    "teams": [
+      "Graben",
+      "Graben NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "grafenried-jegenstorf-47-0731-7-4953",
+    "name": "Grafenried-Jegenstorf",
+    "ort": "Grafenried",
+    "strasse": "Buchhofstrasse",
+    "plz": "3308",
+    "lat": 47.073089,
+    "lng": 7.495261,
+    "homepage": "http://www.hg-gj.ch/",
+    "teams": [
+      "Grafenried-Jegenstorf"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "grasswil-47-1492-7-6613",
+    "name": "Grasswil",
+    "ort": "Grasswil",
+    "strasse": "Haldenweg 2",
+    "plz": "3365",
+    "lat": 47.149184,
+    "lng": 7.661298,
+    "homepage": "www.facebook.ch/hggrasswil",
+    "teams": [
+      "Grasswil B",
+      "Höchstetten C"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "grenchen-47-1780-7-3898",
+    "name": "Grenchen",
+    "ort": "Grenchen",
+    "strasse": "Hornusserweg 50",
+    "plz": "2540",
+    "lat": 47.177976,
+    "lng": 7.389765,
+    "homepage": "http://www.hg-grenchen.ch/",
+    "teams": [
+      "Grenchen",
+      "Grenchen Nachwuchs"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "gruenenmatt-brandis-46-9967-7-7042",
+    "name": "Grünenmatt-Brandis",
+    "ort": "Ramsei",
+    "strasse": "Emmentalstrasse",
+    "plz": "3435",
+    "lat": 46.996716,
+    "lng": 7.704152,
+    "homepage": "https://www.hg-gruenenmatt.ch",
+    "teams": [
+      "Grünenmatt-Brandis A",
+      "Grünenmatt-Brandis B",
+      "Grünenmatt-Brandis NW",
+      "Grünenmatt-Gümligen NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "habstetten-46-9780-7-5167",
+    "name": "Habstetten",
+    "ort": "Rumisberg",
+    "strasse": "Maelbacherweg 10",
+    "plz": "4539",
+    "lat": 46.977958,
+    "lng": 7.516676,
+    "homepage": "http://www.hghabstetten.ch/",
+    "teams": [
+      "Habstetten"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "halten-47-1669-7-6174",
+    "name": "Halten",
+    "ort": "Halten",
+    "strasse": "Hauptstrasse 60",
+    "plz": "4566",
+    "lat": 47.166931,
+    "lng": 7.617392,
+    "homepage": "http://www.hg-halten.ch/",
+    "teams": [
+      "Halten"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "hasle-b-burgdorf-47-0207-7-6479",
+    "name": "Hasle b. Burgdorf",
+    "ort": "Hasle bei Burgdorf",
+    "strasse": "Brückenstrasse 1",
+    "plz": "3415",
+    "lat": 47.0207,
+    "lng": 7.64786,
+    "homepage": "http://www.hg-hasle.ch/",
+    "teams": [
+      "Hasle b. Burgdorf A",
+      "Hasle b. Burgdorf B",
+      "Hasle b. Burgdorf NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "haeusernmoos-47-0563-7-7599",
+    "name": "Häusernmoos",
+    "ort": "Ursenbach",
+    "lat": 47.056272,
+    "lng": 7.759864,
+    "teams": [
+      "Häusernmoos"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "heimberg-46-7597-7-6070",
+    "name": "Heimberg",
+    "ort": "Thun",
+    "lat": 46.75967,
+    "lng": 7.607,
+    "teams": [
+      "Heimberg"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "heimiswil-47-0921-7-6633",
+    "name": "Heimiswil",
+    "ort": "Heimiswil",
+    "strasse": "Kleinweid 389",
+    "plz": "3412",
+    "lat": 47.092056,
+    "lng": 7.663259,
+    "homepage": "https://www.hornusserheimiswil.ch/",
+    "teams": [
+      "Heimiswil A",
+      "Heimiswil C",
+      "Heimiswil D",
+      "Heimiswil Nachwuchs"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "heimiswil-47-0660-7-6659",
+    "name": "Heimiswil",
+    "ort": "Heimiswil",
+    "strasse": "Schindelgasse 47",
+    "plz": "3412",
+    "lat": 47.066028,
+    "lng": 7.665885,
+    "homepage": "https://www.hornusserheimiswil.ch/",
+    "teams": [
+      "Heimiswil B"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "hergiswil-am-napf-47-0699-7-9555",
+    "name": "Hergiswil am Napf",
+    "ort": "Hergiswil b. Willisau",
+    "strasse": "Opfersei",
+    "plz": "6133",
+    "lat": 47.069886,
+    "lng": 7.955486,
+    "homepage": "http://www.hghergiswil.ch/home.html",
+    "teams": [
+      "Hergiswil am Napf",
+      "Hergiswil am Napf Nachwuchs"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "hettiswil-eintracht-moosseedorf-47-0385-7-5793",
+    "name": "Hettiswil-Eintracht-Moosseedorf",
+    "ort": "Mötschwil",
+    "strasse": "Rüteli 1",
+    "plz": "3324",
+    "lat": 47.038546,
+    "lng": 7.57933,
+    "homepage": "http://www.hornusser-hettiswil.ch/",
+    "teams": [
+      "Hettiswil-Eintracht NW",
+      "Hettiswil-Eintracht-Moosseedorf A",
+      "Hettiswil-Eintracht-Moosseedorf B"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "hettiswil-eintracht-moosseedorf-47-0119-7-4980",
+    "name": "Hettiswil-Eintracht-Moosseedorf",
+    "ort": "Moosseedorf",
+    "lat": 47.011888,
+    "lng": 7.498027,
+    "teams": [
+      "Hettiswil-Eintracht-Moosseedorf C"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "hindelbank-zollikofen-47-0441-7-5637",
+    "name": "Hindelbank-Zollikofen",
+    "ort": "Mittlerhölzliweg",
+    "lat": 47.044112,
+    "lng": 7.563714,
+    "teams": [
+      "Hindelbank-Zollikofen B",
+      "Hindelbank-Zollikofen NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "hindelbank-zollikofen-46-9868-7-4539",
+    "name": "Hindelbank-Zollikofen",
+    "ort": "Unterzollikofen",
+    "lat": 46.986756,
+    "lng": 7.45387,
+    "teams": [
+      "Hindelbank-Zollikofen A"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "hintermoos-reiden-47-2556-8-0087",
+    "name": "Hintermoos-Reiden",
+    "ort": "Reiden",
+    "lat": 47.255622,
+    "lng": 8.008652,
+    "teams": [
+      "Hintermoos-Reiden A",
+      "Hintermoos-Reiden B",
+      "Hintermoos-Reiden Nachwuchs"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "hoechstetten-47-1520-7-6397",
+    "name": "Höchstetten",
+    "ort": "Höchstetten",
+    "strasse": "Wäldliweg",
+    "plz": "3429",
+    "lat": 47.151991,
+    "lng": 7.639693,
+    "homepage": "http://www.hghoechstetten.ch/",
+    "teams": [
+      "Höchstetten A",
+      "Höchstetten B",
+      "Höchstetten Nachwuchs",
+      "Höchstetten_alt Nachwuchs"
+    ],
+    "playingDirectionDeg": 129.42
+  },
+  {
+    "id": "huttwil-47-1123-7-8678",
+    "name": "Huttwil",
+    "ort": "Huttwil",
+    "strasse": "Kammernmoos",
+    "plz": "4950",
+    "lat": 47.112273,
+    "lng": 7.867796,
+    "homepage": "https://hghuttwil.ch",
+    "teams": [
+      "Huttwil",
+      "Huttwil NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "kappelen-saurenhorn-47-0651-7-2857",
+    "name": "Kappelen-Saurenhorn",
+    "ort": "Kappelen",
+    "strasse": "Lyssstrasse",
+    "plz": "3273",
+    "lat": 47.065079,
+    "lng": 7.285671,
+    "homepage": "https://hgkappelen-saurenhorn.ch",
+    "teams": [
+      "Kappelen-Saurenhorn",
+      "Kappelen-Saurenhorn NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "kirchberg-47-0984-7-5802",
+    "name": "Kirchberg",
+    "ort": "Kirchberg BE",
+    "strasse": "Gassacher 110",
+    "plz": "3422",
+    "lat": 47.098417,
+    "lng": 7.580233,
+    "homepage": "http://www.hgkirchberg.ch/",
+    "teams": [
+      "Kirchberg",
+      "Kirchberg NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "kirchdorf-herbligen-46-8817-7-5456",
+    "name": "Kirchdorf-Herbligen",
+    "ort": "Münsingen",
+    "strasse": "Walke",
+    "plz": "3110",
+    "lat": 46.88174,
+    "lng": 7.54559,
+    "homepage": "",
+    "teams": [
+      "Kirchdorf-Herbligen",
+      "Kirchdorf-Herbligen NW",
+      "Münsingen",
+      "Münsingen NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "kraeiligen-baetterkinden-47-1511-7-5444",
+    "name": "Kräiligen-Bätterkinden",
+    "ort": "Kräiligen",
+    "strasse": "Rüttistrasse 37",
+    "plz": "3315",
+    "lat": 47.151069,
+    "lng": 7.544367,
+    "homepage": "http://www.hgkb.ch/wordpress/",
+    "teams": [
+      "Kräiligen-Bätterkinden",
+      "Kräiligen-Bätterkinden Nachwuchs"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "krauchthal-hub-47-0043-7-5554",
+    "name": "Krauchthal-Hub",
+    "ort": "Krauchthal",
+    "strasse": "Bolligenstrasse",
+    "plz": "3326",
+    "lat": 47.004259,
+    "lng": 7.55541,
+    "homepage": "http://www.krauchthal-hub.ch/",
+    "teams": [
+      "Krauchthal-Hub A",
+      "Krauchthal-Hub B",
+      "Krauchthal-Hub NWH"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "kriechenwil-46-9120-7-2120",
+    "name": "Kriechenwil",
+    "ort": "Bern",
+    "strasse": "Mittelstr. 68",
+    "plz": "3012",
+    "lat": 46.912,
+    "lng": 7.212,
+    "homepage": "http://hgkriechenwil.ch/",
+    "teams": [
+      "Kriechenwil"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "langnau-berge-46-9699-7-8058",
+    "name": "Langnau-Berge",
+    "ort": "Oberfrittenbach",
+    "strasse": "Obere Hollern 438",
+    "plz": "3551",
+    "lat": 46.969857,
+    "lng": 7.805848,
+    "homepage": "https://www.hglangnau-berge.ch/",
+    "teams": [
+      "Langnau-Berge",
+      "Langnau-Berge NWH"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "lohn-47-1757-7-5241",
+    "name": "Lohn",
+    "ort": "Lohn-Ammannsegg",
+    "strasse": "Schwallermattstr. 8",
+    "plz": "4573",
+    "lat": 47.175692,
+    "lng": 7.524101,
+    "homepage": "http://www.hglohn.ch/",
+    "teams": [
+      "Lohn"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "lotzwil-47-1932-7-7815",
+    "name": "Lotzwil",
+    "ort": "Lotzwil",
+    "lat": 47.19323,
+    "lng": 7.781488,
+    "teams": [
+      "Lotzwil",
+      "Lotzwil NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "lueg-i-47-0772-7-7144",
+    "name": "Lueg i..",
+    "ort": "Affoltern im Emmental",
+    "strasse": "Junkholz 6",
+    "plz": "3416",
+    "lat": 47.07725,
+    "lng": 7.714379,
+    "homepage": "http://www.hglueg.ch/",
+    "teams": [
+      "Lueg i. E.",
+      "Lueg i. E. NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "luesslingen-nennigkofen-47-1973-7-4960",
+    "name": "Lüsslingen-Nennigkofen",
+    "ort": "Lüsslingen",
+    "strasse": "",
+    "plz": "",
+    "lat": 47.197271,
+    "lng": 7.496043,
+    "homepage": "http://www.hgluesslingen-nennigkofen.ch/",
+    "teams": [
+      "Lüsslingen-Nennigkofen",
+      "Lüsslingen-Nennigkofen NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "luzern-47-0332-8-3005",
+    "name": "Luzern",
+    "ort": "Meggen",
+    "strasse": "Gotthardstrasse 59",
+    "plz": "6045",
+    "lat": 47.033156,
+    "lng": 8.300457,
+    "homepage": "http://www.hgluzern.ch/",
+    "teams": [
+      "Luzern NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "lyss-47-0813-7-2978",
+    "name": "Lyss",
+    "ort": "Lyss",
+    "strasse": "Bielstrasse 98",
+    "plz": "3250",
+    "lat": 47.08133,
+    "lng": 7.297779,
+    "homepage": "http://www.hornusser-lyss.ch/HGL/",
+    "teams": [
+      "Lyss A",
+      "Lyss B",
+      "Lyss NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "lyssach-47-0786-7-5858",
+    "name": "Lyssach",
+    "ort": "Lyssach",
+    "strasse": "Burgdorfstr. 45",
+    "plz": "3421",
+    "lat": 47.078628,
+    "lng": 7.585783,
+    "homepage": "http://hglyssach.ch/",
+    "teams": [
+      "Lyssach A",
+      "Lyssach B",
+      "Lyssach Nachwuchs"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "maettenwil-brittnau-47-2428-7-9195",
+    "name": "Mättenwil-Brittnau",
+    "ort": "Brittnau",
+    "strasse": "Scharleten",
+    "plz": "4805",
+    "lat": 47.242794,
+    "lng": 7.91949,
+    "homepage": "http://www.hgmb.ch/cms/",
+    "teams": [
+      "Mättenwil-Brittnau A",
+      "Mättenwil-Brittnau B",
+      "Mättenwil-Brittnau NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "messen-47-0902-7-4612",
+    "name": "Messen",
+    "ort": "Messen",
+    "strasse": "Krähenberg",
+    "plz": "3254",
+    "lat": 47.090243,
+    "lng": 7.461173,
+    "homepage": "https://www.hgmessen.ch/",
+    "teams": [
+      "Messen",
+      "Messen NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "muelchi-47-1085-7-4715",
+    "name": "Mülchi",
+    "ort": "Mülchi",
+    "strasse": "Mülchibach",
+    "plz": "3317",
+    "lat": 47.108476,
+    "lng": 7.471532,
+    "homepage": "http://www.hgmülchi.ch/",
+    "teams": [
+      "Mülchi"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "muenchenbuchsee-wohlen-47-0177-7-4335",
+    "name": "Münchenbuchsee-Wohlen",
+    "ort": "Diemerswil",
+    "lat": 47.017733,
+    "lng": 7.433485,
+    "teams": [
+      "Münchenbuchsee-Wohlen B",
+      "Münchenbuchsee-Wohlen NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "muenchenbuchsee-wohlen-46-9933-7-3493",
+    "name": "Münchenbuchsee-Wohlen",
+    "ort": "Möriswil",
+    "lat": 46.993258,
+    "lng": 7.349298,
+    "teams": [
+      "Münchenbuchsee-Wohlen A"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "muetzlenberg-nesselgraben-46-9701-7-7056",
+    "name": "Mützlenberg-Nesselgraben",
+    "ort": "Wynigen",
+    "strasse": "Grüttermatt",
+    "plz": "3472",
+    "lat": 46.970099,
+    "lng": 7.705576,
+    "homepage": "http://hgmn.ch/wp/",
+    "teams": [
+      "Mützlenberg-Nesselgraben A",
+      "Mützlenberg-Nesselgraben NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "oberbottigen-46-9296-7-3350",
+    "name": "Oberbottigen",
+    "ort": "Bern",
+    "lat": 46.929612,
+    "lng": 7.334994,
+    "teams": [
+      "Oberbottigen",
+      "Oberbottigen NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "oberdiessbach-46-8363-7-6096",
+    "name": "Oberdiessbach",
+    "ort": "Oberdiessbach",
+    "strasse": "Moosweg 4",
+    "plz": "3672",
+    "lat": 46.836319,
+    "lng": 7.609585,
+    "homepage": "http://www.hgoberdiessbach.ch/",
+    "teams": [
+      "Oberdiessbach A",
+      "Oberdiessbach B",
+      "Oberdiessbach C",
+      "Oberdiessbach NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "obergerlafingen-47-1497-7-5896",
+    "name": "Obergerlafingen",
+    "ort": "Obergerlafingen",
+    "strasse": "Hölzli 2",
+    "plz": "4564",
+    "lat": 47.14968,
+    "lng": 7.589643,
+    "homepage": "http://www.hgobergerlafingen.ch/",
+    "teams": [
+      "Obergerlafingen A",
+      "Obergerlafingen B",
+      "Obergerlafingen NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "obergoldbach-46-9625-7-6775",
+    "name": "Obergoldbach",
+    "ort": "Obergoldbach",
+    "lat": 46.962525,
+    "lng": 7.677472,
+    "teams": [
+      "Obergoldbach",
+      "Obergoldbach NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "oberoenz-niederoenz-47-1811-7-6786",
+    "name": "Oberönz-Niederönz",
+    "ort": "Niederönz",
+    "strasse": "Grubenweg 8",
+    "plz": "3362",
+    "lat": 47.181111,
+    "lng": 7.678611,
+    "homepage": "https://www.hornusser-oenz.ch/",
+    "teams": [
+      "Oberönz-Niederönz A",
+      "Oberönz-Niederönz B",
+      "Oberönz-Niederönz NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "obersteckholz-47-2223-7-8375",
+    "name": "Obersteckholz",
+    "ort": "Untersteckholz",
+    "strasse": "Steckholzstrasse",
+    "plz": "4916",
+    "lat": 47.222268,
+    "lng": 7.837541,
+    "homepage": "http://www.hgobersteckholz.ch/",
+    "teams": [
+      "Obersteckholz"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "oberthal-46-9289-7-6807",
+    "name": "Oberthal",
+    "ort": "Oberthal",
+    "strasse": "Blasen",
+    "plz": "3531",
+    "lat": 46.928872,
+    "lng": 7.680704,
+    "homepage": "www.hornusseroberthal.ch",
+    "teams": [
+      "Oberthal",
+      "Oberthal NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "oberwil-47-1304-7-3898",
+    "name": "Oberwil",
+    "ort": "Oberwil",
+    "lat": 47.130405,
+    "lng": 7.3898,
+    "teams": [
+      "Oberwil",
+      "Oberwil NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "obfelden-47-2582-8-4402",
+    "name": "Obfelden",
+    "ort": "Obfelden",
+    "strasse": "Schmittenstr. 17",
+    "plz": "8912",
+    "lat": 47.258153,
+    "lng": 8.440166,
+    "homepage": "http://www.hgobfelden.ch/",
+    "teams": [
+      "Obfelden",
+      "Obfelden HG Obfelden NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "oeschenbach-kleindietwil-47-1106-7-7467",
+    "name": "Oeschenbach-Kleindietwil",
+    "ort": "Oeschenbach",
+    "strasse": "Zulligen",
+    "plz": "4943",
+    "lat": 47.110597,
+    "lng": 7.746692,
+    "homepage": "http://www.hgoeschenbach-kleindietwil.ch/",
+    "teams": [
+      "Oeschenbach-Kleindietwil A"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "oeschenbach-kleindietwil-47-1410-7-7924",
+    "name": "Oeschenbach-Kleindietwil",
+    "ort": "Kleindietwil",
+    "strasse": "Schynenstrasse",
+    "plz": "4936",
+    "lat": 47.141026,
+    "lng": 7.792418,
+    "homepage": "http://www.hgoeschenbach-kleindietwil.ch/",
+    "teams": [
+      "Oeschenbach-Kleindietwil B",
+      "Oeschenbach-Kleindietwil NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "oschwand-biembach-47-0089-7-5877",
+    "name": "Oschwand-Biembach",
+    "ort": "Krauchthal",
+    "strasse": "Dieterswald 202b",
+    "plz": "3326",
+    "lat": 47.008881,
+    "lng": 7.587717,
+    "homepage": "https://www.hgoschwandbiembach.ch",
+    "teams": [
+      "Oschwand-Biembach A",
+      "Oschwand-Biembach B",
+      "Oschwand-Biembach NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "recherswil-kriegstetten-47-1599-7-6052",
+    "name": "Recherswil-Kriegstetten",
+    "ort": "Recherswil",
+    "strasse": "",
+    "plz": "4565",
+    "lat": 47.159917,
+    "lng": 7.60516,
+    "homepage": "http://www.hgrk.ch/clubdesk/www",
+    "teams": [
+      "Recherswil-Kriegstetten A",
+      "Recherswil-Kriegstetten B",
+      "Recherswil-Kriegstetten C",
+      "Recherswil-Kriegstetten NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "reinach-47-2652-8-1597",
+    "name": "Reinach",
+    "ort": "Gontenschwil",
+    "strasse": "Oberes Feld 253",
+    "plz": "5728",
+    "lat": 47.265172,
+    "lng": 8.159696,
+    "homepage": "http://www.hgreinach.ch/",
+    "teams": [
+      "Reinach",
+      "Reinach Nachwuchs"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "richigen-46-9155-7-5731",
+    "name": "Richigen",
+    "ort": "Richigen",
+    "strasse": "Stationsstrasse 298",
+    "plz": "3078",
+    "lat": 46.915459,
+    "lng": 7.573056,
+    "homepage": "http://www.hgrichigen.ch/",
+    "teams": [
+      "Richigen A",
+      "Richigen B",
+      "Richigen C",
+      "Richigen NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "rohrbach-47-1242-7-8243",
+    "name": "Rohrbach",
+    "ort": "Rohrbach b. Huttwil",
+    "strasse": "Häbernbadweg 16",
+    "plz": "4938",
+    "lat": 47.124241,
+    "lng": 7.824323,
+    "homepage": "https://www.hg-rohrbach.ch/",
+    "teams": [
+      "Rohrbach",
+      "Rohrbach Nachwuchs"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "rohrbachgraben-47-1114-7-8025",
+    "name": "Rohrbachgraben",
+    "ort": "Huttwil",
+    "strasse": "Friedhofweg 21A",
+    "plz": "4950",
+    "lat": 47.111391,
+    "lng": 7.802538,
+    "homepage": "http://www.hg-rohrbachgraben.ch/de/",
+    "teams": [
+      "Rohrbachgraben A",
+      "Rohrbachgraben B",
+      "Rohrbachgraben NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "roethenbach-i-46-8601-7-7526",
+    "name": "Röthenbach i..",
+    "ort": "Röthenbach i. E.",
+    "strasse": "Fischbach 36c",
+    "plz": "3538",
+    "lat": 46.860066,
+    "lng": 7.75263,
+    "homepage": "http://www.hg-roethenbach.ch/",
+    "teams": [
+      "Röthenbach i. E. A",
+      "Röthenbach i. E. B",
+      "Röthenbach i. E. C",
+      "Röthenbach i. E. Nachwuchs"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "rothrist-olten-47-2925-7-8559",
+    "name": "Rothrist-Olten",
+    "ort": "Rothrist",
+    "strasse": "Bernstrasse 283",
+    "plz": "4852",
+    "lat": 47.292509,
+    "lng": 7.855898,
+    "homepage": "http://www.hg-rothrist-olten.ch/",
+    "teams": [
+      "Rothrist-Olten",
+      "Rothrist-Olten NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "ruederswil-46-9899-7-7010",
+    "name": "Rüderswil",
+    "ort": "Schwanden i.E",
+    "strasse": "Gümpel 3",
+    "plz": "3433",
+    "lat": 46.98986,
+    "lng": 7.701041,
+    "homepage": "http://hgruederswil.ch/",
+    "teams": [
+      "Rüderswil A",
+      "Rüderswil B",
+      "Rüderswil C",
+      "Rüderswil NW"
+    ],
+    "playingDirectionDeg": 237.33
+  },
+  {
+    "id": "ruedtligen-alchenflueh-47-0778-7-5642",
+    "name": "Rüdtligen-Alchenflüh",
+    "ort": "Rüdtligen",
+    "strasse": "Riedstrasse 11",
+    "plz": "3422",
+    "lat": 47.077798,
+    "lng": 7.564194,
+    "homepage": "http://www.hgra.ch/",
+    "teams": [
+      "Rüdtligen-Alchenflüh A",
+      "Rüdtligen-Alchenflüh B",
+      "Rüdtligen-Alchenflüh NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "rueedisbach-47-1197-7-6986",
+    "name": "Rüedisbach",
+    "ort": "Rüedisbach",
+    "strasse": "Dorf",
+    "plz": "3474",
+    "lat": 47.119747,
+    "lng": 7.698597,
+    "homepage": "http://www.hgruedisbach.ch/",
+    "teams": [
+      "Rüedisbach",
+      "Rüedisbach NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "rueegsau-affoltern-47-0596-7-7329",
+    "name": "Rüegsau-Affoltern",
+    "ort": "Rüegsbach",
+    "strasse": "Grünenboden",
+    "plz": "3417",
+    "lat": 47.059611,
+    "lng": 7.732861,
+    "homepage": "http://www.hgrueegsau.ch/",
+    "teams": [
+      "Rüegsau-Affoltern A",
+      "Rüegsau-Affoltern B",
+      "Rüegsau-Affoltern NH"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "ruetschelen-47-1724-7-7663",
+    "name": "Rütschelen",
+    "ort": "Rütschelen",
+    "strasse": "Flösch 30",
+    "plz": "4933",
+    "lat": 47.172359,
+    "lng": 7.766259,
+    "homepage": "http://www.hg-ruetschelen.ch/",
+    "teams": [
+      "Rütschelen A",
+      "Rütschelen B",
+      "Rütschelen NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "saurenhorn-47-0440-7-3562",
+    "name": "Saurenhorn",
+    "ort": "Schüpfen",
+    "strasse": "Ziegelried",
+    "plz": "3054",
+    "lat": 47.044002,
+    "lng": 7.356237,
+    "homepage": "http://hg-saurenhorn.ch/",
+    "teams": [
+      "Saurenhorn NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "schafhausen-i-46-9922-7-6441",
+    "name": "Schafhausen i..",
+    "ort": "Schafhausen i. E.",
+    "strasse": "Äbeläng",
+    "plz": "3415",
+    "lat": 46.99223,
+    "lng": 7.64407,
+    "homepage": "https://www.hgschafhausen.ch/",
+    "teams": [
+      "Schafhausen i. E. A",
+      "Schafhausen i. E. B",
+      "Schafhausen i. E. NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "schlosswil-gysenstein-46-9053-7-6230",
+    "name": "Schlosswil-Gysenstein",
+    "ort": "Schlosswil",
+    "strasse": "Thalibühl",
+    "plz": "3082",
+    "lat": 46.9052791,
+    "lng": 7.62302,
+    "homepage": "https://www.hgsg.ch",
+    "teams": [
+      "Schlosswil-Gysenstein",
+      "Schlosswil-Gysenstein NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "schmidigen-47-0851-7-7604",
+    "name": "Schmidigen",
+    "ort": "Walterswil",
+    "strasse": "Dennlisboden",
+    "plz": "4952",
+    "lat": 47.085098,
+    "lng": 7.7604,
+    "homepage": "",
+    "teams": [
+      "Schmidigen NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "schoren-47-2247-7-7728",
+    "name": "Schoren",
+    "ort": "Langenthal",
+    "strasse": "Bern-Zürichstrasse",
+    "plz": "4900",
+    "lat": 47.224735,
+    "lng": 7.772839,
+    "homepage": "https://www.hgschoren.ch/",
+    "teams": [
+      "Schoren A",
+      "Schoren B",
+      "Schoren NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "schuepbach-46-9416-7-7497",
+    "name": "Schüpbach",
+    "ort": "Schüpbach",
+    "strasse": "obere Brunnmatt",
+    "plz": "3535",
+    "lat": 46.94164,
+    "lng": 7.749682,
+    "homepage": "http://www.hornusser-schuepbach.ch/",
+    "teams": [
+      "Schüpbach A",
+      "Schüpbach B",
+      "Schüpbach Nachwuchs"
+    ],
+    "playingDirectionDeg": 215.96,
+    "playingDirectionNote": "Schüpbach A & B"
+  },
+  {
+    "id": "schwarzenburg-46-8085-7-3479",
+    "name": "Schwarzenburg",
+    "ort": "Schwarzenburg",
+    "lat": 46.808459,
+    "lng": 7.347863,
+    "teams": [
+      "Schwarzenburg A",
+      "Schwarzenburg NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "schwarzhaeusern-aarwangen-47-2541-7-7636",
+    "name": "Schwarzhäusern-Aarwangen",
+    "ort": "Schwarzhäusern",
+    "strasse": "Wittifeldstrasse 6",
+    "plz": "4911",
+    "lat": 47.25413,
+    "lng": 7.763633,
+    "homepage": "https://www.hg-schwarzhaeusern.ch/",
+    "teams": [
+      "Schwarzhäusern-Aarwangen",
+      "Schwarzhäusern-Aarwangen NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "sinneringen-vechigen-46-9463-7-5476",
+    "name": "Sinneringen-Vechigen",
+    "ort": "Vechigen",
+    "strasse": "Mühlegässli Nesselbank",
+    "plz": "3067",
+    "lat": 46.946289,
+    "lng": 7.54757,
+    "homepage": "https://www.hgsinneringen-vechigen.ch/",
+    "teams": [
+      "Sinneringen-Vechigen A",
+      "Sinneringen-Vechigen B",
+      "Sinneringen-Vechigen NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "sparring-47-0873-7-5893",
+    "name": "Sparring",
+    "ort": "Kirchberg BE",
+    "lat": 47.08733300000001,
+    "lng": 7.5893006,
+    "teams": [
+      "Sparring",
+      "Sparring SN"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "stalden-dorf-46-8750-7-6371",
+    "name": "Stalden-Dorf",
+    "ort": "Niederhünigen",
+    "strasse": "Hubelweg 4",
+    "plz": "3504",
+    "lat": 46.875028988503885,
+    "lng": 7.637050928255633,
+    "homepage": "www.stalden-dorf.ch",
+    "teams": [
+      "Stalden-Dorf A",
+      "Stalden-Dorf B",
+      "Stalden-Dorf NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "steinen-b-signau-46-8973-7-7144",
+    "name": "Steinen b. Signau",
+    "ort": "Bowil",
+    "strasse": "Käserei 139aDorf",
+    "plz": "3533",
+    "lat": 46.897285,
+    "lng": 7.714366,
+    "homepage": "http://www.hgsteinen.ch/",
+    "teams": [
+      "Steinen b. Signau A",
+      "Steinen b. Signau B",
+      "Steinen b. Signau C",
+      "Steinen b. Signau NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "steingrube-zimmerberg-47-0205-7-5944",
+    "name": "Steingrube-Zimmerberg",
+    "ort": "Fraubrunnen",
+    "strasse": "Solothurnstr. 32",
+    "plz": "3312",
+    "lat": 47.020549,
+    "lng": 7.594431,
+    "homepage": "https://www.hg-steingrube-zimmerberg.ch/",
+    "teams": [
+      "Steingrube-Zimmerberg"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "studen-madretsch-47-1163-7-3173",
+    "name": "Studen-Madretsch",
+    "ort": "Studen",
+    "strasse": "Grienweg Ende",
+    "plz": "2557",
+    "lat": 47.116267,
+    "lng": 7.317313,
+    "homepage": "",
+    "teams": [
+      "Studen-Madretsch",
+      "Studen-Madretsch NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "sumiswald-47-0307-7-7615",
+    "name": "Sumiswald",
+    "ort": "Sumiswald",
+    "strasse": "Senggen",
+    "plz": "3454",
+    "lat": 47.030663,
+    "lng": 7.761511,
+    "homepage": "http://www.hgsumiswald.ch/",
+    "teams": [
+      "Sumiswald"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "sueri-spengelried-46-9183-7-3160",
+    "name": "Süri-Spengelried",
+    "ort": "Neuenegg",
+    "strasse": "Heitere 479",
+    "plz": "3176",
+    "lat": 46.918321,
+    "lng": 7.315988,
+    "homepage": "http://www.hgsueri.ch/",
+    "teams": [
+      "Süri-Spengelried",
+      "Süri-Spengelried Nachwuchs"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "taegertschi-haeutligen-46-8614-7-6060",
+    "name": "Tägertschi-Häutligen",
+    "ort": "Häutligen",
+    "strasse": "Lochenbergweg 30",
+    "plz": "3510",
+    "lat": 46.861431,
+    "lng": 7.605986,
+    "homepage": "http://www.taegertschi-haeutligen.ch/",
+    "teams": [
+      "Tägertschi-Häutligen",
+      "Tägertschi-Häutligen NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "tenniken-47-4320-7-8014",
+    "name": "Tenniken",
+    "ort": "Tenniken",
+    "strasse": "Alte Landstrasse 11",
+    "plz": "4456",
+    "lat": 47.43195,
+    "lng": 7.80144,
+    "homepage": "http://www.hgtl.ch/",
+    "teams": [
+      "Tenniken",
+      "Tenniken NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "thalgraben-46-9783-7-6595",
+    "name": "Thalgraben",
+    "ort": "Lützelflüh",
+    "strasse": "Bahnstr. 16",
+    "plz": "3432",
+    "lat": 46.978338,
+    "lng": 7.659456,
+    "homepage": "http://www.hg-thalgraben.ch",
+    "teams": [
+      "Thalgraben",
+      "Thalgraben NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "thoerigen-47-1744-7-7413",
+    "name": "Thörigen",
+    "ort": "Thörigen",
+    "strasse": "Burgdorfstr. 15",
+    "plz": "3367",
+    "lat": 47.174399,
+    "lng": 7.741327,
+    "homepage": "http://hornusser-thoerigen.ch/",
+    "teams": [
+      "Thörigen A",
+      "Thörigen B",
+      "Thörigen C",
+      "Thörigen NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "thoerishaus-46-8922-7-3382",
+    "name": "Thörishaus",
+    "ort": "Thörishaus",
+    "strasse": "Freiburgstrasse 57",
+    "plz": "3174",
+    "lat": 46.892221,
+    "lng": 7.338221,
+    "homepage": "http://www.hornusse.ch/",
+    "teams": [
+      "Thörishaus NW",
+      "Thörishaus-Frauchwil-Zimlisberg B"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "thun-46-7597-7-6056",
+    "name": "Thun",
+    "ort": "Thun",
+    "strasse": "",
+    "plz": "",
+    "lat": 46.75967,
+    "lng": 7.605616,
+    "homepage": "http://www.hornusserthun.ch/",
+    "teams": [
+      "Thun",
+      "Thun Nachwuchs"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "thunstetten-47-1959-7-7332",
+    "name": "Thunstetten",
+    "ort": "Bützberg",
+    "strasse": "Postfach 113",
+    "plz": "4922",
+    "lat": 47.195855,
+    "lng": 7.733152,
+    "homepage": "http://www.hgthunstetten.ch/",
+    "teams": [
+      "Thunstetten",
+      "Thunstetten N"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "tramelan-47-2302-7-0651",
+    "name": "Tramelan",
+    "ort": "Tramelan",
+    "strasse": "Le Cernil",
+    "plz": "2720",
+    "lat": 47.230166,
+    "lng": 7.065068,
+    "homepage": "http://hgtramelan.ch/",
+    "teams": [
+      "Tramelan",
+      "Tramelan Nachwuchshornusser"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "trimstein-46-8985-7-5674",
+    "name": "Trimstein",
+    "ort": "Trimstein",
+    "strasse": "Eichi 49",
+    "plz": "3083",
+    "lat": 46.898511,
+    "lng": 7.567429,
+    "homepage": "http://www.hgtrimstein.ch/",
+    "teams": [
+      "Trimstein A",
+      "Trimstein B",
+      "Trimstein NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "urtenen-47-0327-7-4842",
+    "name": "Urtenen",
+    "ort": "Urtenen-Schönbühl",
+    "strasse": "Friedhofweg 7",
+    "plz": "3322",
+    "lat": 47.032744,
+    "lng": 7.484152,
+    "homepage": "http://www.hornusser-urtenen.ch/",
+    "teams": [
+      "Urtenen A",
+      "Urtenen B",
+      "Urtenen NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "utzenstorf-koppigen-47-1143-7-5388",
+    "name": "Utzenstorf-Koppigen",
+    "ort": "Utzensdorf",
+    "strasse": "Altwyden",
+    "plz": "3427",
+    "lat": 47.114346,
+    "lng": 7.53881,
+    "homepage": "https://www.hguk.ch/",
+    "teams": [
+      "Utzenstorf-Koppigen A",
+      "Utzenstorf-Koppigen B",
+      "Utzenstorf-Koppigen NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "utzigen-46-9598-7-5518",
+    "name": "Utzigen",
+    "ort": "Utzigen",
+    "strasse": "Lindentalstrasse 35",
+    "plz": "3068",
+    "lat": 46.959782,
+    "lng": 7.551792,
+    "homepage": "http://www.hornusser-utzigen.ch",
+    "teams": [
+      "Utzigen A",
+      "Utzigen B",
+      "Utzigen C",
+      "Utzigen NW"
+    ],
+    "playingDirectionDeg": 210.76
+  },
+  {
+    "id": "walliswil-47-2239-7-6852",
+    "name": "Walliswil",
+    "ort": "Walliswil b/Wangen",
+    "strasse": "Heimenhausenstr. 35",
+    "plz": "3377",
+    "lat": 47.223858,
+    "lng": 7.685195,
+    "homepage": "https://www.hornusser-walliswil.ch/",
+    "teams": [
+      "Walliswil"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "wangenried-wanzwil-47-1987-7-6895",
+    "name": "Wangenried-Wanzwil",
+    "ort": "Wanzwil",
+    "strasse": "Inkwilerweg 36",
+    "plz": "3372",
+    "lat": 47.19868,
+    "lng": 7.68955,
+    "homepage": "https://hgwangenried.clubs.localcities.ch",
+    "teams": [
+      "Wangenried-Wanzwil",
+      "Wangenried-Wanzwil Nachwuchs"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "waeseli-46-9477-7-5836",
+    "name": "Wäseli",
+    "ort": "Worb",
+    "strasse": "Bangertenstrasse",
+    "plz": "3076",
+    "lat": 46.947692,
+    "lng": 7.583592,
+    "homepage": "https://www.hgwaeseli.ch/",
+    "teams": [
+      "Wäseli A",
+      "Wäseli B",
+      "Wäseli C",
+      "Wäseli NW"
+    ],
+    "playingDirectionDeg": 278.46
+  },
+  {
+    "id": "wasen-lugenbach-47-0355-7-7665",
+    "name": "Wasen-Lugenbach",
+    "ort": "Sumiswald",
+    "strasse": "Schloss",
+    "plz": "3454",
+    "lat": 47.035499,
+    "lng": 7.766508,
+    "homepage": "http://www.hgwasen-lugenbach.ch/cms/seite1.html",
+    "teams": [
+      "Wasen-Lugenbach A",
+      "Wasen-Lugenbach B",
+      "Wasen-Lugenbach C",
+      "Wasen-Lugenbach D",
+      "Wasen-Lugenbach Nachwuchs"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "wattenwil-46-7561-7-5180",
+    "name": "Wattenwil",
+    "ort": "Wattenwil",
+    "strasse": "Gürbeweg 3",
+    "plz": "3665",
+    "lat": 46.75609,
+    "lng": 7.517961,
+    "homepage": "https://www.hgwattenwil.ch/",
+    "teams": [
+      "Wattenwil A",
+      "Wattenwil B",
+      "Wattenwil NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "wichtrach-46-8351-7-5753",
+    "name": "Wichtrach",
+    "ort": "Wichtrach",
+    "strasse": "Bernstr. 2",
+    "plz": "3114",
+    "lat": 46.83511797293536,
+    "lng": 7.575258631731935,
+    "homepage": "http://www.hgwichtrach.ch/",
+    "teams": [
+      "Wichtrach A",
+      "Wichtrach B",
+      "Wichtrach Nachwuchs"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "wiedlisbach-47-2566-7-6429",
+    "name": "Wiedlisbach",
+    "ort": "Wiedlisbach",
+    "strasse": "Fichtenweg 16",
+    "plz": "4537",
+    "lat": 47.256609,
+    "lng": 7.642933,
+    "homepage": "http://www.hg-wiedlisbach.ch/clubdesk/www",
+    "teams": [
+      "Wiedlisbach"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "wiler-47-1591-7-5569",
+    "name": "Wiler",
+    "ort": "Wiler",
+    "strasse": "Bannholz",
+    "plz": "3428",
+    "lat": 47.159095,
+    "lng": 7.556942,
+    "homepage": "http://www.hornusser-wiler.ch/",
+    "teams": [
+      "Wiler",
+      "Wiler NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "winistorf-seeberg-47-1540-7-6471",
+    "name": "Winistorf-Seeberg",
+    "ort": "Winistorf",
+    "strasse": "Wäldliweg 5",
+    "plz": "4558",
+    "lat": 47.154032,
+    "lng": 7.647095,
+    "homepage": "http://www.hgwinistorf.ch/",
+    "teams": [
+      "Winistorf-Seeberg A"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "winistorf-seeberg-47-1675-7-6654",
+    "name": "Winistorf-Seeberg",
+    "ort": "Seeberg",
+    "strasse": "Seestrasse 13",
+    "plz": "3365",
+    "lat": 47.167459,
+    "lng": 7.665413,
+    "homepage": "http://www.hgwinistorf.ch/",
+    "teams": [
+      "Winistorf-Seeberg B",
+      "Winistorf-Seeberg NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "winterthur-47-4823-8-6928",
+    "name": "Winterthur",
+    "ort": "Winterthur",
+    "strasse": "Brüttener Fussweg",
+    "plz": "8406",
+    "lat": 47.482269,
+    "lng": 8.692799,
+    "homepage": "http://www.hgwinterthur.ch/",
+    "teams": [
+      "Winterthur A",
+      "Winterthur B",
+      "Winterthur NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "worb-46-9153-7-5728",
+    "name": "Worb",
+    "ort": "Worb",
+    "strasse": "Stationsstrasse 298",
+    "plz": "3078",
+    "lat": 46.915256,
+    "lng": 7.57285,
+    "homepage": "http://www.hgworb.ch/clubdesk/www",
+    "teams": [
+      "Worb"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "wynigen-rumendingen-47-0978-7-6398",
+    "name": "Wynigen-Rumendingen",
+    "ort": "Wynigen",
+    "strasse": "Bickigen",
+    "plz": "3472",
+    "lat": 47.097803,
+    "lng": 7.639835,
+    "homepage": "http://hgwynigenrumendingen.ch/",
+    "teams": [
+      "Wynigen-Rumendingen",
+      "Wynigen-Rumendingen NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "wyssachen-47-1002-7-8180",
+    "name": "Wyssachen",
+    "ort": "Huttwil",
+    "lat": 47.100227,
+    "lng": 7.818025,
+    "teams": [
+      "Wyssachen",
+      "Wyssachen NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "zauggenried-kernenried-47-0717-7-5539",
+    "name": "Zauggenried-Kernenried",
+    "ort": "Kernenried",
+    "strasse": "Büelweg",
+    "plz": "3309",
+    "lat": 47.071682,
+    "lng": 7.553919,
+    "homepage": "http://www.hgzk.ch/",
+    "teams": [
+      "Zauggenried-Kernenried A",
+      "Zauggenried-Kernenried B",
+      "Zauggenried-Kernenried Nachwuchshornusser"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "zaeziwil-reutenen-46-9011-7-6715",
+    "name": "Zäziwil-Reutenen",
+    "ort": "Zäziwil",
+    "strasse": "Langnaustrasse 58",
+    "plz": "3532",
+    "lat": 46.901111,
+    "lng": 7.671547,
+    "homepage": "http://hgzaeziwilreutenen.ch/",
+    "teams": [
+      "Zäziwil-Reutenen A",
+      "Zäziwil-Reutenen C",
+      "Zäziwil-Reutenen NW"
+    ],
+    "playingDirectionDeg": 184.43
+  },
+  {
+    "id": "zaeziwil-reutenen-46-8927-7-6485",
+    "name": "Zäziwil-Reutenen",
+    "ort": "Mirchel",
+    "strasse": "Dorfstrasse",
+    "plz": "3532",
+    "lat": 46.892713,
+    "lng": 7.648517,
+    "homepage": "http://hgzaeziwilreutenen.ch/",
+    "teams": [
+      "Zäziwil-Reutenen B"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "zimmerwald-46-8865-7-4732",
+    "name": "Zimmerwald",
+    "ort": "Zimmerwald",
+    "strasse": "Schulhausstrasse 24",
+    "plz": "3086",
+    "lat": 46.886511,
+    "lng": 7.473222,
+    "homepage": "http://www.hornusserzimmerwald.ch/",
+    "teams": [
+      "Zimmerwald A",
+      "Zimmerwald B",
+      "Zimmerwald NW"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "zollbrueck-46-9635-7-7463",
+    "name": "Zollbrück",
+    "ort": "Zollbrück",
+    "strasse": "Zollstr. 12",
+    "plz": "3436",
+    "lat": 46.963471,
+    "lng": 7.74634,
+    "homepage": "http://www.hgzollbrueck.ch/Hornusser_Zollbruck/Startseite.html",
+    "teams": [
+      "Zollbrück"
+    ],
+    "playingDirectionDeg": null
+  },
+  {
+    "id": "zuchwil-47-2055-7-5722",
+    "name": "Zuchwil",
+    "ort": "Zuchwil",
+    "strasse": "Schachenweg  30",
+    "plz": "4528",
+    "lat": 47.205522,
+    "lng": 7.57217,
+    "homepage": "https://www.hgzuchwil.ch/",
+    "teams": [
+      "Zuchwil A",
+      "Zuchwil B",
+      "Zuchwil NW"
+    ],
+    "playingDirectionDeg": null
+  }
+]

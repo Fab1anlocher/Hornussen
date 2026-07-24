@@ -1,0 +1,18 @@
+{
+  "_comment": "Spielrichtung = Azimut (0°=N, 90°=O, 180°=S, 270°=W), in die der Nouss geschlagen wird. Wird dem Platz anhand der Koordinaten zugeordnet (gilt für ALLE Teams dieses Platzes). Ergänze weitere Plätze nach Bedarf. 'model.k': Faktor für erwartete Schlagpunkte = 1 + k * Rückenwind[km/h] (Default 0.02 = +2%/km/h, d.h. ~+20% bei 10 km/h Rückenwind). playWindow = angenommenes Spielfenster (Std, lokal), da exakte Anspielzeiten nicht in den PDFs stehen.",
+  "model": {
+    "k": 0.02,
+    "playWindowStart": 12,
+    "playWindowEnd": 17
+  },
+  "directions": [
+    { "venue": "Brunnmatt (HG Schüpbach)", "lat": 46.94164, "lng": 7.749682, "directionDeg": 215.96, "note": "Schüpbach A & B" },
+    { "venue": "Wäseli (Worb)", "lat": 46.947692, "lng": 7.583592, "directionDeg": 278.46 },
+    { "venue": "Höchstetten", "lat": 47.151991, "lng": 7.639693, "directionDeg": 129.42 },
+    { "venue": "Rüderswil (Schwanden i.E.)", "lat": 46.98986, "lng": 7.701041, "directionDeg": 237.33 },
+    { "venue": "Bern-Beundenfeld", "lat": 46.962126, "lng": 7.47714, "directionDeg": 230.39 },
+    { "venue": "Biglen-Arni (Arni)", "lat": 46.936316, "lng": 7.653124, "directionDeg": 265.96 },
+    { "venue": "Zäziwil-Reutenen", "lat": 46.901111, "lng": 7.671547, "directionDeg": 184.43 },
+    { "venue": "Utzigen", "lat": 46.959782, "lng": 7.551792, "directionDeg": 210.76 }
+  ]
+}
