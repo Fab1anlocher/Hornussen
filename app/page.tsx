@@ -1,12 +1,15 @@
 import Link from "next/link";
 import { getAnalysis, getVenues } from "@/lib/data";
-import { StatTile, VerdictCard } from "@/components/ui";
+import { StatTile, VerdictBadge, VerdictCard } from "@/components/ui";
 import { Nouss } from "@/components/Nouss";
 
 export default function Home() {
   const analysis = getAnalysis();
   const venues = getVenues();
   const venuesWithDir = venues.filter((v) => v.playingDirectionDeg != null).length;
+  const bs = analysis?.blueSky;
+  const clearPct =
+    bs && bs.overcastMean ? Math.round((bs.clearMean / bs.overcastMean - 1) * 100) : 0;
 
   return (
     <>
@@ -31,6 +34,18 @@ export default function Home() {
               — verbreitete Hornusser-Weisheit
             </span>
           </blockquote>
+
+          {bs && (
+            <div className="mt-7 inline-flex max-w-2xl flex-wrap items-center gap-x-4 gap-y-2 rounded-2xl border border-[var(--border)] bg-[var(--surface)]/80 px-5 py-4 backdrop-blur">
+              <VerdictBadge level={bs.verdict.level} />
+              <span className="text-lg font-semibold leading-snug">
+                {bs.verdict.level === "confirmed" ? "Ja" : "Kurz gesagt"} — bei wolkenlosem Himmel
+                fallen im Schnitt <span className="text-sky-700 dark:text-sky-400">+{clearPct} %</span>{" "}
+                mehr Nummern als bei bedecktem Himmel.
+              </span>
+            </div>
+          )}
+
           <p className="mt-6 max-w-2xl text-lg text-[var(--text-secondary)]">
             Wir prüfen diese Volksweisheit mit echten Zahlen: {analysis ? formatN(analysis.totalMatches) : "tausenden"}{" "}
             Meisterschaftsspielen des EHV, kombiniert mit stundengenauen historischen

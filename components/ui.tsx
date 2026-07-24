@@ -28,12 +28,12 @@ export function VerdictBadge({ level }: { level: VerdictLevel }) {
 
 export function VerdictCard({ verdict, title }: { verdict: Verdict; title: string }) {
   return (
-    <div className="card p-6">
+    <div className="card rounded-[18px] p-6">
       <div className="mb-3 flex flex-wrap items-center gap-3">
-        <h3 className="font-display text-xl font-semibold">{title}</h3>
+        <h3 className="font-display text-xl font-bold tracking-tight">{title}</h3>
         <VerdictBadge level={verdict.level} />
       </div>
-      <p className="text-lg font-medium">{verdict.headline}</p>
+      <p className="text-lg font-semibold">{verdict.headline}</p>
       <p className="mt-1.5 text-[var(--text-secondary)]">{verdict.detail}</p>
     </div>
   );
