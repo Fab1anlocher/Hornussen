@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-26T07:39:13.436Z",
+  "generatedAt": "2026-07-26T07:50:31.158Z",
   "seasons": [
     2013,
     2014,
@@ -41,6 +41,7 @@
   "totalObservations": 27586,
   "observationsWithWeather": 27042,
   "observationsWithWind": 4390,
+  "matchesNotPlayed": 112,
   "blueSky": {
     "metric": "nummern",
     "correlation": {

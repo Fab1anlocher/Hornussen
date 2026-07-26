@@ -327,7 +327,11 @@ function windVerdict(corr: CorrelationResult, ratio: number): Verdict {
   };
 }
 
-export function analyze(obs: Observation[], modelK: number): AnalysisResult {
+export function analyze(
+  obs: Observation[],
+  modelK: number,
+  matchesNotPlayed = 0,
+): AnalysisResult {
   const matchIds = new Set(obs.map((o) => o.matchId));
   const seasons = [...new Set(obs.map((o) => o.season))].sort((a, b) => a - b);
   const leagues = [...new Set(obs.map((o) => o.league))].sort();
@@ -342,6 +346,7 @@ export function analyze(obs: Observation[], modelK: number): AnalysisResult {
     totalObservations: obs.length,
     observationsWithWeather: withWeather.length,
     observationsWithWind: withWind.length,
+    matchesNotPlayed,
     blueSky: analyzeBlueSky(obs),
     wind: analyzeWind(obs, modelK),
   };

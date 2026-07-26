@@ -20,7 +20,7 @@ export default function Home() {
   }
 
   const bs = analysis.blueSky;
-  const ext = bs.extremes; // 0/8 vs 8/8 — the test behind the headline number
+  const ext = bs.extremes; // 0/8 vs 8/8, the test behind the headline number
   const ctx = bs.context;
   const dist = bs.distribution;
   const colTotals = dist.counts.map((row) => row.reduce((a, b) => a + b, 0));
@@ -92,7 +92,7 @@ export default function Home() {
             «Bei blauem Himmel sieht man den Nouss schlechter.»
           </blockquote>
           <p data-reveal="120" className="mt-[26px] text-[15px] text-[var(--sky-ink-soft)]">
-            — verbreitete Hornusser-Weisheit
+            – verbreitete Hornusser-Weisheit
           </p>
           <p
             data-reveal="240"
@@ -147,7 +147,7 @@ export default function Home() {
             nicht ab.
           </Body>
           <Body delay={220}>
-            Vor wolkenlosem Himmel fehlt der Kontrast — er verschwindet im gleissenden Licht. Vor
+            Vor wolkenlosem Himmel fehlt der Kontrast, er verschwindet im gleissenden Licht. Vor
             Wolken hebt er sich ab. So lautet die Theorie.
           </Body>
         </section>
@@ -168,7 +168,7 @@ export default function Home() {
               delay={90}
               count={analysis.observationsWithWeather}
               label="Resultate mit Wetterdaten"
-              sub={`je Mannschaft eines — von ${formatCH(analysis.totalObservations)} insgesamt`}
+              sub={`je Mannschaft eines, von ${formatCH(analysis.totalObservations)} insgesamt`}
               accent="var(--series-1)"
             />
             <StatTile
@@ -223,7 +223,7 @@ export default function Home() {
           >
             {bs.clearMean.toFixed(2)} gegen {bs.overcastMean.toFixed(2)} Nummern pro Team und
             Spiel. Verglichen werden {formatCH(ext.nA)} wolkenlose mit {formatCH(ext.nB)}{" "}
-            bedeckten Team-Resultaten — der Unterschied ist klar gesichert (Welch-t-Test,{" "}
+            bedeckten Team-Resultaten. Der Unterschied ist klar gesichert (Welch-t-Test,{" "}
             {formatP(ext.p)}).
           </p>
         </section>
@@ -275,20 +275,35 @@ export default function Home() {
                 </div>
               ))}
             </div>
-            <div className="mt-2.5 flex" style={{ gap: "clamp(3px,1.1vw,8px)" }}>
-              {bars.map((b) => (
-                <span
-                  key={b.label}
-                  className="flex-1 text-center text-[var(--text-muted)]"
-                  style={{ fontSize: "clamp(9px,2.3vw,12px)" }}
-                >
-                  {b.label}
+            {/* the axis as sky: each column carries the colour of its own cloud cover */}
+            <div
+              data-bars
+              className="mt-2.5 flex items-center"
+              style={{ gap: "clamp(3px,1.1vw,8px)" }}
+            >
+              {bars.map((b, i) => (
+                <span key={b.label} className="flex flex-1 flex-col items-center gap-1.5">
+                  <span
+                    aria-hidden
+                    className="sky-swatch block w-full rounded-full"
+                    style={{
+                      background: skyColor(i, bars.length - 1),
+                      height: "clamp(7px,1.8vw,10px)",
+                      transitionDelay: `${i * 70}ms`,
+                    }}
+                  />
+                  <span
+                    className="text-center text-[var(--text-muted)]"
+                    style={{ fontSize: "clamp(9px,2.3vw,12px)" }}
+                  >
+                    {b.label}
+                  </span>
                 </span>
               ))}
             </div>
             <p className="mt-5 text-[13px] text-[var(--text-muted)]">
               links wolkenlos · rechts bedeckt · die Achse beginnt bei {baseline.toFixed(2)} statt
-              bei null, damit der Sprung sichtbar wird — die Balken sind dadurch stärker
+              bei null, damit der Sprung sichtbar wird. Die Balken sind dadurch stärker
               gestaffelt, als die Zahlen es sind
             </p>
           </figure>
@@ -301,17 +316,17 @@ export default function Home() {
         >
           <Kicker>KAPITEL 3 · DER HAKEN</Kicker>
           <ChapterTitle delay={60} small>
-            Es ist keine Skala — es ist eine Schwelle.
+            Es ist keine Skala, sondern eine Schwelle.
           </ChapterTitle>
           <Body delay={140}>
             «Etwas mehr Wolken, etwas weniger Nummern» stimmt nicht. Sobald auch nur ein Achtel
             Himmel bedeckt ist, liegen alle Stufen zwischen {band.lo.toFixed(2)} und{" "}
-            {band.hi.toFixed(2)} — ohne erkennbare Richtung. Der ganze Effekt entsteht am Rand:
+            {band.hi.toFixed(2)}, ohne erkennbare Richtung. Der ganze Effekt entsteht am Rand:
             beim komplett wolkenlosen Himmel.
           </Body>
           <Body delay={180}>
             Eine Stufe schert aus: bei {band.hiLabel} liegt der Schnitt bei {band.hi.toFixed(2)}.
-            Das ist mehr, als Zufall bequem erklärt, passt aber in keine Richtung — wir führen es
+            Das ist mehr, als Zufall bequem erklärt, passt aber in keine Richtung. Wir führen ihn
             als offenen Ausreisser, nicht als Gegenbeweis.
           </Body>
 
@@ -361,7 +376,7 @@ export default function Home() {
           </ChapterTitle>
           <Body delay={140}>
             Bisher haben wir Mittelwerte verglichen. Hier ist alles auf einmal: jedes der{" "}
-            {formatCH(bs.correlation.n)} Team-Resultate sitzt in einem Punkt dieses Rasters — links
+            {formatCH(bs.correlation.n)} Team-Resultate sitzt in einem Punkt dieses Rasters: links
             der wolkenlose Himmel, rechts der bedeckte, nach oben die Zahl der Nummern. Je grösser
             der Punkt, desto mehr Spiele endeten so.
           </Body>
@@ -389,7 +404,7 @@ export default function Home() {
             <p className="mt-4 text-[13px] text-[var(--text-muted)]">
               Spalten sind unterschiedlich stark besetzt: {formatCH(Math.max(...colTotals))}{" "}
               Resultate bei bedecktem, nur {formatCH(colTotals[0])} bei wolkenlosem Himmel. Die
-              oberste Reihe fasst alles ab {dist.cap} Nummern zusammen — der längste Schwanz reicht
+              oberste Reihe fasst alles ab {dist.cap} Nummern zusammen, der längste Schwanz reicht
               bis {dist.maxNummern}.
             </p>
           </figure>
@@ -401,14 +416,14 @@ export default function Home() {
         >
           <Body delay={0}>
             Zwei Dinge fallen auf. Erstens: {Math.round(dist.zeroShare * 100)} % aller Resultate
-            enden ohne eine einzige Nummer — das ist der dicke Punkt ganz unten. Bei bedecktem
+            enden ohne eine einzige Nummer, das ist der dicke Punkt ganz unten. Bei bedecktem
             Himmel sind es {Math.round(zeroClear.overcast * 100)} %, bei wolkenlosem nur{" "}
             {Math.round(zeroClear.clear * 100)} %. Der blaue Himmel nimmt der Mannschaft die
             fehlerfreie Runde weg und macht dafür den oberen Rand dicker.
           </Body>
           <Body delay={80}>
             Zweitens: die Gerade fällt über die ganze Skala um nur{" "}
-            {Math.abs(bs.correlation.slope * 100).toFixed(2)} Nummern — von{" "}
+            {Math.abs(bs.correlation.slope * 100).toFixed(2)} Nummern, von{" "}
             {bs.correlation.intercept.toFixed(2)} bei blankem Himmel auf{" "}
             {(bs.correlation.intercept + bs.correlation.slope * 100).toFixed(2)} bei geschlossener
             Decke. Neben einer Streuung, die von 0 bis {dist.maxNummern} reicht, ist das fast
@@ -418,7 +433,7 @@ export default function Home() {
           </Body>
           <Body delay={160}>
             Ein Modell, das aus der Bewölkung die Nummern eines einzelnen Spiels vorhersagt, gibt es
-            hier also nicht — und wird es nicht geben. Was es gibt, ist ein Effekt, der erst über
+            hier also nicht, und wird es nicht geben. Was es gibt, ist ein Effekt, der erst über
             Tausende von Spielen aus dem Rauschen auftaucht.
           </Body>
         </section>
@@ -447,15 +462,21 @@ export default function Home() {
             Mannschaften antreten. Der Anteil der obersten Ligen ist in beiden Gruppen praktisch
             gleich ({Math.round(ctx.topLeagueShareClear * 100)} % gegen{" "}
             {Math.round(ctx.topLeagueShareOvercast * 100)} % NLA/NLB). Und ruhiger ist es bei
-            blauem Himmel auch nicht — der Wind liegt mit {ctx.windSpeedClear.toFixed(1)} km/h
+            blauem Himmel auch nicht: der Wind liegt mit {ctx.windSpeedClear.toFixed(1)} km/h
             sogar leicht über den {ctx.windSpeedOvercast.toFixed(1)} km/h bei bedecktem Himmel.
           </Body>
           <Body delay={260}>
             Dazu kommt, woher das Wetter stammt: aus der ERA5-Reanalyse (Open-Meteo), einem
-            Rechenmodell mit rund 9 bis 25 Kilometern Auflösung — das regionale Wetter, nicht die
-            Luft über dem Ries. Und weil die Ranglisten keine Anspielzeiten nennen, nehmen wir für
+            Rechenmodell mit rund 9 bis 25 Kilometern Auflösung. Gemessen wird damit das regionale
+            Wetter, nicht die Luft über dem Ries. Und weil die Ranglisten keine Anspielzeiten nennen, nehmen wir für
             jedes Spiel den Wert um <strong className="text-ink">13 Uhr</strong> Ortszeit. Wer
             früher oder später spielte, spielte unter einem anderen Himmel als dem hier gemessenen.
+          </Body>
+          <Body delay={290}>
+            Nicht ausgetragene Runden stehen im Archiv als 0:0. Solche Einträge lassen wir weg,
+            sonst wanderte jedes verregnete Wochenende als fehlerfreies Spiel in die Statistik.
+            Darum rechnen wir mit {formatCH(analysis.totalMatches)} Spielen und nicht mit den{" "}
+            {formatCH(analysis.totalMatches + analysis.matchesNotPlayed)} Einträgen, die im Archiv stehen.
           </Body>
           <Body delay={320}>
             Der Zusammenhang ist also gemessen, die Ursache nicht bewiesen. Trotzdem: die Richtung
@@ -481,7 +502,7 @@ export default function Home() {
               textWrap: "balance",
             }}
           >
-            Die Weisheit hält stand — aber nur, wenn keine einzige Wolke am Himmel steht.
+            Die Weisheit hält stand, aber nur, wenn keine einzige Wolke am Himmel steht.
           </blockquote>
           <p data-reveal="120" className="mt-7 text-[15px] text-[var(--text-muted)]">
             Datenbasis: {analysis.seasons.length} Meisterschaftssaisons {firstSeason}–{lastSeason}{" "}
@@ -589,7 +610,7 @@ interface BarDatum extends Bucket {
 
 /**
  * Maps bucket means onto bar heights. The domain is padded rather than starting
- * at zero — otherwise the 0/8 spike, which is the whole story, is a barely
+ * at zero, otherwise the 0/8 spike, which is the whole story, is a barely
  * visible bump above eight near-identical bars. That exaggerates the ratio
  * between bars, so `baseline` is printed under the chart: a truncated axis is
  * only fair if the reader can see where it was cut.
@@ -636,8 +657,21 @@ function seasonGaps(seasons: number[]): number[] {
   return gaps;
 }
 
+/**
+ * Colour of the sky at a given okta, blending a cloudless blue into overcast
+ * grey. Turns the chart's x-axis into the thing it measures, so the reader sees
+ * the scale before reading a single label.
+ */
+function skyColor(step: number, steps: number): string {
+  const clear = [90, 180, 240];
+  const overcast = [169, 180, 187];
+  const t = steps === 0 ? 0 : step / steps;
+  const [r, g, b] = clear.map((c, i) => Math.round(c + (overcast[i] - c) * t));
+  return `rgb(${r}, ${g}, ${b})`;
+}
+
 /** p-values as read aloud: "p < 0.001" below the floor, otherwise "p = 0.010". */
 function formatP(p: number): string {
-  if (!Number.isFinite(p)) return "p — ";
+  if (!Number.isFinite(p)) return "p unbekannt";
   return p < 0.001 ? "p < 0.001" : `p = ${p.toFixed(3)}`;
 }

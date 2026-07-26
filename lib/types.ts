@@ -220,6 +220,8 @@ export interface AnalysisResult {
   totalObservations: number;
   observationsWithWeather: number;
   observationsWithWind: number;
+  /** Archive rows recorded as 0:0 because the round was never played. */
+  matchesNotPlayed: number;
   blueSky: BlueSkyAnalysis;
   wind: WindAnalysis;
 }

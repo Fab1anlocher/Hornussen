@@ -62,6 +62,8 @@ export function StoryMotion() {
               bar.style.transitionDelay = `${i * 70}ms`;
               bar.classList.add("is-in");
             });
+            // Sky swatches already carry their delay from the server render.
+            el.querySelectorAll(".sky-swatch").forEach((s) => s.classList.add("is-in"));
           }
 
           // Distribution dots carry their own authored stagger, so they only

@@ -15,7 +15,7 @@ const R_MAX = 16;
  * Every observation as one cell of an okta × Nummern grid: dot area is the
  * share of that column, so the nine columns stay comparable even though the
  * overcast one holds three times as many games. The OLS line from the analysis
- * is drawn on the same scale, which is the point of the chapter — the model is
+ * is drawn on the same scale, which is the point of the chapter: the model is
  * a thin line through a very wide cloud.
  */
 export function DistributionGrid({

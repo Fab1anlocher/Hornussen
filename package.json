@@ -14,7 +14,8 @@
     "scrape:weather": "tsx scripts/fetch-weather.ts",
     "build:dataset": "tsx scripts/build-dataset.ts",
     "analyze": "tsx scripts/analyze.ts",
-    "pipeline": "npm run scrape:venues && npm run scrape:archive && npm run scrape:geocode && npm run scrape:weather && npm run build:dataset && npm run analyze"
+    "verify": "tsx scripts/verify-analysis.ts",
+    "pipeline": "npm run scrape:venues && npm run scrape:archive && npm run scrape:geocode && npm run scrape:weather && npm run build:dataset && npm run analyze && npm run verify"
   },
   "dependencies": {
     "next": "^15.5.21",

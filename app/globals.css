@@ -168,6 +168,15 @@ body {
   height: 0;
 }
 
+/* Sky swatches wipe in under the axis, in step with the bars above them */
+.sky-swatch {
+  transform-origin: left center;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.js [data-bars] .sky-swatch:not(.is-in) {
+  transform: scaleX(0);
+}
+
 /* Distribution dots pop in column by column, the fit line draws itself after */
 .dist-dot {
   transform-box: fill-box;
@@ -198,6 +207,12 @@ body {
   }
   .js [data-bars] .okta-bar:not(.is-in) {
     height: var(--bar-h);
+  }
+  .js [data-bars] .sky-swatch:not(.is-in) {
+    transform: none;
+  }
+  .sky-swatch {
+    transition: none;
   }
   .js [data-dots] .dist-dot:not(.is-in) {
     transform: none;
