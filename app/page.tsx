@@ -490,16 +490,6 @@ export default function Home() {
             Darum rechnen wir mit {formatCH(analysis.totalMatches)} Spielen und nicht mit den{" "}
             {formatCH(analysis.totalMatches + analysis.matchesNotPlayed)} Einträgen, die im Archiv stehen.
           </Body>
-          <Body delay={310}>
-            Die grösste Einschränkung ist eine andere. Der Vergleich lebt davon, dass sich klare
-            und bedeckte <em>Spieltage</em> unterscheiden, nicht einzelne Plätze:{" "}
-            {Math.round(bs.betweenDayShare * 100)} % der Unterschiede in der Bewölkung liegen
-            zwischen den Tagen, nur der kleine Rest zwischen den Plätzen eines Tages. Vergleicht
-            man nur Plätze innerhalb desselben Spieltags, ist vom Effekt nichts mehr messbar. Ob
-            das gegen die Weisheit spricht oder nur daran liegt, dass ein 9-Kilometer-Raster
-            benachbarte Plätze gar nicht auseinanderhalten kann, lässt sich mit diesen Daten nicht
-            entscheiden.
-          </Body>
           <Body delay={320}>
             Der Zusammenhang ist also gemessen, die Ursache nicht bewiesen. Trotzdem: die Richtung
             passt genau zu dem, was Hornusser seit Jahrzehnten sagen.
