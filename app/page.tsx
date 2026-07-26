@@ -21,7 +21,6 @@ export default function Home() {
 
   const bs = analysis.blueSky;
   const ext = bs.extremes; // 0/8 vs 8/8, the test behind the headline number
-  const ctx = bs.context;
   const clustered = bs.extremesClustered;
   const dist = bs.distribution;
   const colTotals = dist.counts.map((row) => row.reduce((a, b) => a + b, 0));
@@ -449,40 +448,15 @@ export default function Home() {
         >
           <Kicker>KAPITEL 5 · WAS WIR NICHT WISSEN</Kicker>
           <ChapterTitle delay={60} small>
-            Blauer Himmel kommt nie allein.
+            Woher die Zahlen kommen.
           </ChapterTitle>
           <Body delay={140}>
-            Ein wolkenloser Tag ist nicht nur wolkenlos. Er ist im Schnitt{" "}
-            {Math.round(ctx.temperatureClear - ctx.temperatureOvercast)} Grad wärmer (
-            {ctx.temperatureClear.toFixed(1)} statt {ctx.temperatureOvercast.toFixed(1)} °C) und
-            liegt viel häufiger im Hochsommer: {Math.round(ctx.midsummerShareClear * 100)} % der
-            wolkenlosen Resultate fallen in Juni oder Juli, bei bedecktem Himmel nur{" "}
-            {Math.round(ctx.midsummerShareOvercast * 100)} %. Die Hitze wäre also die naheliegende
-            Gegenerklärung.
-          </Body>
-          <Body delay={170}>
-            Sie trägt aber nicht. Teilt man die Spiele in Temperaturbänder und vergleicht innerhalb
-            jedes Bandes noch einmal wolkenlos gegen bedeckt, bleibt der Abstand überall bestehen:
-            {" "}
-            {bs.temperatureStrata
-              .map((t) => `${t.label} +${t.diff.toFixed(2)}`)
-              .join(", ")}
-            . Bei gleicher Temperatur macht der blanke Himmel also weiterhin den Unterschied.
-          </Body>
-          <Body delay={200}>
-            Eine Erklärung können wir ausschliessen: dass bei schönem Wetter einfach andere
-            Mannschaften antreten. Der Anteil der obersten Ligen ist in beiden Gruppen praktisch
-            gleich ({Math.round(ctx.topLeagueShareClear * 100)} % gegen{" "}
-            {Math.round(ctx.topLeagueShareOvercast * 100)} % NLA/NLB). Und ruhiger ist es bei
-            blauem Himmel auch nicht: der Wind liegt mit {ctx.windSpeedClear.toFixed(1)} km/h
-            sogar leicht über den {ctx.windSpeedOvercast.toFixed(1)} km/h bei bedecktem Himmel.
-          </Body>
-          <Body delay={260}>
-            Dazu kommt, woher das Wetter stammt: aus der ERA5-Reanalyse (Open-Meteo), einem
-            Rechenmodell mit rund 9 bis 25 Kilometern Auflösung. Gemessen wird damit das regionale
-            Wetter, nicht die Luft über dem Ries. Und weil die Ranglisten keine Anspielzeiten nennen, nehmen wir für
-            jedes Spiel den Wert um <strong className="text-ink">13 Uhr</strong> Ortszeit. Wer
-            früher oder später spielte, spielte unter einem anderen Himmel als dem hier gemessenen.
+            Das Wetter ist nicht am Platzrand gemessen. Es stammt aus der ERA5-Reanalyse
+            (Open-Meteo), einem Rechenmodell mit rund 9 bis 25 Kilometern Auflösung. Das ist das
+            regionale Wetter, nicht die Luft über dem Ries. Und weil die Ranglisten keine
+            Anspielzeiten nennen, nehmen wir für jedes Spiel den Wert um{" "}
+            <strong className="text-ink">13 Uhr</strong> Ortszeit. Wer früher oder später spielte,
+            spielte unter einem anderen Himmel als dem hier gemessenen.
           </Body>
           <Body delay={290}>
             Nicht ausgetragene Runden stehen im Archiv als 0:0. Solche Einträge lassen wir weg,
