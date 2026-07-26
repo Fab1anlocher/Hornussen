@@ -9,7 +9,14 @@ import type {
   Verdict,
   WindAnalysis,
 } from "./types";
-import type { CategoryAnalysis, PairwiseTest } from "./types";
+import type {
+  CategoryAnalysis,
+  ClearSkyContext,
+  ClusteredTest,
+  NummernDistribution,
+  PairwiseTest,
+  Stratum,
+} from "./types";
 import {
   bootstrapCI,
   correlationPValue,
@@ -18,7 +25,9 @@ import {
   oneWayAnova,
   pearson,
   spearman,
+  stdDev,
   stdErr,
+  studentTTwoSided,
   welchTTest,
 } from "./stats";
 
@@ -57,11 +66,12 @@ export function analyzeBlueSky(obs: Observation[]): BlueSkyAnalysis {
   const corr = correlation(cloud, nummern);
 
   // Official okta scale (eighths): okta = round(cloudCover% / 12.5), 0..8.
-  const oktaGroups: number[][] = Array.from({ length: 9 }, () => []);
+  const oktaObs: Observation[][] = Array.from({ length: 9 }, () => []);
   for (const o of withWeather) {
     const k = Math.max(0, Math.min(8, Math.round((o.cloudCoverMean as number) / 12.5)));
-    oktaGroups[k].push(o.nummern);
+    oktaObs[k].push(o);
   }
+  const oktaGroups: number[][] = oktaObs.map((g) => g.map((o) => o.nummern));
   const buckets: Bucket[] = oktaGroups.map((g, k) => bucketOf(g, `${k}/8`));
   const okta = oneWayAnova(oktaGroups.filter((g) => g.length > 0));
 
@@ -78,6 +88,11 @@ export function analyzeBlueSky(obs: Observation[]): BlueSkyAnalysis {
   const clearMean = mean(oktaGroups[0]); // wolkenlos (0/8)
   const overcastMean = mean(oktaGroups[8]); // bedeckt (8/8)
 
+  // The headline number compares the two ends of the scale, so it needs its own
+  // test — the correlation's p and n cover all nine oktas and would overstate
+  // the sample behind this specific claim.
+  const extremes = pairwise("0/8 (wolkenlos)", oktaGroups[0], "8/8 (bedeckt)", oktaGroups[8]);
+
   const verdict = blueSkyVerdict(corr, clearMean, overcastMean, categories);
 
   return {
@@ -88,31 +103,216 @@ export function analyzeBlueSky(obs: Observation[]): BlueSkyAnalysis {
     oktaAnovaP: okta.p,
     clearMean,
     overcastMean,
+    extremes,
+    extremesClustered: clusteredDiff(oktaObs[0], oktaObs[8], (o) => o.date),
+    playingDays: new Set(withWeather.map((o) => o.date)).size,
+    temperatureStrata: temperatureStrata(oktaObs[0], oktaObs[8]),
+    betweenDayShare: betweenDayShare(withWeather),
+    context: clearSkyContext(oktaObs[0], oktaObs[8]),
+    distribution: nummernDistribution(oktaObs),
     categories,
     verdict,
+  };
+}
+
+/**
+ * Difference in means between two groups with standard errors clustered on
+ * `key` (the playing day). Written as a two-group OLS with a dummy and the
+ * Liang–Zeger sandwich, which is what a t-test becomes once observations inside
+ * a cluster are allowed to be correlated.
+ *
+ * Necessary here because the exposure is a property of the round date: every
+ * result played on the same day shares essentially the same sky, so the naive
+ * test counts one weather draw thousands of times.
+ */
+function clusteredDiff(
+  a: Observation[],
+  b: Observation[],
+  key: (o: Observation) => string,
+): ClusteredTest {
+  const rows = [
+    ...a.map((o) => ({ y: o.nummern, g: 1, c: key(o) })),
+    ...b.map((o) => ({ y: o.nummern, g: 0, c: key(o) })),
+  ];
+  const n = rows.length;
+  const meanA = mean(a.map((o) => o.nummern));
+  const meanB = mean(b.map((o) => o.nummern));
+  const diff = meanA - meanB;
+  const xbar = a.length / n;
+
+  const byCluster = new Map<string, typeof rows>();
+  let sxx = 0;
+  for (const r of rows) {
+    sxx += (r.g - xbar) ** 2;
+    const bucket = byCluster.get(r.c);
+    if (bucket) bucket.push(r);
+    else byCluster.set(r.c, [r]);
+  }
+
+  let meat = 0;
+  for (const cluster of byCluster.values()) {
+    let s = 0;
+    for (const r of cluster) s += (r.g - xbar) * (r.y - (meanB + diff * r.g));
+    meat += s * s;
+  }
+  const g = byCluster.size;
+  const finite = (g / (g - 1)) * ((n - 1) / (n - 2));
+  const stdErr = Math.sqrt((finite * meat) / (sxx * sxx));
+  const naiveSe = Math.sqrt(
+    stdDev(a.map((o) => o.nummern)) ** 2 / a.length +
+      stdDev(b.map((o) => o.nummern)) ** 2 / b.length,
+  );
+  const t = stdErr === 0 ? 0 : diff / stdErr;
+  return {
+    diff,
+    stdErr,
+    t,
+    p: studentTTwoSided(Math.abs(t), g - 1),
+    clusters: g,
+    inflation: naiveSe === 0 ? 1 : stdErr / naiveSe,
+  };
+}
+
+/**
+ * Splits the variance in cloud cover into a between-playing-day and a
+ * within-day part. Reported because it bounds what the whole analysis can show:
+ * if almost all of the variation is between dates, then so is the effect, and
+ * no amount of observations turns that into a per-pitch finding.
+ */
+function betweenDayShare(obs: Observation[]): number {
+  const byDate = new Map<string, number[]>();
+  for (const o of obs) {
+    const v = o.cloudCoverMean as number;
+    const bucket = byDate.get(o.date);
+    if (bucket) bucket.push(v);
+    else byDate.set(o.date, [v]);
+  }
+  const grand = mean(obs.map((o) => o.cloudCoverMean as number));
+  let between = 0;
+  let within = 0;
+  for (const values of byDate.values()) {
+    const m = mean(values);
+    between += values.length * (m - grand) ** 2;
+    for (const v of values) within += (v - m) ** 2;
+  }
+  const total = between + within;
+  return total === 0 ? 0 : between / total;
+}
+
+/**
+ * Repeats the 0/8-vs-8/8 contrast inside fixed temperature bands. Clear days run
+ * about six degrees warmer, so heat is the obvious rival explanation; holding
+ * temperature roughly constant is the cheapest way to see whether it carries the
+ * difference on its own.
+ */
+function temperatureStrata(clear: Observation[], overcast: Observation[]): Stratum[] {
+  const bands: [string, number, number][] = [
+    ["unter 15 °C", -100, 15],
+    ["15 bis 20 °C", 15, 20],
+    ["20 bis 25 °C", 20, 25],
+    ["über 25 °C", 25, 100],
+  ];
+  const inBand = (obs: Observation[], lo: number, hi: number) =>
+    obs.filter((o) => {
+      const t = o.temperatureMean;
+      return Number.isFinite(t) && (t as number) >= lo && (t as number) < hi;
+    });
+
+  const out: Stratum[] = [];
+  for (const [label, lo, hi] of bands) {
+    const a = inBand(clear, lo, hi);
+    const b = inBand(overcast, lo, hi);
+    // Too thin to say anything; reporting it would invite over-reading.
+    if (a.length < 30 || b.length < 30) continue;
+    const t = welchTTest(a.map((o) => o.nummern), b.map((o) => o.nummern));
+    out.push({
+      label,
+      meanClear: t.meanA,
+      meanOvercast: t.meanB,
+      diff: t.diff,
+      p: t.p,
+      nClear: a.length,
+      nOvercast: b.length,
+    });
+  }
+  return out;
+}
+
+/**
+ * Buckets every observation into an okta × Nummern grid. Counts above `cap`
+ * fold into the last row: the tail runs to 21 but is so thin that plotting it
+ * would spend most of the chart on a handful of games.
+ */
+function nummernDistribution(oktaObs: Observation[][], cap = 6): NummernDistribution {
+  const counts = oktaObs.map((group) => {
+    const row = new Array<number>(cap + 1).fill(0);
+    for (const o of group) row[Math.min(cap, Math.max(0, o.nummern))]++;
+    return row;
+  });
+  const all = oktaObs.flat();
+  const zero = all.filter((o) => o.nummern === 0).length;
+  return {
+    cap,
+    counts,
+    zeroShare: all.length === 0 ? 0 : zero / all.length,
+    maxNummern: all.reduce((m, o) => Math.max(m, o.nummern), 0),
+  };
+}
+
+/**
+ * Measures what else separates cloudless from overcast playing days, so the
+ * story can name its confounders with numbers instead of asserting them.
+ */
+function clearSkyContext(clear: Observation[], overcast: Observation[]): ClearSkyContext {
+  const avg = (obs: Observation[], pick: (o: Observation) => number | undefined) => {
+    const vs = obs.map(pick).filter((v): v is number => Number.isFinite(v as number));
+    return vs.length === 0 ? NaN : mean(vs);
+  };
+  // June/July — the height of the season, when clear days cluster.
+  const midsummer = (obs: Observation[]) =>
+    obs.length === 0
+      ? NaN
+      : obs.filter((o) => ["06", "07"].includes(o.date.slice(5, 7))).length / obs.length;
+  const topLeague = (obs: Observation[]) =>
+    obs.length === 0 ? NaN : obs.filter((o) => o.league.startsWith("NL")).length / obs.length;
+
+  return {
+    temperatureClear: avg(clear, (o) => o.temperatureMean),
+    temperatureOvercast: avg(overcast, (o) => o.temperatureMean),
+    windSpeedClear: avg(clear, (o) => o.windSpeedMean),
+    windSpeedOvercast: avg(overcast, (o) => o.windSpeedMean),
+    midsummerShareClear: midsummer(clear),
+    midsummerShareOvercast: midsummer(overcast),
+    topLeagueShareClear: topLeague(clear),
+    topLeagueShareOvercast: topLeague(overcast),
+  };
+}
+
+/** Welch test between two labelled groups, in the shape the frontend reads. */
+function pairwise(la: string, ga: number[], lb: string, gb: number[]): PairwiseTest {
+  const t = welchTTest(ga, gb);
+  return {
+    a: la,
+    b: lb,
+    meanA: t.meanA,
+    meanB: t.meanB,
+    diff: t.diff,
+    pctDiff: t.pctDiff,
+    t: t.t,
+    p: t.p,
+    significant: t.p < 0.05,
+    nA: t.nA,
+    nB: t.nB,
   };
 }
 
 /** One-way ANOVA + all pairwise Welch tests across labelled groups. */
 function categoryAnalysis(groups: [string, number[]][]): CategoryAnalysis {
   const anova = oneWayAnova(groups.map(([, g]) => g));
-  const pairwise: PairwiseTest[] = [];
+  const tests: PairwiseTest[] = [];
   for (let i = 0; i < groups.length; i++) {
     for (let j = i + 1; j < groups.length; j++) {
-      const [la, ga] = groups[i];
-      const [lb, gb] = groups[j];
-      const t = welchTTest(ga, gb);
-      pairwise.push({
-        a: la,
-        b: lb,
-        meanA: t.meanA,
-        meanB: t.meanB,
-        diff: t.diff,
-        pctDiff: t.pctDiff,
-        t: t.t,
-        p: t.p,
-        significant: t.p < 0.05,
-      });
+      tests.push(pairwise(groups[i][0], groups[i][1], groups[j][0], groups[j][1]));
     }
   }
   return {
@@ -120,7 +320,7 @@ function categoryAnalysis(groups: [string, number[]][]): CategoryAnalysis {
     anovaF: anova.f,
     anovaP: anova.p,
     anovaSignificant: anova.p < 0.05,
-    pairwise,
+    pairwise: tests,
   };
 }
 
@@ -258,7 +458,11 @@ function windVerdict(corr: CorrelationResult, ratio: number): Verdict {
   };
 }
 
-export function analyze(obs: Observation[], modelK: number): AnalysisResult {
+export function analyze(
+  obs: Observation[],
+  modelK: number,
+  matchesNotPlayed = 0,
+): AnalysisResult {
   const matchIds = new Set(obs.map((o) => o.matchId));
   const seasons = [...new Set(obs.map((o) => o.season))].sort((a, b) => a - b);
   const leagues = [...new Set(obs.map((o) => o.league))].sort();
@@ -273,6 +477,7 @@ export function analyze(obs: Observation[], modelK: number): AnalysisResult {
     totalObservations: obs.length,
     observationsWithWeather: withWeather.length,
     observationsWithWind: withWind.length,
+    matchesNotPlayed,
     blueSky: analyzeBlueSky(obs),
     wind: analyzeWind(obs, modelK),
   };

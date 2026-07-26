@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Blauer Himmel, mehr Nummern? — eine Hornussen-Datengeschichte",
+  title: "Blauer Himmel, mehr Nummern? Eine Hornussen-Datengeschichte",
   description:
-    "Bei blauem Himmel sieht man den Nouss schlechter — stimmt das? 13'793 Meisterschaftsspiele und das Wetter darüber, als Scroll-Geschichte erzählt.",
+    "Bei blauem Himmel sieht man den Nouss schlechter, sagen die Hornusser. Stimmt das? 13'793 Meisterschaftsspiele und das Wetter darüber, als Scroll-Geschichte erzählt.",
 };
 
 // Marks JS as available before first paint. Every animation is gated on this

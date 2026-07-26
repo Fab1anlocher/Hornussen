@@ -127,6 +127,68 @@ export interface PairwiseTest {
   t: number;
   p: number;
   significant: boolean; // p < 0.05
+  nA: number;
+  nB: number;
+}
+
+/**
+ * The headline contrast repeated inside a stratum, e.g. one temperature band.
+ * If the difference only existed because clear days are hot days, it would
+ * vanish here; that it does not is the reason chapter 5 can rule heat out.
+ */
+export interface Stratum {
+  label: string;
+  meanClear: number;
+  meanOvercast: number;
+  diff: number;
+  p: number;
+  nClear: number;
+  nOvercast: number;
+}
+
+/** A group difference with cluster-robust inference (Liang–Zeger). */
+export interface ClusteredTest {
+  diff: number;
+  stdErr: number;
+  t: number;
+  p: number;
+  clusters: number;
+  /** How much wider the clustered standard error is than the naive one. */
+  inflation: number;
+}
+
+/**
+ * What else changes when the sky clears. These are the confounders the story
+ * names, measured rather than assumed — a cloudless day differs from an
+ * overcast one in more than just its cloud cover.
+ */
+export interface ClearSkyContext {
+  temperatureClear: number; // °C at 0/8
+  temperatureOvercast: number; // °C at 8/8
+  windSpeedClear: number; // km/h at 0/8
+  windSpeedOvercast: number; // km/h at 8/8
+  /** Share of observations played in June/July (0..1) — clear skies sit later. */
+  midsummerShareClear: number;
+  midsummerShareOvercast: number;
+  /** Share of observations from the top flight, NLA/NLB (0..1). */
+  topLeagueShareClear: number;
+  topLeagueShareOvercast: number;
+}
+
+/**
+ * The full joint distribution of cloud cover and Nummern — every observation
+ * lands in exactly one cell. Lets the story show the raw spread the averages
+ * are drawn from, instead of only the averages.
+ */
+export interface NummernDistribution {
+  /** Last explicit row; the row at this index means "cap or more". */
+  cap: number;
+  /** counts[okta 0..8][nummern 0..cap] — the final row is the tail. */
+  counts: number[][];
+  /** Share of all observations that ended without a single Nummer, 0..1. */
+  zeroShare: number;
+  /** Largest single Nummern value in the data — the tail the grid folds away. */
+  maxNummern: number;
 }
 
 export interface CategoryAnalysis {
@@ -145,6 +207,33 @@ export interface BlueSkyAnalysis {
   oktaAnovaP: number;
   clearMean: number; // mean nummern, wolkenlos (0/8)
   overcastMean: number; // mean nummern, bedeckt (8/8)
+  /**
+   * Welch test for exactly the headline claim: 0/8 vs 8/8. Kept separate from
+   * `correlation` (which spans all nine oktas) so the reported p-value and n
+   * belong to the comparison actually being quoted.
+   */
+  extremes: PairwiseTest;
+  /**
+   * The same 0/8-vs-8/8 difference, but with standard errors clustered by
+   * playing day. Weather is a property of the round date, not of the single
+   * result: 91 % of the variance in cloud cover sits between playing days, so
+   * treating each team result as independent evidence overstates precision by
+   * roughly a factor of 2.5. This is the honest test.
+   */
+  extremesClustered: ClusteredTest;
+  /** Distinct round dates with weather — the real number of independent draws. */
+  playingDays: number;
+  /** 0/8 vs 8/8 repeated within temperature bands, to test the heat explanation. */
+  temperatureStrata: Stratum[];
+  /**
+   * Share of the variance in cloud cover that sits between playing days rather
+   * than between venues on the same day (0..1). Near 1 means the exposure is
+   * effectively a property of the date, which is what limits what the
+   * comparison can identify.
+   */
+  betweenDayShare: number;
+  context: ClearSkyContext; // what else differs between 0/8 and 8/8 days
+  distribution: NummernDistribution; // okta × Nummern, all observations
   categories: CategoryAnalysis; // coarse official groups + pairwise tests
   verdict: Verdict;
 }
@@ -176,6 +265,8 @@ export interface AnalysisResult {
   totalObservations: number;
   observationsWithWeather: number;
   observationsWithWind: number;
+  /** Archive rows recorded as 0:0 because the round was never played. */
+  matchesNotPlayed: number;
   blueSky: BlueSkyAnalysis;
   wind: WindAnalysis;
 }

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-24T14:44:15.067Z",
+  "generatedAt": "2026-07-26T08:03:26.703Z",
   "seasons": [
     2013,
     2014,
@@ -41,6 +41,7 @@
   "totalObservations": 27586,
   "observationsWithWeather": 27042,
   "observationsWithWind": 4390,
+  "matchesNotPlayed": 112,
   "blueSky": {
     "metric": "nummern",
     "correlation": {
@@ -113,6 +114,165 @@
     "oktaAnovaP": 1.1551839279111046e-52,
     "clearMean": 1.6522577092511013,
     "overcastMean": 1.1013245033112582,
+    "extremes": {
+      "a": "0/8 (wolkenlos)",
+      "b": "8/8 (bedeckt)",
+      "meanA": 1.6522577092511013,
+      "meanB": 1.1013245033112582,
+      "diff": 0.5509332059398431,
+      "pctDiff": 50.02460258383422,
+      "t": 13.520066416361066,
+      "p": 5.866835245381385e-41,
+      "significant": true,
+      "nA": 3632,
+      "nB": 10570
+    },
+    "extremesClustered": {
+      "diff": 0.5509332059398431,
+      "stdErr": 0.10273657043294472,
+      "t": 5.362581246562367,
+      "p": 3.630507703328229e-7,
+      "clusters": 131,
+      "inflation": 2.521186308371175
+    },
+    "playingDays": 157,
+    "temperatureStrata": [
+      {
+        "label": "unter 15 °C",
+        "meanClear": 1.9264305177111716,
+        "meanOvercast": 1.08289124668435,
+        "diff": 0.8435392710268215,
+        "p": 2.1303185101926094e-19,
+        "nClear": 734,
+        "nOvercast": 4524
+      },
+      {
+        "label": "15 bis 20 °C",
+        "meanClear": 1.471264367816092,
+        "meanOvercast": 1.12109375,
+        "diff": 0.35017061781609193,
+        "p": 0.0020992458634357244,
+        "nClear": 348,
+        "nOvercast": 4352
+      },
+      {
+        "label": "20 bis 25 °C",
+        "meanClear": 1.4963144963144963,
+        "meanOvercast": 1.0589519650655022,
+        "diff": 0.43736253124899416,
+        "p": 4.549306482966145e-10,
+        "nClear": 1628,
+        "nOvercast": 1374
+      },
+      {
+        "label": "über 25 °C",
+        "meanClear": 1.7776572668112798,
+        "meanOvercast": 1.275,
+        "diff": 0.5026572668112799,
+        "p": 0.00014623809734123433,
+        "nClear": 922,
+        "nOvercast": 320
+      }
+    ],
+    "betweenDayShare": 0.9090217185572266,
+    "context": {
+      "temperatureClear": 21.323953744493387,
+      "temperatureOvercast": 15.35097445600765,
+      "windSpeedClear": 9.226101321585949,
+      "windSpeedOvercast": 8.576385998108,
+      "midsummerShareClear": 0.6018722466960352,
+      "midsummerShareOvercast": 0.343046357615894,
+      "topLeagueShareClear": 0.24284140969162996,
+      "topLeagueShareOvercast": 0.2556291390728477
+    },
+    "distribution": {
+      "cap": 6,
+      "counts": [
+        [
+          1464,
+          829,
+          492,
+          309,
+          163,
+          126,
+          249
+        ],
+        [
+          735,
+          399,
+          198,
+          87,
+          55,
+          37,
+          57
+        ],
+        [
+          869,
+          389,
+          197,
+          112,
+          68,
+          34,
+          59
+        ],
+        [
+          751,
+          359,
+          173,
+          99,
+          58,
+          33,
+          41
+        ],
+        [
+          658,
+          345,
+          174,
+          90,
+          46,
+          22,
+          39
+        ],
+        [
+          681,
+          395,
+          193,
+          107,
+          42,
+          47,
+          57
+        ],
+        [
+          1142,
+          568,
+          293,
+          141,
+          56,
+          52,
+          66
+        ],
+        [
+          1374,
+          699,
+          316,
+          178,
+          105,
+          56,
+          88
+        ],
+        [
+          5403,
+          2426,
+          1232,
+          663,
+          329,
+          207,
+          310
+        ]
+      ],
+      "zeroShare": 0.48358109607277566,
+      "maxNummern": 21
+    },
     "categories": {
       "buckets": [
         {
@@ -147,7 +307,9 @@
           "pctDiff": 19.78652662120278,
           "t": 6.436584886066472,
           "p": 1.2766894669023658e-10,
-          "significant": true
+          "significant": true,
+          "nA": 6928,
+          "nB": 4410
         },
         {
           "a": "Heiter (0–2/8)",
@@ -158,7 +320,9 @@
           "pctDiff": 28.27007827280973,
           "t": 11.15362320893905,
           "p": 9.654733836760557e-29,
-          "significant": true
+          "significant": true,
+          "nA": 6928,
+          "nB": 15704
         },
         {
           "a": "Bewölkt (3–5/8)",
@@ -169,7 +333,9 @@
           "pctDiff": 7.082225264310586,
           "t": 2.586318987803605,
           "p": 0.009721114610025824,
-          "significant": true
+          "significant": true,
+          "nA": 4410,
+          "nB": 15704
         }
       ]
     },
