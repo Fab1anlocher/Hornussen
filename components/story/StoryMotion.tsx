@@ -64,6 +64,14 @@ export function StoryMotion() {
             });
           }
 
+          // Distribution dots carry their own authored stagger, so they only
+          // need the flag flipped.
+          if (el.hasAttribute("data-dots")) {
+            el.querySelectorAll(".dist-dot, .dist-fit").forEach((n) =>
+              n.classList.add("is-in"),
+            );
+          }
+
           observer.unobserve(el);
         }
       },
@@ -71,7 +79,7 @@ export function StoryMotion() {
     );
 
     document
-      .querySelectorAll("[data-reveal], [data-bars]")
+      .querySelectorAll("[data-reveal], [data-bars], [data-dots]")
       .forEach((el) => observer.observe(el));
 
     // Staggered reveals read as a cascade only if they start together, so give

@@ -127,6 +127,42 @@ export interface PairwiseTest {
   t: number;
   p: number;
   significant: boolean; // p < 0.05
+  nA: number;
+  nB: number;
+}
+
+/**
+ * What else changes when the sky clears. These are the confounders the story
+ * names, measured rather than assumed — a cloudless day differs from an
+ * overcast one in more than just its cloud cover.
+ */
+export interface ClearSkyContext {
+  temperatureClear: number; // °C at 0/8
+  temperatureOvercast: number; // °C at 8/8
+  windSpeedClear: number; // km/h at 0/8
+  windSpeedOvercast: number; // km/h at 8/8
+  /** Share of observations played in June/July (0..1) — clear skies sit later. */
+  midsummerShareClear: number;
+  midsummerShareOvercast: number;
+  /** Share of observations from the top flight, NLA/NLB (0..1). */
+  topLeagueShareClear: number;
+  topLeagueShareOvercast: number;
+}
+
+/**
+ * The full joint distribution of cloud cover and Nummern — every observation
+ * lands in exactly one cell. Lets the story show the raw spread the averages
+ * are drawn from, instead of only the averages.
+ */
+export interface NummernDistribution {
+  /** Last explicit row; the row at this index means "cap or more". */
+  cap: number;
+  /** counts[okta 0..8][nummern 0..cap] — the final row is the tail. */
+  counts: number[][];
+  /** Share of all observations that ended without a single Nummer, 0..1. */
+  zeroShare: number;
+  /** Largest single Nummern value in the data — the tail the grid folds away. */
+  maxNummern: number;
 }
 
 export interface CategoryAnalysis {
@@ -145,6 +181,14 @@ export interface BlueSkyAnalysis {
   oktaAnovaP: number;
   clearMean: number; // mean nummern, wolkenlos (0/8)
   overcastMean: number; // mean nummern, bedeckt (8/8)
+  /**
+   * Welch test for exactly the headline claim: 0/8 vs 8/8. Kept separate from
+   * `correlation` (which spans all nine oktas) so the reported p-value and n
+   * belong to the comparison actually being quoted.
+   */
+  extremes: PairwiseTest;
+  context: ClearSkyContext; // what else differs between 0/8 and 8/8 days
+  distribution: NummernDistribution; // okta × Nummern, all observations
   categories: CategoryAnalysis; // coarse official groups + pairwise tests
   verdict: Verdict;
 }

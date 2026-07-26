@@ -1,6 +1,7 @@
 import { getAnalysis } from "@/lib/data";
 import { formatCH, formatPct } from "@/lib/format";
 import { StoryMotion } from "@/components/story/StoryMotion";
+import { DistributionGrid } from "@/components/story/DistributionGrid";
 import type { Bucket } from "@/lib/types";
 
 export default function Home() {
@@ -19,14 +20,27 @@ export default function Home() {
   }
 
   const bs = analysis.blueSky;
-  const clearPct = Math.round((bs.clearMean / bs.overcastMean - 1) * 100);
-  const bars = withBarHeights(bs.buckets);
+  const ext = bs.extremes; // 0/8 vs 8/8 — the test behind the headline number
+  const ctx = bs.context;
+  const dist = bs.distribution;
+  const colTotals = dist.counts.map((row) => row.reduce((a, b) => a + b, 0));
+  const zeroClear = {
+    clear: colTotals[0] === 0 ? 0 : dist.counts[0][0] / colTotals[0],
+    overcast: colTotals[8] === 0 ? 0 : dist.counts[8][0] / colTotals[8],
+  };
+  const clearPct = Math.round(ext.pctDiff);
+  const { bars, baseline } = withBarHeights(bs.buckets);
+  const band = cloudyBand(bs.buckets);
   const [heiter, bewoelkt, bedeckt] = bs.categories.buckets;
   const heiterVsBewoelkt = bs.categories.pairwise.find(
     (p) => p.a === heiter?.label && p.b === bewoelkt?.label,
   );
+  const bewoelktVsBedeckt = bs.categories.pairwise.find(
+    (p) => p.a === bewoelkt?.label && p.b === bedeckt?.label,
+  );
   const firstSeason = analysis.seasons[0];
   const lastSeason = analysis.seasons[analysis.seasons.length - 1];
+  const missingSeasons = seasonGaps(analysis.seasons);
 
   return (
     <main>
@@ -154,7 +168,7 @@ export default function Home() {
               delay={90}
               count={analysis.observationsWithWeather}
               label="Resultate mit Wetterdaten"
-              sub="zwei pro Spiel — je Mannschaft"
+              sub={`je Mannschaft eines — von ${formatCH(analysis.totalObservations)} insgesamt`}
               accent="var(--series-1)"
             />
             <StatTile
@@ -208,7 +222,9 @@ export default function Home() {
             className="mx-auto mt-5 max-w-[52ch] text-[17px] leading-[1.6] text-[var(--text-secondary)]"
           >
             {bs.clearMean.toFixed(2)} gegen {bs.overcastMean.toFixed(2)} Nummern pro Team und
-            Spiel. Statistisch klar gesichert: p &lt; 0.001 bei n = {formatCH(bs.correlation.n)}.
+            Spiel. Verglichen werden {formatCH(ext.nA)} wolkenlose mit {formatCH(ext.nB)}{" "}
+            bedeckten Team-Resultaten — der Unterschied ist klar gesichert (Welch-t-Test,{" "}
+            {formatP(ext.p)}).
           </p>
         </section>
 
@@ -227,7 +243,8 @@ export default function Home() {
             </figcaption>
             <p className="mb-[26px] mt-1.5 max-w-[60ch] text-sm text-[var(--text-muted)]">
               Mittlere Nummern pro Team und Spiel je Achtel Bewölkung. Der wolkenlose Himmel sticht
-              heraus — alles dazwischen ist beinahe flach.
+              heraus; die übrigen acht Stufen bleiben eng beieinander und ordnen sich in keine
+              Reihenfolge.
             </p>
 
             <div
@@ -270,8 +287,9 @@ export default function Home() {
               ))}
             </div>
             <p className="mt-5 text-[13px] text-[var(--text-muted)]">
-              links wolkenlos · rechts bedeckt · Achse gekürzt, damit der Schwelleneffekt sichtbar
-              wird
+              links wolkenlos · rechts bedeckt · die Achse beginnt bei {baseline.toFixed(2)} statt
+              bei null, damit der Sprung sichtbar wird — die Balken sind dadurch stärker
+              gestaffelt, als die Zahlen es sind
             </p>
           </figure>
         </section>
@@ -286,9 +304,15 @@ export default function Home() {
             Es ist keine Skala — es ist eine Schwelle.
           </ChapterTitle>
           <Body delay={140}>
-            «Etwas mehr Wolken, etwas weniger Nummern» stimmt nicht. Zwischen 1/8 und 8/8
-            Bewölkung liegen alle Werte in einem engen Band um 1.1 bis 1.2. Der ganze Effekt
-            entsteht am Rand: beim komplett wolkenlosen Himmel.
+            «Etwas mehr Wolken, etwas weniger Nummern» stimmt nicht. Sobald auch nur ein Achtel
+            Himmel bedeckt ist, liegen alle Stufen zwischen {band.lo.toFixed(2)} und{" "}
+            {band.hi.toFixed(2)} — ohne erkennbare Richtung. Der ganze Effekt entsteht am Rand:
+            beim komplett wolkenlosen Himmel.
+          </Body>
+          <Body delay={180}>
+            Eine Stufe schert aus: bei {band.hiLabel} liegt der Schnitt bei {band.hi.toFixed(2)}.
+            Das ist mehr, als Zufall bequem erklärt, passt aber in keine Richtung — wir führen es
+            als offenen Ausreisser, nicht als Gegenbeweis.
           </Body>
 
           <div data-reveal="220" className="mt-[30px] grid gap-3">
@@ -317,30 +341,125 @@ export default function Home() {
             data-reveal="300"
             className="mt-[18px] text-sm leading-[1.6] text-[var(--text-muted)]"
           >
-            Alle drei Vergleiche sind signifikant (ANOVA F = {bs.categories.anovaF.toFixed(1)}, p
-            &lt; 0.001), aber die Lücke zwischen heiter und bewölkt ist mit +
-            {Math.round(heiterVsBewoelkt?.pctDiff ?? 0)} % dreimal so gross wie die zwischen
-            bewölkt und bedeckt.
+            Die drei Gruppen unterscheiden sich gesichert (ANOVA F ={" "}
+            {bs.categories.anovaF.toFixed(1)}, {formatP(bs.categories.anovaP)}); auch jedes
+            einzelne Paar ist signifikant, bewölkt gegen bedeckt allerdings nur knapp (
+            {formatP(bewoelktVsBedeckt?.p ?? NaN)}). Entscheidend sind die Abstände: heiter liegt
+            +{Math.round(heiterVsBewoelkt?.pctDiff ?? 0)} % über bewölkt, bewölkt nur +
+            {Math.round(bewoelktVsBedeckt?.pctDiff ?? 0)} % über bedeckt.
           </p>
         </section>
 
-        {/* ------------------------------------------- 4 · was wir nicht wissen */}
+        {/* ---------------------------------------------- 4 · die ganze masse */}
         <section
           className="mx-auto max-w-[720px] px-5"
           style={{ paddingTop: "clamp(68px,13vw,110px)" }}
         >
-          <Kicker>KAPITEL 4 · WAS WIR NICHT WISSEN</Kicker>
+          <Kicker>KAPITEL 4 · DIE GANZE MASSE</Kicker>
+          <ChapterTitle delay={60} small>
+            Ein dünner Strich durch eine breite Wolke.
+          </ChapterTitle>
+          <Body delay={140}>
+            Bisher haben wir Mittelwerte verglichen. Hier ist alles auf einmal: jedes der{" "}
+            {formatCH(bs.correlation.n)} Team-Resultate sitzt in einem Punkt dieses Rasters — links
+            der wolkenlose Himmel, rechts der bedeckte, nach oben die Zahl der Nummern. Je grösser
+            der Punkt, desto mehr Spiele endeten so.
+          </Body>
+        </section>
+
+        <section
+          className="mx-auto max-w-[1000px] px-5"
+          style={{ paddingTop: "clamp(30px,6vw,44px)" }}
+        >
+          <figure
+            data-reveal="0"
+            className="m-0 rounded-[20px] border border-[var(--border)] bg-[var(--surface)]"
+            style={{ padding: "clamp(18px,4.5vw,28px) clamp(14px,3.5vw,26px) clamp(16px,4vw,24px)" }}
+          >
+            <figcaption className="font-display text-xl font-semibold">
+              Alle Resultate, nach Bewölkung
+            </figcaption>
+            <p className="mb-5 mt-1.5 max-w-[60ch] text-sm text-[var(--text-muted)]">
+              Punktfläche = Anteil innerhalb einer Spalte, damit sich die neun Stufen vergleichen
+              lassen. Die braune Gerade ist die lineare Regression über alle Beobachtungen.
+            </p>
+            <div data-dots>
+              <DistributionGrid distribution={dist} correlation={bs.correlation} />
+            </div>
+            <p className="mt-4 text-[13px] text-[var(--text-muted)]">
+              Spalten sind unterschiedlich stark besetzt: {formatCH(Math.max(...colTotals))}{" "}
+              Resultate bei bedecktem, nur {formatCH(colTotals[0])} bei wolkenlosem Himmel. Die
+              oberste Reihe fasst alles ab {dist.cap} Nummern zusammen — der längste Schwanz reicht
+              bis {dist.maxNummern}.
+            </p>
+          </figure>
+        </section>
+
+        <section
+          className="mx-auto max-w-[720px] px-5"
+          style={{ paddingTop: "clamp(44px,8vw,64px)" }}
+        >
+          <Body delay={0}>
+            Zwei Dinge fallen auf. Erstens: {Math.round(dist.zeroShare * 100)} % aller Resultate
+            enden ohne eine einzige Nummer — das ist der dicke Punkt ganz unten. Bei bedecktem
+            Himmel sind es {Math.round(zeroClear.overcast * 100)} %, bei wolkenlosem nur{" "}
+            {Math.round(zeroClear.clear * 100)} %. Der blaue Himmel nimmt der Mannschaft die
+            fehlerfreie Runde weg und macht dafür den oberen Rand dicker.
+          </Body>
+          <Body delay={80}>
+            Zweitens: die Gerade fällt über die ganze Skala um nur{" "}
+            {Math.abs(bs.correlation.slope * 100).toFixed(2)} Nummern — von{" "}
+            {bs.correlation.intercept.toFixed(2)} bei blankem Himmel auf{" "}
+            {(bs.correlation.intercept + bs.correlation.slope * 100).toFixed(2)} bei geschlossener
+            Decke. Neben einer Streuung, die von 0 bis {dist.maxNummern} reicht, ist das fast
+            nichts. Genau deshalb ist die Korrelation mit r ={" "}
+            {bs.correlation.pearson.toFixed(2)} so klein, obwohl der Unterschied echt ist: Das
+            Wetter verschiebt die Verteilung, es bestimmt sie nicht.
+          </Body>
+          <Body delay={160}>
+            Ein Modell, das aus der Bewölkung die Nummern eines einzelnen Spiels vorhersagt, gibt es
+            hier also nicht — und wird es nicht geben. Was es gibt, ist ein Effekt, der erst über
+            Tausende von Spielen aus dem Rauschen auftaucht.
+          </Body>
+        </section>
+
+        {/* ------------------------------------------- 5 · was wir nicht wissen */}
+        <section
+          className="mx-auto max-w-[720px] px-5"
+          style={{ paddingTop: "clamp(68px,13vw,110px)" }}
+        >
+          <Kicker>KAPITEL 5 · WAS WIR NICHT WISSEN</Kicker>
           <ChapterTitle delay={60} small>
             Blauer Himmel kommt nie allein.
           </ChapterTitle>
           <Body delay={140}>
-            Wolkenlose Tage sind auch heisser, trockener und windstiller — und liegen oft mitten im
-            Sommer, wo andere Mannschaften spielen. Der Zusammenhang ist gemessen, die Ursache
-            nicht bewiesen. Ausserdem stammt das Wetter aus Stundenwerten der nächstgelegenen
-            Station, nicht vom Platzrand.
+            Ein wolkenloser Tag ist nicht nur wolkenlos. Er ist im Schnitt{" "}
+            {Math.round(ctx.temperatureClear - ctx.temperatureOvercast)} Grad wärmer (
+            {ctx.temperatureClear.toFixed(1)} statt {ctx.temperatureOvercast.toFixed(1)} °C) und
+            liegt viel häufiger im Hochsommer: {Math.round(ctx.midsummerShareClear * 100)} % der
+            wolkenlosen Resultate fallen in Juni oder Juli, bei bedecktem Himmel nur{" "}
+            {Math.round(ctx.midsummerShareOvercast * 100)} %. Hitze, Flimmern über dem Ries und
+            tiefer Sonnenstand am späteren Nachmittag sind damit genauso gute Verdächtige wie der
+            fehlende Kontrast.
           </Body>
-          <Body delay={220}>
-            Trotzdem: die Richtung passt genau zu dem, was Hornusser seit Jahrzehnten sagen.
+          <Body delay={200}>
+            Eine Erklärung können wir ausschliessen: dass bei schönem Wetter einfach andere
+            Mannschaften antreten. Der Anteil der obersten Ligen ist in beiden Gruppen praktisch
+            gleich ({Math.round(ctx.topLeagueShareClear * 100)} % gegen{" "}
+            {Math.round(ctx.topLeagueShareOvercast * 100)} % NLA/NLB). Und ruhiger ist es bei
+            blauem Himmel auch nicht — der Wind liegt mit {ctx.windSpeedClear.toFixed(1)} km/h
+            sogar leicht über den {ctx.windSpeedOvercast.toFixed(1)} km/h bei bedecktem Himmel.
+          </Body>
+          <Body delay={260}>
+            Dazu kommt, woher das Wetter stammt: aus der ERA5-Reanalyse (Open-Meteo), einem
+            Rechenmodell mit rund 9 bis 25 Kilometern Auflösung — das regionale Wetter, nicht die
+            Luft über dem Ries. Und weil die Ranglisten keine Anspielzeiten nennen, nehmen wir für
+            jedes Spiel den Wert um <strong className="text-ink">13 Uhr</strong> Ortszeit. Wer
+            früher oder später spielte, spielte unter einem anderen Himmel als dem hier gemessenen.
+          </Body>
+          <Body delay={320}>
+            Der Zusammenhang ist also gemessen, die Ursache nicht bewiesen. Trotzdem: die Richtung
+            passt genau zu dem, was Hornusser seit Jahrzehnten sagen.
           </Body>
         </section>
 
@@ -365,8 +484,10 @@ export default function Home() {
             Die Weisheit hält stand — aber nur, wenn keine einzige Wolke am Himmel steht.
           </blockquote>
           <p data-reveal="120" className="mt-7 text-[15px] text-[var(--text-muted)]">
-            Datenbasis: Meisterschaftsresultate {firstSeason}–{lastSeason}, Wetter stündlich pro
-            Spielort. Ein Hobbyprojekt, keine offizielle EHV-Statistik.
+            Datenbasis: {analysis.seasons.length} Meisterschaftssaisons {firstSeason}–{lastSeason}{" "}
+            aus dem EHV-Archiv{missingSeasons.length > 0 && ` (ohne ${missingSeasons.join(" und ")})`}
+            , dazu das Wetter um 13 Uhr über jedem Spielort aus der ERA5-Reanalyse von Open-Meteo.
+            Ein Hobbyprojekt, keine offizielle EHV-Statistik.
           </p>
         </section>
       </div>
@@ -469,22 +590,54 @@ interface BarDatum extends Bucket {
 /**
  * Maps bucket means onto bar heights. The domain is padded rather than starting
  * at zero — otherwise the 0/8 spike, which is the whole story, is a barely
- * visible bump above eight near-identical bars. Flagged under the chart.
+ * visible bump above eight near-identical bars. That exaggerates the ratio
+ * between bars, so `baseline` is printed under the chart: a truncated axis is
+ * only fair if the reader can see where it was cut.
  */
-function withBarHeights(buckets: Bucket[]): BarDatum[] {
+function withBarHeights(buckets: Bucket[]): { bars: BarDatum[]; baseline: number } {
   const means = buckets.map((b) => b.mean);
   const lo = Math.min(...means);
   const hi = Math.max(...means);
   const span = hi - lo || 1;
   const domainLo = lo - span * 0.15;
   const domainHi = hi + span * 0.12;
-  return buckets.map((b) => ({
-    ...b,
-    heightPct: Math.round(((b.mean - domainLo) / (domainHi - domainLo)) * 100),
-  }));
+  return {
+    bars: buckets.map((b) => ({
+      ...b,
+      heightPct: Math.round(((b.mean - domainLo) / (domainHi - domainLo)) * 100),
+    })),
+    baseline: domainLo,
+  };
 }
 
 /** "Heiter (0–2/8)" → "Heiter · 0–2/8" */
 function prettyCategory(label: string): string {
   return label.replace(/\s*\(([^)]+)\)\s*$/, " · $1");
+}
+
+/**
+ * Range of the buckets once any cloud is present (1/8 … 8/8). Chapter 3 claims
+ * this range is flat, so it reads the actual span rather than quoting fixed
+ * numbers that a later pipeline run could quietly falsify.
+ */
+function cloudyBand(buckets: Bucket[]): { lo: number; hi: number; hiLabel: string } {
+  const rest = buckets.slice(1).filter((b) => b.count > 0);
+  const hi = rest.reduce((a, b) => (b.mean > a.mean ? b : a), rest[0]);
+  const lo = rest.reduce((a, b) => (b.mean < a.mean ? b : a), rest[0]);
+  return { lo: lo.mean, hi: hi.mean, hiLabel: hi.label };
+}
+
+/** Seasons absent from an otherwise continuous run, e.g. [2020, 2021]. */
+function seasonGaps(seasons: number[]): number[] {
+  const gaps: number[] = [];
+  for (let y = seasons[0]; y < seasons[seasons.length - 1]; y++) {
+    if (!seasons.includes(y)) gaps.push(y);
+  }
+  return gaps;
+}
+
+/** p-values as read aloud: "p < 0.001" below the floor, otherwise "p = 0.010". */
+function formatP(p: number): string {
+  if (!Number.isFinite(p)) return "p — ";
+  return p < 0.001 ? "p < 0.001" : `p = ${p.toFixed(3)}`;
 }
