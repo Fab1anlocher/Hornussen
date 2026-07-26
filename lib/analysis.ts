@@ -108,6 +108,7 @@ export function analyzeBlueSky(obs: Observation[]): BlueSkyAnalysis {
     playingDays: new Set(withWeather.map((o) => o.date)).size,
     temperatureStrata: temperatureStrata(oktaObs[0], oktaObs[8]),
     betweenDayShare: betweenDayShare(withWeather),
+    withinDaySpreadMedian: withinDaySpreadMedian(withWeather),
     context: clearSkyContext(oktaObs[0], oktaObs[8]),
     distribution: nummernDistribution(oktaObs),
     categories,
@@ -171,6 +172,27 @@ function clusteredDiff(
     clusters: g,
     inflation: naiveSe === 0 ? 1 : stdErr / naiveSe,
   };
+}
+
+/**
+ * Median max-minus-min cloud cover across the pitches of a single playing day.
+ * Counterweight to `betweenDayShare`: the share alone reads as if every pitch
+ * shared one sky, which is not what the data says.
+ */
+function withinDaySpreadMedian(obs: Observation[]): number {
+  const byDate = new Map<string, number[]>();
+  for (const o of obs) {
+    const v = o.cloudCoverMean as number;
+    const bucket = byDate.get(o.date);
+    if (bucket) bucket.push(v);
+    else byDate.set(o.date, [v]);
+  }
+  const spreads = [...byDate.values()]
+    .filter((v) => v.length >= 10)
+    .map((v) => Math.max(...v) - Math.min(...v))
+    .sort((a, b) => a - b);
+  if (spreads.length === 0) return 0;
+  return spreads[Math.floor((spreads.length - 1) / 2)];
 }
 
 /**
