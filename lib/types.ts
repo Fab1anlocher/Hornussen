@@ -232,6 +232,12 @@ export interface BlueSkyAnalysis {
    * comparison can identify.
    */
   betweenDayShare: number;
+  /**
+   * Median spread in cloud cover across the pitches of one playing day, in
+   * percentage points. The sky does differ from venue to venue — ERA5 resolves
+   * that much — it just differs far more from one round date to the next.
+   */
+  withinDaySpreadMedian: number;
   context: ClearSkyContext; // what else differs between 0/8 and 8/8 days
   distribution: NummernDistribution; // okta × Nummern, all observations
   categories: CategoryAnalysis; // coarse official groups + pairwise tests

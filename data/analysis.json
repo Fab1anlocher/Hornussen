@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-26T08:03:26.703Z",
+  "generatedAt": "2026-07-26T08:21:14.519Z",
   "seasons": [
     2013,
     2014,
@@ -175,6 +175,7 @@
       }
     ],
     "betweenDayShare": 0.9090217185572266,
+    "withinDaySpreadMedian": 31,
     "context": {
       "temperatureClear": 21.323953744493387,
       "temperatureOvercast": 15.35097445600765,

@@ -126,6 +126,21 @@ function main() {
     for (const v of values) withinSS += (v - m) ** 2;
   }
   near("betweenDayShare", bs.betweenDayShare, betweenSS / (betweenSS + withinSS), 1e-12);
+  const spreads = [...byDate.values()]
+    .filter((v) => v.length >= 10)
+    .map((v) => Math.max(...v) - Math.min(...v))
+    .sort((x, y) => x - y);
+  near(
+    "withinDaySpreadMedian",
+    bs.withinDaySpreadMedian,
+    spreads[Math.floor((spreads.length - 1) / 2)],
+    1e-9,
+  );
+  check(
+    "der Himmel unterscheidet sich innerhalb eines Spieltags messbar",
+    bs.withinDaySpreadMedian > 0,
+    "sonst waere die Aussage in Kapitel 2 falsch",
+  );
 
   // --- temperature strata ---------------------------------------------------
   for (const stratum of bs.temperatureStrata) {

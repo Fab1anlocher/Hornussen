@@ -223,11 +223,13 @@ export default function Home() {
           >
             {bs.clearMean.toFixed(2)} gegen {bs.overcastMean.toFixed(2)} Nummern pro Team und
             Spiel, aus {formatCH(ext.nA)} wolkenlosen und {formatCH(ext.nB)} bedeckten
-            Team-Resultaten. Diese Resultate verteilen sich allerdings auf nur{" "}
-            {bs.playingDays} Spieltage, und wer am selben Tag spielt, spielt unter praktisch
-            demselben Himmel. Rechnet man den Spieltag als Einheit, bleibt der Unterschied
-            gesichert: t = {clustered.t.toFixed(1)}, {formatP(clustered.p)} über{" "}
-            {clustered.clusters} Spieltage.
+            Team-Resultaten. Diese verteilen sich allerdings auf nur {bs.playingDays} Spieltage.
+            Von Platz zu Platz ist der Himmel durchaus verschieden: an einem mittleren Spieltag
+            liegen {Math.round(bs.withinDaySpreadMedian)} Prozentpunkte zwischen dem klarsten und
+            dem bedecktesten Ries. Zwischen den Spieltagen sind die Unterschiede aber viel grösser,
+            auf sie entfallen {Math.round(bs.betweenDayShare * 100)} % der gesamten Streuung.
+            Rechnet man deshalb den Spieltag als Einheit, bleibt der Unterschied gesichert: t ={" "}
+            {clustered.t.toFixed(1)}, {formatP(clustered.p)} über {clustered.clusters} Spieltage.
           </p>
         </section>
 
