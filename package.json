@@ -17,11 +17,9 @@
     "pipeline": "npm run scrape:venues && npm run scrape:archive && npm run scrape:geocode && npm run scrape:weather && npm run build:dataset && npm run analyze"
   },
   "dependencies": {
-    "maplibre-gl": "^4.7.1",
     "next": "^15.5.21",
     "react": "19.0.0",
-    "react-dom": "19.0.0",
-    "recharts": "^2.15.0"
+    "react-dom": "19.0.0"
   },
   "devDependencies": {
     "@types/node": "^20.17.0",

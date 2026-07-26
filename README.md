@@ -4,8 +4,13 @@ Untersucht datenbasiert die Hornusser-Volksweisheit **„Bei blauem Himmel sieht
 Nouss schlechter, wodurch mehr Nummern entstehen"** — und die These, dass Rückenwind mehr
 Schlagpunkte bringt. Für die Schweizer Hornusser-Gemeinschaft.
 
-**Stack:** Next.js 15 (App Router) · TypeScript · Tailwind · Recharts · MapLibre. Statische
-JSON-Datenpipeline, deploybar auf Vercel.
+Die Website ist ein **One-Pager**: eine Scroll-Geschichte zur Blauer-Himmel-These in vier
+Kapiteln. Die Wind-Analyse läuft weiterhin in der Pipeline mit und liegt in
+`data/analysis.json` bereit, wird aktuell aber nicht dargestellt.
+
+**Stack:** Next.js 15 (App Router) · TypeScript · Tailwind. Statische JSON-Datenpipeline,
+deploybar auf Vercel. Keine Chart- oder Karten-Bibliothek — der Okta-Chart ist reines
+CSS.
 
 ## Datenquellen
 
@@ -42,8 +47,17 @@ npm run dev     # http://localhost:3000
 npm run build && npm start
 ```
 
-Seiten: `/` (Übersicht + Urteil), `/wetter` (Blauer-Himmel-These), `/wind`
-(Rückenwind-These), `/plaetze` (Karte + Spielrichtungen), `/daten` (Methodik & Grenzen).
+Eine einzige Seite: `/` — die Scroll-Geschichte. Sie zieht alle Zahlen aus
+`data/analysis.json`, nichts ist im Markup fest verdrahtet.
+
+Der Aufbau: Hero (Weisheit) → Kapitel 1 «Worum es geht» → Kapitel 2 «Das Ergebnis»
+(+50 %, Okta-Chart) → Kapitel 3 «Der Haken» (Schwelle statt Skala) → Kapitel 4 «Was wir
+nicht wissen» → Schlusszitat.
+
+Alle Scroll-Effekte hängen an `components/story/StoryMotion.tsx`; das Markup selbst trägt
+nur `data-`Attribute. Animationen sind über die `js`-Klasse am `<html>` gated und in
+`prefers-reduced-motion` abgeschaltet — ohne JavaScript rendert die Seite vollständig und
+lesbar. Parallax ist unter 700 px Breite aus (ruckelt sonst auf dem Handy).
 
 ## Spielrichtungen ergänzen
 
@@ -62,4 +76,6 @@ Vercel deployt den Commit automatisch.
 
 Reanalyse-Wetter (~9–25 km, nicht das Mikroklima am Ries), keine exakten Anspielzeiten
 (Fenster ~12–17 Uhr angenommen), Heimplatz = erstgenannte Mannschaft, Wind-Analyse nur für
-Plätze mit erfasster Richtung. Details unter `/daten`. Korrelation ≠ Kausalität.
+Plätze mit erfasster Richtung. Korrelation ≠ Kausalität — Kapitel 4 der Seite sagt das auch
+so. Der Okta-Chart hat eine gekürzte Achse, damit der Schwelleneffekt sichtbar wird; das ist
+unter der Grafik vermerkt.
