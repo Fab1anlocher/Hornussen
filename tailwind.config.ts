@@ -5,7 +5,6 @@ const config: Config = {
     "./app/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
   ],
-  darkMode: "class",
   theme: {
     extend: {
       colors: {
@@ -49,22 +48,6 @@ const config: Config = {
       fontFamily: {
         display: ["var(--font-display)", "Georgia", "serif"],
         sans: ["var(--font-sans)", "system-ui", "sans-serif"],
-      },
-      keyframes: {
-        "fly-nouss": {
-          "0%": { transform: "translate(-10vw, 40vh) rotate(0deg)", opacity: "0" },
-          "10%": { opacity: "1" },
-          "90%": { opacity: "1" },
-          "100%": { transform: "translate(90vw, -10vh) rotate(720deg)", opacity: "0" },
-        },
-        "float": {
-          "0%,100%": { transform: "translateY(0)" },
-          "50%": { transform: "translateY(-8px)" },
-        },
-      },
-      animation: {
-        "fly-nouss": "fly-nouss 7s ease-in-out infinite",
-        "float": "float 5s ease-in-out infinite",
       },
     },
   },

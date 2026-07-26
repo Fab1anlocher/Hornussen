@@ -7,78 +7,190 @@
   --font-sans: "Instrument Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --font-display: "Bricolage Grotesque", "Iowan Old Style", Georgia, serif;
   /* page planes */
-  --bg: #f7f9f4;
+  --bg: #f7faf4;
   --surface: #ffffff;
-  --surface-2: #f2f6ec;
-  --border: rgba(18, 36, 26, 0.1);
+  --surface-2: #eef6e6;
+  --border: rgba(18, 36, 26, 0.09);
   /* ink */
   --text-primary: #12241a;
   --text-secondary: #47564d;
   --text-muted: #7c8a80;
-  /* viz roles (from validated dataviz palette) */
-  --series-1: #2a78d6;
+  /* sky ink — readable on the hero gradient */
+  --sky-ink: #31485c;
+  --sky-ink-soft: #3d5d75;
+  --sky-kicker: #2a5a86;
+  /* viz roles */
+  --series-1: #1c6bdc;
+  --series-muted: #c9d9ec;
   --grid: #e4e8de;
-  --axis: #c5ccbf;
   --good: #0ca30c;
-  --warning: #d98a00;
-  --serious: #ec835a;
-  --critical: #d03b3b;
-  --pole-tail: #2a78d6; /* diverging: tailwind (positive) */
-  --pole-head: #d03b3b; /* diverging: headwind (negative) */
+  --meadow: #79b055;
+  --meadow-deep: #45762a;
 }
 
-.dark {
-  color-scheme: dark;
-  --bg: #0c130e;
-  --surface: #131c15;
-  --surface-2: #18231a;
-  --border: rgba(255, 255, 255, 0.1);
-  --text-primary: #f3f7f0;
-  --text-secondary: #bcc7bd;
-  --text-muted: #8a988c;
-  --series-1: #3987e5;
-  --grid: #223026;
-  --axis: #33453a;
-  --good: #0ca30c;
-  --warning: #fab219;
-  --serious: #ec835a;
-  --critical: #e66767;
-  --pole-tail: #3987e5;
-  --pole-head: #e66767;
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background-color: var(--bg);
   color: var(--text-primary);
   font-feature-settings: "cv02", "cv03", "cv04";
-}
-
-/* Hornussen hero: sky gradient fading to meadow */
-.hero-sky {
-  background:
-    radial-gradient(1200px 500px at 70% -10%, rgba(96, 192, 255, 0.55), transparent 60%),
-    linear-gradient(180deg, var(--sky-top) 0%, var(--sky-mid) 55%, var(--meadow) 100%);
-  --sky-top: #bfe6ff;
-  --sky-mid: #eaf6ff;
-  --meadow: #e0efd6;
-}
-.dark .hero-sky {
-  --sky-top: #17324a;
-  --sky-mid: #12202a;
-  --meadow: #16241a;
-}
-
-.card {
-  background-color: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 1rem;
+  /* the nouss flies past the right edge of the hero */
+  overflow-x: hidden;
 }
 
 .tabular {
   font-variant-numeric: tabular-nums;
 }
 
-/* recharts text picks up currentColor where we set it */
-.recharts-cartesian-axis-tick-value {
-  fill: var(--text-muted);
+/* ---------------------------------------------------------------- story
+   Motion is opt-in: the `js` class is set on <html> before paint, so a
+   no-JS render shows every section already in its final state. */
+
+@keyframes noussFly {
+  0% {
+    transform: translate(-6vw, 18vh) scale(0.7);
+    opacity: 0;
+  }
+  12%,
+  88% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(102vw, -6vh) scale(1.15);
+    opacity: 0;
+  }
+}
+@keyframes sunBreathe {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.06);
+    opacity: 1;
+  }
+}
+@keyframes drift {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(60px);
+  }
+}
+@keyframes bob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(7px);
+  }
+}
+@keyframes grassSway {
+  0%,
+  100% {
+    transform: skewX(-1.5deg);
+  }
+  50% {
+    transform: skewX(1.5deg);
+  }
+}
+
+/* Sky-to-meadow hero */
+.story-sky {
+  background: linear-gradient(180deg, #79b7ea 0%, #a8d2f2 42%, #d7ebf8 72%, #eef6e6 100%);
+}
+
+.story-sun {
+  background: radial-gradient(circle, #fff7d6 0%, #ffeba8 45%, rgba(255, 235, 168, 0) 72%);
+}
+
+.story-cloud {
+  background: rgba(255, 255, 255, 0.5);
+  filter: blur(9px);
+}
+
+.story-grass {
+  background: repeating-linear-gradient(90deg, var(--meadow) 0 3px, transparent 3px 11px);
+  mask-image: linear-gradient(180deg, transparent, #000 70%);
+  -webkit-mask-image: linear-gradient(180deg, transparent, #000 70%);
+  transform-origin: bottom center;
+}
+
+.js .anim-sun {
+  animation: sunBreathe 7s ease-in-out infinite;
+}
+.js .anim-drift {
+  animation: drift 26s ease-in-out infinite alternate;
+}
+.js .anim-drift-slow {
+  animation: drift 34s ease-in-out infinite alternate-reverse;
+}
+.js .anim-bob {
+  animation: bob 2.4s ease-in-out infinite;
+}
+.js .anim-grass {
+  animation: grassSway 9s ease-in-out infinite;
+}
+.js .anim-nouss {
+  animation: noussFly 9s cubic-bezier(0.42, 0, 0.6, 1) 1.2s infinite;
+}
+/* hidden until its flight starts, so it never sits parked in the corner */
+.story-nouss {
+  opacity: 0;
+}
+
+/* Reveal on scroll */
+.js [data-reveal] {
+  opacity: 0;
+  transform: translateY(26px);
+  transition:
+    opacity 0.85s ease,
+    transform 0.95s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.js [data-reveal].is-in {
+  opacity: 1;
+  transform: none;
+}
+
+/* Okta bars grow out of the axis */
+.okta-bar {
+  height: var(--bar-h);
+  transition: height 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.js [data-bars] .okta-bar:not(.is-in) {
+  height: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .js [data-reveal],
+  .js [data-reveal].is-in {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .js [data-bars] .okta-bar:not(.is-in) {
+    height: var(--bar-h);
+  }
+  .okta-bar {
+    transition: none;
+  }
+  .js .anim-sun,
+  .js .anim-drift,
+  .js .anim-drift-slow,
+  .js .anim-bob,
+  .js .anim-grass,
+  .js .anim-nouss {
+    animation: none;
+  }
+  .js .anim-nouss {
+    display: none;
+  }
 }

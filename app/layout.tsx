@@ -1,27 +1,19 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Nav } from "@/components/Nav";
-import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Blauer Himmel, mehr Nummern? — Hornussen-Wetteranalyse",
+  title: "Blauer Himmel, mehr Nummern? — eine Hornussen-Datengeschichte",
   description:
-    "Stimmt die Hornusser-Weisheit, dass man den Nouss bei blauem Himmel schlechter sieht und mehr Nummern entstehen? Eine datenbasierte Untersuchung der EHV-Meisterschaft.",
+    "Bei blauem Himmel sieht man den Nouss schlechter — stimmt das? 13'793 Meisterschaftsspiele und das Wetter darüber, als Scroll-Geschichte erzählt.",
 };
 
-// Set theme before paint to avoid a flash.
-const themeScript = `
-(function(){try{
-  var t=localStorage.getItem('theme');
-  if(t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme: dark)').matches)){
-    document.documentElement.classList.add('dark');
-  }
-}catch(e){}})();
-`;
+// Marks JS as available before first paint. Every animation is gated on this
+// class, so the page renders complete and readable if the script never runs.
+const jsFlag = `document.documentElement.classList.add('js')`;
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="de" suppressHydrationWarning>
+    <html lang="de">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -29,13 +21,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Instrument+Sans:wght@400..600&display=swap"
           rel="stylesheet"
         />
-        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+        <script dangerouslySetInnerHTML={{ __html: jsFlag }} />
       </head>
-      <body className="font-sans antialiased min-h-screen flex flex-col">
-        <Nav />
-        <main className="flex-1">{children}</main>
-        <Footer />
-      </body>
+      <body className="font-sans antialiased">{children}</body>
     </html>
   );
 }
