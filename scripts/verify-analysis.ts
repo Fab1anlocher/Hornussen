@@ -89,6 +89,66 @@ function main() {
     "sonst zitiert die Seite wieder den falschen Test",
   );
 
+  // --- clustered inference --------------------------------------------------
+  const days = new Set(withWeather.map((o) => o.date));
+  check("playingDays stimmt", bs.playingDays === days.size);
+  const cl = bs.extremesClustered;
+  near("geclusterte Differenz gleich der naiven", cl.diff, bs.extremes.diff, 1e-9);
+  check(
+    "Clusterung vergroessert den Standardfehler",
+    cl.inflation > 1,
+    `Inflation ${cl.inflation.toFixed(2)}`,
+  );
+  check(
+    "geclusterter t-Wert ist kleiner als der naive",
+    Math.abs(cl.t) < Math.abs(bs.extremes.t),
+  );
+  check(
+    "Cluster sind Spieltage, nicht Beobachtungen",
+    cl.clusters <= days.size && cl.clusters > 1,
+  );
+
+  // Cloud cover is a property of the date; if that ever stopped being true the
+  // story's central caveat would need rewriting, so pin the decomposition.
+  const byDate = new Map<string, number[]>();
+  for (const o of withWeather) {
+    const v = o.cloudCoverMean as number;
+    const bucket = byDate.get(o.date);
+    if (bucket) bucket.push(v);
+    else byDate.set(o.date, [v]);
+  }
+  const grand = mean(withWeather.map((o) => o.cloudCoverMean as number));
+  let betweenSS = 0;
+  let withinSS = 0;
+  for (const values of byDate.values()) {
+    const m = mean(values);
+    betweenSS += values.length * (m - grand) ** 2;
+    for (const v of values) withinSS += (v - m) ** 2;
+  }
+  near("betweenDayShare", bs.betweenDayShare, betweenSS / (betweenSS + withinSS), 1e-12);
+
+  // --- temperature strata ---------------------------------------------------
+  for (const stratum of bs.temperatureStrata) {
+    const band = (g: Observation[], lo: number, hi: number) =>
+      g.filter((o) => Number.isFinite(o.temperatureMean) && (o.temperatureMean as number) >= lo && (o.temperatureMean as number) < hi);
+    const [lo, hi] = {
+      "unter 15 °C": [-100, 15],
+      "15 bis 20 °C": [15, 20],
+      "20 bis 25 °C": [20, 25],
+      "über 25 °C": [25, 100],
+    }[stratum.label] ?? [NaN, NaN];
+    const a = band(groups[0], lo, hi);
+    const b = band(groups[8], lo, hi);
+    check(`Stratum "${stratum.label}" Anzahl klar`, stratum.nClear === a.length);
+    check(`Stratum "${stratum.label}" Anzahl bedeckt`, stratum.nOvercast === b.length);
+    near(`Stratum "${stratum.label}" Differenz`, stratum.diff, mean(nummern(a)) - mean(nummern(b)));
+  }
+  check(
+    "Kapitel 5: der Abstand ueberlebt jedes Temperaturband",
+    bs.temperatureStrata.length > 0 && bs.temperatureStrata.every((t) => t.diff > 0),
+    "sonst traegt die Hitze-Erklaerung doch",
+  );
+
   // --- regression -----------------------------------------------------------
   const xs = withWeather.map((o) => o.cloudCoverMean as number);
   const ys = withWeather.map((o) => o.nummern);

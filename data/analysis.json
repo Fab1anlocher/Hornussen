@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-26T07:50:31.158Z",
+  "generatedAt": "2026-07-26T08:03:26.703Z",
   "seasons": [
     2013,
     2014,
@@ -127,6 +127,54 @@
       "nA": 3632,
       "nB": 10570
     },
+    "extremesClustered": {
+      "diff": 0.5509332059398431,
+      "stdErr": 0.10273657043294472,
+      "t": 5.362581246562367,
+      "p": 3.630507703328229e-7,
+      "clusters": 131,
+      "inflation": 2.521186308371175
+    },
+    "playingDays": 157,
+    "temperatureStrata": [
+      {
+        "label": "unter 15 °C",
+        "meanClear": 1.9264305177111716,
+        "meanOvercast": 1.08289124668435,
+        "diff": 0.8435392710268215,
+        "p": 2.1303185101926094e-19,
+        "nClear": 734,
+        "nOvercast": 4524
+      },
+      {
+        "label": "15 bis 20 °C",
+        "meanClear": 1.471264367816092,
+        "meanOvercast": 1.12109375,
+        "diff": 0.35017061781609193,
+        "p": 0.0020992458634357244,
+        "nClear": 348,
+        "nOvercast": 4352
+      },
+      {
+        "label": "20 bis 25 °C",
+        "meanClear": 1.4963144963144963,
+        "meanOvercast": 1.0589519650655022,
+        "diff": 0.43736253124899416,
+        "p": 4.549306482966145e-10,
+        "nClear": 1628,
+        "nOvercast": 1374
+      },
+      {
+        "label": "über 25 °C",
+        "meanClear": 1.7776572668112798,
+        "meanOvercast": 1.275,
+        "diff": 0.5026572668112799,
+        "p": 0.00014623809734123433,
+        "nClear": 922,
+        "nOvercast": 320
+      }
+    ],
+    "betweenDayShare": 0.9090217185572266,
     "context": {
       "temperatureClear": 21.323953744493387,
       "temperatureOvercast": 15.35097445600765,

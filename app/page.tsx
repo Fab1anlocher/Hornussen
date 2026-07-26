@@ -22,6 +22,7 @@ export default function Home() {
   const bs = analysis.blueSky;
   const ext = bs.extremes; // 0/8 vs 8/8, the test behind the headline number
   const ctx = bs.context;
+  const clustered = bs.extremesClustered;
   const dist = bs.distribution;
   const colTotals = dist.counts.map((row) => row.reduce((a, b) => a + b, 0));
   const zeroClear = {
@@ -222,9 +223,12 @@ export default function Home() {
             className="mx-auto mt-5 max-w-[52ch] text-[17px] leading-[1.6] text-[var(--text-secondary)]"
           >
             {bs.clearMean.toFixed(2)} gegen {bs.overcastMean.toFixed(2)} Nummern pro Team und
-            Spiel. Verglichen werden {formatCH(ext.nA)} wolkenlose mit {formatCH(ext.nB)}{" "}
-            bedeckten Team-Resultaten. Der Unterschied ist klar gesichert (Welch-t-Test,{" "}
-            {formatP(ext.p)}).
+            Spiel, aus {formatCH(ext.nA)} wolkenlosen und {formatCH(ext.nB)} bedeckten
+            Team-Resultaten. Diese Resultate verteilen sich allerdings auf nur{" "}
+            {bs.playingDays} Spieltage, und wer am selben Tag spielt, spielt unter praktisch
+            demselben Himmel. Rechnet man den Spieltag als Einheit, bleibt der Unterschied
+            gesichert: t = {clustered.t.toFixed(1)}, {formatP(clustered.p)} über{" "}
+            {clustered.clusters} Spieltage.
           </p>
         </section>
 
@@ -453,9 +457,17 @@ export default function Home() {
             {ctx.temperatureClear.toFixed(1)} statt {ctx.temperatureOvercast.toFixed(1)} °C) und
             liegt viel häufiger im Hochsommer: {Math.round(ctx.midsummerShareClear * 100)} % der
             wolkenlosen Resultate fallen in Juni oder Juli, bei bedecktem Himmel nur{" "}
-            {Math.round(ctx.midsummerShareOvercast * 100)} %. Hitze, Flimmern über dem Ries und
-            tiefer Sonnenstand am späteren Nachmittag sind damit genauso gute Verdächtige wie der
-            fehlende Kontrast.
+            {Math.round(ctx.midsummerShareOvercast * 100)} %. Die Hitze wäre also die naheliegende
+            Gegenerklärung.
+          </Body>
+          <Body delay={170}>
+            Sie trägt aber nicht. Teilt man die Spiele in Temperaturbänder und vergleicht innerhalb
+            jedes Bandes noch einmal wolkenlos gegen bedeckt, bleibt der Abstand überall bestehen:
+            {" "}
+            {bs.temperatureStrata
+              .map((t) => `${t.label} +${t.diff.toFixed(2)}`)
+              .join(", ")}
+            . Bei gleicher Temperatur macht der blanke Himmel also weiterhin den Unterschied.
           </Body>
           <Body delay={200}>
             Eine Erklärung können wir ausschliessen: dass bei schönem Wetter einfach andere
@@ -477,6 +489,16 @@ export default function Home() {
             sonst wanderte jedes verregnete Wochenende als fehlerfreies Spiel in die Statistik.
             Darum rechnen wir mit {formatCH(analysis.totalMatches)} Spielen und nicht mit den{" "}
             {formatCH(analysis.totalMatches + analysis.matchesNotPlayed)} Einträgen, die im Archiv stehen.
+          </Body>
+          <Body delay={310}>
+            Die grösste Einschränkung ist eine andere. Der Vergleich lebt davon, dass sich klare
+            und bedeckte <em>Spieltage</em> unterscheiden, nicht einzelne Plätze:{" "}
+            {Math.round(bs.betweenDayShare * 100)} % der Unterschiede in der Bewölkung liegen
+            zwischen den Tagen, nur der kleine Rest zwischen den Plätzen eines Tages. Vergleicht
+            man nur Plätze innerhalb desselben Spieltags, ist vom Effekt nichts mehr messbar. Ob
+            das gegen die Weisheit spricht oder nur daran liegt, dass ein 9-Kilometer-Raster
+            benachbarte Plätze gar nicht auseinanderhalten kann, lässt sich mit diesen Daten nicht
+            entscheiden.
           </Body>
           <Body delay={320}>
             Der Zusammenhang ist also gemessen, die Ursache nicht bewiesen. Trotzdem: die Richtung

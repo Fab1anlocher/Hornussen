@@ -12,8 +12,10 @@ import type {
 import type {
   CategoryAnalysis,
   ClearSkyContext,
+  ClusteredTest,
   NummernDistribution,
   PairwiseTest,
+  Stratum,
 } from "./types";
 import {
   bootstrapCI,
@@ -23,7 +25,9 @@ import {
   oneWayAnova,
   pearson,
   spearman,
+  stdDev,
   stdErr,
+  studentTTwoSided,
   welchTTest,
 } from "./stats";
 
@@ -100,11 +104,138 @@ export function analyzeBlueSky(obs: Observation[]): BlueSkyAnalysis {
     clearMean,
     overcastMean,
     extremes,
+    extremesClustered: clusteredDiff(oktaObs[0], oktaObs[8], (o) => o.date),
+    playingDays: new Set(withWeather.map((o) => o.date)).size,
+    temperatureStrata: temperatureStrata(oktaObs[0], oktaObs[8]),
+    betweenDayShare: betweenDayShare(withWeather),
     context: clearSkyContext(oktaObs[0], oktaObs[8]),
     distribution: nummernDistribution(oktaObs),
     categories,
     verdict,
   };
+}
+
+/**
+ * Difference in means between two groups with standard errors clustered on
+ * `key` (the playing day). Written as a two-group OLS with a dummy and the
+ * Liang–Zeger sandwich, which is what a t-test becomes once observations inside
+ * a cluster are allowed to be correlated.
+ *
+ * Necessary here because the exposure is a property of the round date: every
+ * result played on the same day shares essentially the same sky, so the naive
+ * test counts one weather draw thousands of times.
+ */
+function clusteredDiff(
+  a: Observation[],
+  b: Observation[],
+  key: (o: Observation) => string,
+): ClusteredTest {
+  const rows = [
+    ...a.map((o) => ({ y: o.nummern, g: 1, c: key(o) })),
+    ...b.map((o) => ({ y: o.nummern, g: 0, c: key(o) })),
+  ];
+  const n = rows.length;
+  const meanA = mean(a.map((o) => o.nummern));
+  const meanB = mean(b.map((o) => o.nummern));
+  const diff = meanA - meanB;
+  const xbar = a.length / n;
+
+  const byCluster = new Map<string, typeof rows>();
+  let sxx = 0;
+  for (const r of rows) {
+    sxx += (r.g - xbar) ** 2;
+    const bucket = byCluster.get(r.c);
+    if (bucket) bucket.push(r);
+    else byCluster.set(r.c, [r]);
+  }
+
+  let meat = 0;
+  for (const cluster of byCluster.values()) {
+    let s = 0;
+    for (const r of cluster) s += (r.g - xbar) * (r.y - (meanB + diff * r.g));
+    meat += s * s;
+  }
+  const g = byCluster.size;
+  const finite = (g / (g - 1)) * ((n - 1) / (n - 2));
+  const stdErr = Math.sqrt((finite * meat) / (sxx * sxx));
+  const naiveSe = Math.sqrt(
+    stdDev(a.map((o) => o.nummern)) ** 2 / a.length +
+      stdDev(b.map((o) => o.nummern)) ** 2 / b.length,
+  );
+  const t = stdErr === 0 ? 0 : diff / stdErr;
+  return {
+    diff,
+    stdErr,
+    t,
+    p: studentTTwoSided(Math.abs(t), g - 1),
+    clusters: g,
+    inflation: naiveSe === 0 ? 1 : stdErr / naiveSe,
+  };
+}
+
+/**
+ * Splits the variance in cloud cover into a between-playing-day and a
+ * within-day part. Reported because it bounds what the whole analysis can show:
+ * if almost all of the variation is between dates, then so is the effect, and
+ * no amount of observations turns that into a per-pitch finding.
+ */
+function betweenDayShare(obs: Observation[]): number {
+  const byDate = new Map<string, number[]>();
+  for (const o of obs) {
+    const v = o.cloudCoverMean as number;
+    const bucket = byDate.get(o.date);
+    if (bucket) bucket.push(v);
+    else byDate.set(o.date, [v]);
+  }
+  const grand = mean(obs.map((o) => o.cloudCoverMean as number));
+  let between = 0;
+  let within = 0;
+  for (const values of byDate.values()) {
+    const m = mean(values);
+    between += values.length * (m - grand) ** 2;
+    for (const v of values) within += (v - m) ** 2;
+  }
+  const total = between + within;
+  return total === 0 ? 0 : between / total;
+}
+
+/**
+ * Repeats the 0/8-vs-8/8 contrast inside fixed temperature bands. Clear days run
+ * about six degrees warmer, so heat is the obvious rival explanation; holding
+ * temperature roughly constant is the cheapest way to see whether it carries the
+ * difference on its own.
+ */
+function temperatureStrata(clear: Observation[], overcast: Observation[]): Stratum[] {
+  const bands: [string, number, number][] = [
+    ["unter 15 °C", -100, 15],
+    ["15 bis 20 °C", 15, 20],
+    ["20 bis 25 °C", 20, 25],
+    ["über 25 °C", 25, 100],
+  ];
+  const inBand = (obs: Observation[], lo: number, hi: number) =>
+    obs.filter((o) => {
+      const t = o.temperatureMean;
+      return Number.isFinite(t) && (t as number) >= lo && (t as number) < hi;
+    });
+
+  const out: Stratum[] = [];
+  for (const [label, lo, hi] of bands) {
+    const a = inBand(clear, lo, hi);
+    const b = inBand(overcast, lo, hi);
+    // Too thin to say anything; reporting it would invite over-reading.
+    if (a.length < 30 || b.length < 30) continue;
+    const t = welchTTest(a.map((o) => o.nummern), b.map((o) => o.nummern));
+    out.push({
+      label,
+      meanClear: t.meanA,
+      meanOvercast: t.meanB,
+      diff: t.diff,
+      p: t.p,
+      nClear: a.length,
+      nOvercast: b.length,
+    });
+  }
+  return out;
 }
 
 /**
