@@ -610,7 +610,7 @@
     "id": "gondiswil-47-1511-7-8582",
     "name": "Gondiswil",
     "ort": "Gondiswil",
-    "strasse": "Freibachmoos",
+    "strasse": "Brausmatt 23",
     "plz": "4955",
     "lat": 47.15110706444213,
     "lng": 7.858189946144014,
@@ -864,8 +864,11 @@
     "id": "hindelbank-zollikofen-47-0441-7-5637",
     "name": "Hindelbank-Zollikofen",
     "ort": "Mittlerhölzliweg",
+    "strasse": "",
+    "plz": "",
     "lat": 47.044112,
     "lng": 7.563714,
+    "homepage": "https://hghz.ch",
     "teams": [
       "Hindelbank-Zollikofen B"
     ],
@@ -876,8 +879,11 @@
     "id": "hindelbank-zollikofen-46-9868-7-4539",
     "name": "Hindelbank-Zollikofen",
     "ort": "Unterzollikofen",
+    "strasse": "",
+    "plz": "",
     "lat": 46.986756,
     "lng": 7.45387,
+    "homepage": "https://hghz.ch",
     "teams": [
       "Hindelbank-Zollikofen A"
     ],
