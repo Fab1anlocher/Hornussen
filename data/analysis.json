@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-17T04:31:55.069Z",
+  "generatedAt": "2026-08-24T04:55:31.603Z",
   "seasons": [
     2013,
     2014,
@@ -39,348 +39,348 @@
   ],
   "totalMatches": 13793,
   "totalObservations": 27586,
-  "observationsWithWeather": 27088,
-  "observationsWithWind": 4390,
+  "observationsWithWeather": 26096,
+  "observationsWithWind": 4284,
   "matchesNotPlayed": 112,
   "blueSky": {
     "metric": "nummern",
     "correlation": {
-      "n": 27088,
-      "pearson": -0.07558545089798617,
-      "spearman": -0.06565429557795643,
-      "slope": -0.003733591759331414,
-      "intercept": 1.4514367282865765,
-      "ciLow": -0.08061925920754674,
-      "ciHigh": -0.0719657651284933,
-      "pValueApprox": 1.2741236054713833e-35
+      "n": 26096,
+      "pearson": -0.07723097833797206,
+      "spearman": -0.06719333887036942,
+      "slope": -0.003810837818733406,
+      "intercept": 1.4472471966064198,
+      "ciLow": -0.06850412471660956,
+      "ciHigh": -0.06436404857568828,
+      "pValueApprox": 8.034445180665085e-36
     },
     "buckets": [
       {
         "label": "0/8",
-        "count": 3640,
-        "mean": 1.6532967032967032,
-        "stdErr": 0.0371148402251912
+        "count": 3486,
+        "mean": 1.6465863453815262,
+        "stdErr": 0.037980344939594186
       },
       {
         "label": "1/8",
-        "count": 1574,
-        "mean": 1.2064803049555273,
-        "stdErr": 0.044011691287695914
+        "count": 1516,
+        "mean": 1.2150395778364116,
+        "stdErr": 0.0452845224563102
       },
       {
         "label": "2/8",
-        "count": 1730,
-        "mean": 1.1722543352601156,
-        "stdErr": 0.0442037773571356
+        "count": 1668,
+        "mean": 1.1510791366906474,
+        "stdErr": 0.04453123345116104
       },
       {
         "label": "3/8",
-        "count": 1516,
-        "mean": 1.141160949868074,
-        "stdErr": 0.04499464453895257
+        "count": 1466,
+        "mean": 1.139836289222374,
+        "stdErr": 0.0458063692987723
       },
       {
         "label": "4/8",
-        "count": 1374,
-        "mean": 1.1375545851528384,
-        "stdErr": 0.046270949232316484
+        "count": 1338,
+        "mean": 1.139760837070254,
+        "stdErr": 0.046408562896553034
       },
       {
         "label": "5/8",
-        "count": 1522,
-        "mean": 1.295006570302234,
-        "stdErr": 0.04949260970481055
+        "count": 1476,
+        "mean": 1.2892953929539295,
+        "stdErr": 0.050515103639862065
       },
       {
         "label": "6/8",
-        "count": 2320,
-        "mean": 1.1168103448275861,
-        "stdErr": 0.03564916493418311
+        "count": 2270,
+        "mean": 1.111013215859031,
+        "stdErr": 0.036002179251056046
       },
       {
         "label": "7/8",
-        "count": 2826,
-        "mean": 1.1638358103326256,
-        "stdErr": 0.03407778502782655
+        "count": 2736,
+        "mean": 1.152046783625731,
+        "stdErr": 0.034585413009001864
       },
       {
         "label": "8/8",
-        "count": 10586,
-        "mean": 1.1021160022671452,
-        "stdErr": 0.016694709852391288
+        "count": 10140,
+        "mean": 1.08905325443787,
+        "stdErr": 0.016924493337763802
       }
     ],
-    "oktaAnovaF": 33.3514509508714,
-    "oktaAnovaP": 8.724846422514013e-53,
-    "clearMean": 1.6532967032967032,
-    "overcastMean": 1.1021160022671452,
+    "oktaAnovaF": 32.72936876854254,
+    "oktaAnovaP": 9.924790325592772e-52,
+    "clearMean": 1.6465863453815262,
+    "overcastMean": 1.08905325443787,
     "extremes": {
       "a": "0/8 (wolkenlos)",
       "b": "8/8 (bedeckt)",
-      "meanA": 1.6532967032967032,
-      "meanB": 1.1021160022671452,
-      "diff": 0.551180701029558,
-      "pctDiff": 50.011133119901444,
-      "t": 13.54360796015286,
-      "p": 4.2880643007108454e-41,
+      "meanA": 1.6465863453815262,
+      "meanB": 1.08905325443787,
+      "diff": 0.5575330909436562,
+      "pctDiff": 51.19429088262858,
+      "t": 13.40849549146849,
+      "p": 2.7115509509157332e-40,
       "significant": true,
-      "nA": 3640,
-      "nB": 10586
+      "nA": 3486,
+      "nB": 10140
     },
     "extremesClustered": {
-      "diff": 0.551180701029558,
-      "stdErr": 0.10252012513492963,
-      "t": 5.376317091928375,
-      "p": 3.4111981154736595e-7,
-      "clusters": 131,
-      "inflation": 2.519123728860093
+      "diff": 0.5575330909436562,
+      "stdErr": 0.0994756574194168,
+      "t": 5.604718836819977,
+      "p": 1.208591017732616e-7,
+      "clusters": 130,
+      "inflation": 2.392358275562712
     },
     "playingDays": 157,
     "temperatureStrata": [
       {
         "label": "unter 15 °C",
-        "meanClear": 1.934959349593496,
-        "meanOvercast": 1.0835174547061424,
-        "diff": 0.8514418948873537,
-        "p": 8.09157000176393e-20,
-        "nClear": 738,
-        "nOvercast": 4526
+        "meanClear": 1.922752808988764,
+        "meanOvercast": 1.0765928603705377,
+        "diff": 0.8461599486182263,
+        "p": 7.215229927647688e-19,
+        "nClear": 712,
+        "nOvercast": 4426
       },
       {
         "label": "15 bis 20 °C",
-        "meanClear": 1.4685714285714286,
-        "meanOvercast": 1.1211564938044976,
-        "diff": 0.3474149347669311,
-        "p": 0.0021545171379276002,
-        "nClear": 350,
-        "nOvercast": 4358
+        "meanClear": 1.4761904761904763,
+        "meanOvercast": 1.104499274310595,
+        "diff": 0.37169120187988125,
+        "p": 0.0012346769308454527,
+        "nClear": 336,
+        "nOvercast": 4134
       },
       {
         "label": "20 bis 25 °C",
-        "meanClear": 1.4963144963144963,
-        "meanOvercast": 1.0629522431259044,
-        "diff": 0.4333622531885919,
-        "p": 6.207259835629967e-10,
-        "nClear": 1628,
-        "nOvercast": 1382
+        "meanClear": 1.5126903553299493,
+        "meanOvercast": 1.0390625,
+        "diff": 0.47362785532994933,
+        "p": 4.9260325693681966e-11,
+        "nClear": 1576,
+        "nOvercast": 1280
       },
       {
         "label": "über 25 °C",
-        "meanClear": 1.774891774891775,
-        "meanOvercast": 1.275,
-        "diff": 0.49989177489177505,
-        "p": 0.00015744833592127864,
-        "nClear": 924,
-        "nOvercast": 320
+        "meanClear": 1.7296983758700697,
+        "meanOvercast": 1.2733333333333334,
+        "diff": 0.45636504253673627,
+        "p": 0.0007584783585929342,
+        "nClear": 862,
+        "nOvercast": 300
       }
     ],
-    "betweenDayShare": 0.9089246376498139,
+    "betweenDayShare": 0.9092648259081193,
     "withinDaySpreadMedian": 31,
     "context": {
-      "temperatureClear": 21.313901098901095,
-      "temperatureOvercast": 15.357377668619018,
-      "windSpeedClear": 9.231538461538506,
-      "windSpeedOvercast": 8.579293406385942,
-      "midsummerShareClear": 0.6010989010989011,
-      "midsummerShareOvercast": 0.34328358208955223,
-      "topLeagueShareClear": 0.2434065934065934,
-      "topLeagueShareOvercast": 0.2554317022482524
+      "temperatureClear": 21.26299483648883,
+      "temperatureOvercast": 15.27005917159777,
+      "windSpeedClear": 9.104417670682786,
+      "windSpeedOvercast": 8.522583826430132,
+      "midsummerShareClear": 0.597819850831899,
+      "midsummerShareOvercast": 0.34240631163708085,
+      "topLeagueShareClear": 0.24096385542168675,
+      "topLeagueShareOvercast": 0.2571992110453649
     },
     "distribution": {
       "cap": 6,
       "counts": [
         [
-          1465,
-          833,
-          492,
-          310,
-          163,
-          128,
-          249
+          1409,
+          800,
+          466,
+          299,
+          155,
+          121,
+          236
         ],
         [
-          737,
-          400,
-          198,
-          87,
-          55,
-          38,
+          709,
+          388,
+          185,
+          85,
+          53,
+          37,
           59
         ],
         [
-          871,
-          389,
-          197,
-          112,
-          68,
-          34,
-          59
-        ],
-        [
-          752,
-          360,
-          173,
-          99,
-          58,
+          847,
+          375,
+          190,
+          107,
+          61,
           33,
+          55
+        ],
+        [
+          725,
+          350,
+          170,
+          97,
+          55,
+          28,
           41
         ],
         [
-          658,
-          345,
-          174,
-          90,
-          46,
+          635,
+          340,
+          170,
+          89,
+          45,
           22,
-          39
+          37
         ],
         [
-          681,
-          395,
-          193,
-          107,
-          42,
-          47,
-          57
+          665,
+          382,
+          188,
+          100,
+          40,
+          45,
+          56
         ],
         [
-          1142,
-          569,
-          293,
-          142,
-          56,
+          1123,
+          554,
+          285,
+          140,
+          54,
+          49,
+          65
+        ],
+        [
+          1342,
+          678,
+          307,
+          172,
+          102,
           52,
-          66
+          83
         ],
         [
-          1377,
-          701,
-          318,
-          181,
-          105,
-          56,
-          88
-        ],
-        [
-          5409,
-          2429,
-          1235,
-          664,
-          330,
-          209,
-          310
+          5217,
+          2320,
+          1171,
+          633,
+          317,
+          193,
+          289
         ]
       ],
-      "zeroShare": 0.4833136444181926,
+      "zeroShare": 0.4855916615573268,
       "maxNummern": 21
     },
     "categories": {
       "buckets": [
         {
           "label": "Heiter (0–2/8)",
-          "count": 6944,
-          "mean": 1.432171658986175,
-          "stdErr": 0.024636213352399135
+          "count": 6670,
+          "mean": 1.4245877061469265,
+          "stdErr": 0.025139072849508014
         },
         {
           "label": "Bewölkt (3–5/8)",
-          "count": 4412,
-          "mean": 1.1931097008159566,
-          "stdErr": 0.027186015691561153
+          "count": 4280,
+          "mean": 1.1913551401869158,
+          "stdErr": 0.02758547116024853
         },
         {
           "label": "Bedeckt (6–8/8)",
-          "count": 15732,
-          "mean": 1.1153699466056446,
-          "stdErr": 0.013831805293091757
+          "count": 15146,
+          "mean": 1.1037237554469828,
+          "stdErr": 0.014019348965426727
         }
       ],
-      "anovaF": 72.16441197818445,
-      "anovaP": 5.528426476211063e-32,
+      "anovaF": 71.44378559376435,
+      "anovaP": 1.1402611398006876e-31,
       "anovaSignificant": true,
       "pairwise": [
         {
           "a": "Heiter (0–2/8)",
           "b": "Bewölkt (3–5/8)",
-          "meanA": 1.432171658986175,
-          "meanB": 1.1931097008159566,
-          "diff": 0.23906195817021847,
-          "pctDiff": 20.03687992870448,
-          "t": 6.516048671103279,
-          "p": 7.557626052867659e-11,
+          "meanA": 1.4245877061469265,
+          "meanB": 1.1913551401869158,
+          "diff": 0.23323256596001074,
+          "pctDiff": 19.57708143378792,
+          "t": 6.249199031150345,
+          "p": 4.2948598242578243e-10,
           "significant": true,
-          "nA": 6944,
-          "nB": 4412
+          "nA": 6670,
+          "nB": 4280
         },
         {
           "a": "Heiter (0–2/8)",
           "b": "Bedeckt (6–8/8)",
-          "meanA": 1.432171658986175,
-          "meanB": 1.1153699466056446,
-          "diff": 0.31680171238053045,
-          "pctDiff": 28.40328568513424,
-          "t": 11.212819583811035,
-          "p": 4.988144674096458e-29,
+          "meanA": 1.4245877061469265,
+          "meanB": 1.1037237554469828,
+          "diff": 0.3208639506999438,
+          "pctDiff": 29.07103784950259,
+          "t": 11.147326071142475,
+          "p": 1.0514482474363834e-28,
           "significant": true,
-          "nA": 6944,
-          "nB": 15732
+          "nA": 6670,
+          "nB": 15146
         },
         {
           "a": "Bewölkt (3–5/8)",
           "b": "Bedeckt (6–8/8)",
-          "meanA": 1.1931097008159566,
-          "meanB": 1.1153699466056446,
-          "diff": 0.07773975421031198,
-          "pctDiff": 6.9698627300201075,
-          "t": 2.548641274876645,
-          "p": 0.010835938036414248,
+          "meanA": 1.1913551401869158,
+          "meanB": 1.1037237554469828,
+          "diff": 0.08763138473993304,
+          "pctDiff": 7.939612091110999,
+          "t": 2.8319801203975623,
+          "p": 0.004639977301598134,
           "significant": true,
-          "nA": 4412,
-          "nB": 15732
+          "nA": 4280,
+          "nB": 15146
         }
       ]
     },
     "verdict": {
       "level": "confirmed",
       "headline": "Die Weisheit hält stand – als Schwelleneffekt",
-      "detail": "Bei wolkenlosem Himmel (0/8) fallen im Schnitt +50% mehr Nummern als bei bedecktem Himmel (8/8) – der Unterschied ist statistisch signifikant (p<0.05). Der lineare Zusammenhang allein (r=-0.08) unterschätzt diesen Schwelleneffekt, weil fast der gesamte Effekt beim ganz klaren Himmel auftritt."
+      "detail": "Bei wolkenlosem Himmel (0/8) fallen im Schnitt +51% mehr Nummern als bei bedecktem Himmel (8/8) – der Unterschied ist statistisch signifikant (p<0.05). Der lineare Zusammenhang allein (r=-0.08) unterschätzt diesen Schwelleneffekt, weil fast der gesamte Effekt beim ganz klaren Himmel auftritt."
     }
   },
   "wind": {
     "metric": "schlagpunkte",
     "correlation": {
-      "n": 4390,
-      "pearson": 0.07555118081980784,
-      "spearman": 0.05741216504735356,
-      "slope": 2.5323477277596207,
-      "intercept": 991.2064292183557,
-      "ciLow": 0.03580944498405423,
-      "ciHigh": 0.07194310113176906,
-      "pValueApprox": 5.399664677293931e-7
+      "n": 4284,
+      "pearson": 0.07520461971267904,
+      "spearman": 0.056412306973162865,
+      "slope": 2.5412200769577296,
+      "intercept": 991.7032713807922,
+      "ciLow": 0.05060491805340494,
+      "ciHigh": 0.06780227403099422,
+      "pValueApprox": 8.313678314126922e-7
     },
     "buckets": [
       {
         "label": "Gegenwind (≤ −1 km/h)",
-        "count": 1784,
-        "mean": 984.2135650224216,
-        "stdErr": 5.94303484522195
+        "count": 1744,
+        "mean": 985.0625,
+        "stdErr": 5.992150364380936
       },
       {
         "label": "Windstill (±1 km/h)",
-        "count": 498,
-        "mean": 993.5783132530121,
-        "stdErr": 11.674688437982796
+        "count": 492,
+        "mean": 994.0711382113822,
+        "stdErr": 11.76078646809658
       },
       {
         "label": "Rückenwind (≥ +1 km/h)",
-        "count": 2108,
-        "mean": 998.983870967742,
-        "stdErr": 5.709748419505834
+        "count": 2048,
+        "mean": 999.20068359375,
+        "stdErr": 5.78861062719311
       }
     ],
-    "tailwindMean": 998.983870967742,
-    "headwindMean": 984.2135650224216,
-    "ratio": 1.0150072163910726,
+    "tailwindMean": 999.20068359375,
+    "headwindMean": 985.0625,
+    "ratio": 1.0143525751855846,
     "modelK": 0.02,
     "verdict": {
       "level": "weak",
