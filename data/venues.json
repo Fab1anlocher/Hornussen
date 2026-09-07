@@ -1657,7 +1657,7 @@
     "lat": 46.808459,
     "lng": 7.347863,
     "teams": [
-      "Schwarzenburg A"
+      "Schwarzenburg"
     ],
     "playingDirectionDeg": null,
     "source": "directory"
@@ -1822,7 +1822,7 @@
     "plz": "4456",
     "lat": 47.43195,
     "lng": 7.80144,
-    "homepage": "http://www.hgtl.ch/",
+    "homepage": "https://www.hgtenniken.ch",
     "teams": [
       "Tenniken"
     ],
