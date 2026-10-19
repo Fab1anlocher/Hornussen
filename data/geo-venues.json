@@ -1,5 +1,17 @@
 [
   {
+    "id": "geo-ruedtligen-alchenflueh-a-47-0887-7-5707",
+    "name": "Rüdtligen-Alchenflüh A",
+    "ort": "Rüdtligen",
+    "lat": 47.08872,
+    "lng": 7.5707,
+    "teams": [
+      "Rüdtligen-Alchenflüh A"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
     "id": "geo-aetingen-a-47-1322-7-5059",
     "name": "Aetingen A",
     "ort": "Aetingen",
@@ -19,18 +31,6 @@
     "lng": 7.32222,
     "teams": [
       "Busswil BE A"
-    ],
-    "playingDirectionDeg": null,
-    "source": "geocoded"
-  },
-  {
-    "id": "geo-hettiswil-eintracht-a-47-0313-7-5571",
-    "name": "Hettiswil-Eintracht A",
-    "ort": "Hettiswil",
-    "lat": 47.03133,
-    "lng": 7.55705,
-    "teams": [
-      "Hettiswil-Eintracht A"
     ],
     "playingDirectionDeg": null,
     "source": "geocoded"
@@ -73,6 +73,42 @@
     "source": "geocoded"
   },
   {
+    "id": "geo-muensingen-46-8730-7-5610",
+    "name": "Münsingen",
+    "ort": "Münsingen",
+    "lat": 46.87298,
+    "lng": 7.561,
+    "teams": [
+      "Münsingen"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-ruedtligen-alchenflueh-b-47-0887-7-5707",
+    "name": "Rüdtligen-Alchenflüh B",
+    "ort": "Rüdtligen",
+    "lat": 47.08872,
+    "lng": 7.5707,
+    "teams": [
+      "Rüdtligen-Alchenflüh B"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-aefligen-47-0957-7-5518",
+    "name": "Aefligen",
+    "ort": "Aefligen",
+    "lat": 47.09571,
+    "lng": 7.55175,
+    "teams": [
+      "Aefligen"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
     "id": "geo-rueti-bueren-47-2560-8-8555",
     "name": "Rüti-Büren",
     "ort": "Rüti ZH",
@@ -92,30 +128,6 @@
     "lng": 7.66665,
     "teams": [
       "Heimiswil-Berg A"
-    ],
-    "playingDirectionDeg": null,
-    "source": "geocoded"
-  },
-  {
-    "id": "geo-frauchwil-zimlisberg-47-0671-7-3941",
-    "name": "Frauchwil-Zimlisberg",
-    "ort": "Frauchwil",
-    "lat": 47.0671,
-    "lng": 7.39411,
-    "teams": [
-      "Frauchwil-Zimlisberg"
-    ],
-    "playingDirectionDeg": null,
-    "source": "geocoded"
-  },
-  {
-    "id": "geo-thoerishaus-46-8939-7-3513",
-    "name": "Thörishaus",
-    "ort": "Thörishaus",
-    "lat": 46.89387,
-    "lng": 7.35131,
-    "teams": [
-      "Thörishaus"
     ],
     "playingDirectionDeg": null,
     "source": "geocoded"
@@ -278,18 +290,6 @@
     "source": "geocoded"
   },
   {
-    "id": "geo-moosseedorf-47-0156-7-4781",
-    "name": "Moosseedorf",
-    "ort": "Moosseedorf",
-    "lat": 47.01562,
-    "lng": 7.47811,
-    "teams": [
-      "Moosseedorf"
-    ],
-    "playingDirectionDeg": null,
-    "source": "geocoded"
-  },
-  {
     "id": "geo-saurenhorn-47-0347-7-3464",
     "name": "Saurenhorn",
     "ort": "Saurenhorn",
@@ -297,18 +297,6 @@
     "lng": 7.34635,
     "teams": [
       "Saurenhorn"
-    ],
-    "playingDirectionDeg": null,
-    "source": "geocoded"
-  },
-  {
-    "id": "geo-hettiswil-eintracht-b-47-0313-7-5571",
-    "name": "Hettiswil-Eintracht B",
-    "ort": "Hettiswil",
-    "lat": 47.03133,
-    "lng": 7.55705,
-    "teams": [
-      "Hettiswil-Eintracht B"
     ],
     "playingDirectionDeg": null,
     "source": "geocoded"
@@ -441,18 +429,6 @@
     "lng": 7.23922,
     "teams": [
       "Wileroltigen B"
-    ],
-    "playingDirectionDeg": null,
-    "source": "geocoded"
-  },
-  {
-    "id": "geo-hettiswil-eintracht-c-47-0313-7-5571",
-    "name": "Hettiswil-Eintracht C",
-    "ort": "Hettiswil",
-    "lat": 47.03133,
-    "lng": 7.55705,
-    "teams": [
-      "Hettiswil-Eintracht C"
     ],
     "playingDirectionDeg": null,
     "source": "geocoded"
@@ -737,6 +713,18 @@
     "source": "geocoded"
   },
   {
+    "id": "geo-kirchdorf-herbligen-46-8209-7-5485",
+    "name": "Kirchdorf-Herbligen",
+    "ort": "Kirchdorf BE",
+    "lat": 46.82085,
+    "lng": 7.54847,
+    "teams": [
+      "Kirchdorf-Herbligen"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
     "id": "geo-oeschenbach-47-1029-7-7476",
     "name": "Oeschenbach",
     "ort": "Oeschenbach",
@@ -761,6 +749,18 @@
     "source": "geocoded"
   },
   {
+    "id": "geo-hettiswil-eintracht-moosseedorf-a-47-0313-7-5571",
+    "name": "Hettiswil-Eintracht-Moosseedorf A",
+    "ort": "Hettiswil",
+    "lat": 47.03133,
+    "lng": 7.55705,
+    "teams": [
+      "Hettiswil-Eintracht-Moosseedorf A"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
     "id": "geo-schlosswil-46-9087-7-6117",
     "name": "Schlosswil",
     "ort": "Schlosswil",
@@ -780,6 +780,18 @@
     "lng": 7.81149,
     "teams": [
       "Tenniken-Liestal"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-thoerishaus-frauchwil-zimlisberg-a-46-8939-7-3513",
+    "name": "Thörishaus-Frauchwil-Zimlisberg A",
+    "ort": "Thörishaus",
+    "lat": 46.89387,
+    "lng": 7.35131,
+    "teams": [
+      "Thörishaus-Frauchwil-Zimlisberg A"
     ],
     "playingDirectionDeg": null,
     "source": "geocoded"
@@ -816,6 +828,18 @@
     "lng": 7.74929,
     "teams": [
       "Emmenmatt"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-thoerishaus-frauchwil-zimlisberg-b-46-8939-7-3513",
+    "name": "Thörishaus-Frauchwil-Zimlisberg B",
+    "ort": "Thörishaus",
+    "lat": 46.89387,
+    "lng": 7.35131,
+    "teams": [
+      "Thörishaus-Frauchwil-Zimlisberg B"
     ],
     "playingDirectionDeg": null,
     "source": "geocoded"
@@ -881,6 +905,18 @@
     "source": "geocoded"
   },
   {
+    "id": "geo-hettiswil-eintracht-moosseedorf-b-47-0313-7-5571",
+    "name": "Hettiswil-Eintracht-Moosseedorf B",
+    "ort": "Hettiswil",
+    "lat": 47.03133,
+    "lng": 7.55705,
+    "teams": [
+      "Hettiswil-Eintracht-Moosseedorf B"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
     "id": "geo-bern-stadt-stettlen-46-9481-7-4474",
     "name": "Bern-Stadt-Stettlen",
     "ort": "Bern",
@@ -900,6 +936,18 @@
     "lng": 8.66847,
     "teams": [
       "Lohn-Derendingen"
+    ],
+    "playingDirectionDeg": null,
+    "source": "geocoded"
+  },
+  {
+    "id": "geo-hettiswil-eintracht-moosseedorf-c-47-0313-7-5571",
+    "name": "Hettiswil-Eintracht-Moosseedorf C",
+    "ort": "Hettiswil",
+    "lat": 47.03133,
+    "lng": 7.55705,
+    "teams": [
+      "Hettiswil-Eintracht-Moosseedorf C"
     ],
     "playingDirectionDeg": null,
     "source": "geocoded"

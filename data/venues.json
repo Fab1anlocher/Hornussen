@@ -1,17 +1,5 @@
 [
   {
-    "id": "aefligen-47-0970-7-5592",
-    "name": "Aefligen",
-    "ort": "Aefligen",
-    "lat": 47.097006,
-    "lng": 7.559229,
-    "teams": [
-      "Aefligen"
-    ],
-    "playingDirectionDeg": null,
-    "source": "directory"
-  },
-  {
     "id": "aeschi-47-1750-7-6669",
     "name": "Aeschi",
     "ort": "Aeschi SO",
@@ -101,7 +89,8 @@
     "homepage": "https://www.hgbalzenwil.ch/",
     "teams": [
       "Balzenwil A",
-      "Balzenwil B"
+      "Balzenwil B",
+      "Balzenwil C"
     ],
     "playingDirectionDeg": null,
     "source": "directory"
@@ -445,7 +434,7 @@
     "id": "epsach-47-0760-7-2176",
     "name": "Epsach",
     "ort": "Epsach",
-    "strasse": "Dorfstr. 10",
+    "strasse": "Oberdorfstrasse 100",
     "plz": "3272",
     "lat": 47.075991,
     "lng": 7.217551,
@@ -520,26 +509,16 @@
     "source": "directory"
   },
   {
-    "id": "frittenbach-emmenmatt-ilfis-46-9505-7-7384",
-    "name": "Frittenbach-Emmenmatt-Ilfis",
-    "ort": "Lauperswil",
-    "lat": 46.950482,
-    "lng": 7.738444,
+    "id": "frauchwil-zimlisberg-47-0580-7-3819",
+    "name": "Frauchwil-Zimlisberg",
+    "ort": "Rapperswil BE",
+    "strasse": "Rüberi",
+    "plz": "3255",
+    "lat": 47.058014,
+    "lng": 7.381876,
+    "homepage": "https://www.hornusser-frauchwil.ch/",
     "teams": [
-      "Frittenbach-Emmenmatt-Ilfis A",
-      "Frittenbach-Emmenmatt-Ilfis C"
-    ],
-    "playingDirectionDeg": null,
-    "source": "directory"
-  },
-  {
-    "id": "frittenbach-emmenmatt-ilfis-46-9408-7-7602",
-    "name": "Frittenbach-Emmenmatt-Ilfis",
-    "ort": "Langnau i. E.",
-    "lat": 46.940839,
-    "lng": 7.760194,
-    "teams": [
-      "Frittenbach-Emmenmatt-Ilfis B"
+      "Frauchwil-Zimlisberg"
     ],
     "playingDirectionDeg": null,
     "source": "directory"
@@ -833,8 +812,8 @@
     "source": "directory"
   },
   {
-    "id": "hettiswil-eintracht-moosseedorf-47-0385-7-5793",
-    "name": "Hettiswil-Eintracht-Moosseedorf",
+    "id": "hettiswil-eintracht-47-0385-7-5793",
+    "name": "Hettiswil-Eintracht",
     "ort": "Mötschwil",
     "strasse": "Rüteli 1",
     "plz": "3324",
@@ -842,20 +821,9 @@
     "lng": 7.57933,
     "homepage": "http://www.hornusser-hettiswil.ch/",
     "teams": [
-      "Hettiswil-Eintracht-Moosseedorf A",
-      "Hettiswil-Eintracht-Moosseedorf B"
-    ],
-    "playingDirectionDeg": null,
-    "source": "directory"
-  },
-  {
-    "id": "hettiswil-eintracht-moosseedorf-47-0119-7-4980",
-    "name": "Hettiswil-Eintracht-Moosseedorf",
-    "ort": "Moosseedorf",
-    "lat": 47.011888,
-    "lng": 7.498027,
-    "teams": [
-      "Hettiswil-Eintracht-Moosseedorf C"
+      "Hettiswil-Eintracht A",
+      "Hettiswil-Eintracht B",
+      "Hettiswil-Eintracht C"
     ],
     "playingDirectionDeg": null,
     "source": "directory"
@@ -960,22 +928,6 @@
     "homepage": "http://www.hgkirchberg.ch/",
     "teams": [
       "Kirchberg"
-    ],
-    "playingDirectionDeg": null,
-    "source": "directory"
-  },
-  {
-    "id": "kirchdorf-herbligen-46-8817-7-5456",
-    "name": "Kirchdorf-Herbligen",
-    "ort": "Münsingen",
-    "strasse": "Walke",
-    "plz": "3110",
-    "lat": 46.88174,
-    "lng": 7.54559,
-    "homepage": "",
-    "teams": [
-      "Kirchdorf-Herbligen",
-      "Münsingen"
     ],
     "playingDirectionDeg": null,
     "source": "directory"
@@ -1164,6 +1116,18 @@
     "source": "directory"
   },
   {
+    "id": "moosseedorf-47-0119-7-4980",
+    "name": "Moosseedorf",
+    "ort": "Moosseedorf",
+    "lat": 47.011888,
+    "lng": 7.498027,
+    "teams": [
+      "Moosseedorf"
+    ],
+    "playingDirectionDeg": null,
+    "source": "directory"
+  },
+  {
     "id": "muelchi-47-1085-7-4715",
     "name": "Mülchi",
     "ort": "Mülchi",
@@ -1198,6 +1162,22 @@
     "lng": 7.349298,
     "teams": [
       "Münchenbuchsee-Wohlen A"
+    ],
+    "playingDirectionDeg": null,
+    "source": "directory"
+  },
+  {
+    "id": "muensingen-kirchdorf-herbligen-46-8817-7-5456",
+    "name": "Münsingen-Kirchdorf-Herbligen",
+    "ort": "Münsingen",
+    "strasse": "Walke",
+    "plz": "3110",
+    "lat": 46.88174,
+    "lng": 7.54559,
+    "homepage": "",
+    "teams": [
+      "Münsingen-Kirchdorf-Herbligen A",
+      "Münsingen-Kirchdorf-Herbligen B"
     ],
     "playingDirectionDeg": null,
     "source": "directory"
@@ -1460,9 +1440,9 @@
   {
     "id": "rohrbachgraben-47-1114-7-8025",
     "name": "Rohrbachgraben",
-    "ort": "Huttwil",
-    "strasse": "Friedhofweg 21A",
-    "plz": "4950",
+    "ort": "Rohrbachgraben",
+    "strasse": "Wald 53 D",
+    "plz": "4938",
     "lat": 47.111391,
     "lng": 7.802538,
     "homepage": "http://www.hg-rohrbachgraben.ch/de/",
@@ -1523,17 +1503,26 @@
     "source": "directory"
   },
   {
-    "id": "ruedtligen-alchenflueh-47-0778-7-5642",
-    "name": "Rüdtligen-Alchenflüh",
+    "id": "ruedtligen-aefligen-47-0778-7-5642",
+    "name": "Rüdtligen-Aefligen",
     "ort": "Rüdtligen",
-    "strasse": "Riedstrasse 11",
-    "plz": "3422",
     "lat": 47.077798,
     "lng": 7.564194,
-    "homepage": "http://www.hgra.ch/",
     "teams": [
-      "Rüdtligen-Alchenflüh A",
-      "Rüdtligen-Alchenflüh B"
+      "Rüdtligen-Aefligen A",
+      "Rüdtligen-Aefligen B"
+    ],
+    "playingDirectionDeg": null,
+    "source": "directory"
+  },
+  {
+    "id": "ruedtligen-aefligen-47-0970-7-5592",
+    "name": "Rüdtligen-Aefligen",
+    "ort": "Aefligen",
+    "lat": 47.097006,
+    "lng": 7.559229,
+    "teams": [
+      "Rüdtligen-Aefligen C"
     ],
     "playingDirectionDeg": null,
     "source": "directory"
@@ -1694,13 +1683,12 @@
     "source": "directory"
   },
   {
-    "id": "sparring-47-0873-7-5893",
-    "name": "Sparring",
+    "id": "sparring-sn-47-0873-7-5893",
+    "name": "Sparring SN",
     "ort": "Kirchberg BE",
     "lat": 47.08733300000001,
     "lng": 7.5893006,
     "teams": [
-      "Sparring",
       "Sparring SN"
     ],
     "playingDirectionDeg": null,
@@ -1716,7 +1704,6 @@
     "lng": 7.637050928255633,
     "homepage": "www.stalden-dorf.ch",
     "teams": [
-      "Stalden-Dorf",
       "Stalden-Dorf"
     ],
     "playingDirectionDeg": null,
@@ -1862,23 +1849,8 @@
     "source": "directory"
   },
   {
-    "id": "thoerishaus-frauchwil-zimlisberg-47-0580-7-3819",
-    "name": "Thörishaus-Frauchwil-Zimlisberg",
-    "ort": "Rapperswil BE",
-    "strasse": "Rüberi",
-    "plz": "3255",
-    "lat": 47.058014,
-    "lng": 7.381876,
-    "homepage": "https://www.hornusser-frauchwil.ch/",
-    "teams": [
-      "Thörishaus-Frauchwil-Zimlisberg A"
-    ],
-    "playingDirectionDeg": null,
-    "source": "directory"
-  },
-  {
-    "id": "thoerishaus-frauchwil-zimlisberg-46-8922-7-3382",
-    "name": "Thörishaus-Frauchwil-Zimlisberg",
+    "id": "thoerishaus-46-8922-7-3382",
+    "name": "Thörishaus",
     "ort": "Thörishaus",
     "strasse": "Freiburgstrasse 57",
     "plz": "3174",
@@ -1886,7 +1858,7 @@
     "lng": 7.338221,
     "homepage": "http://www.hornusse.ch/",
     "teams": [
-      "Thörishaus-Frauchwil-Zimlisberg B"
+      "Thörishaus"
     ],
     "playingDirectionDeg": null,
     "source": "directory"
@@ -1950,6 +1922,23 @@
     "teams": [
       "Trimstein A",
       "Trimstein B"
+    ],
+    "playingDirectionDeg": null,
+    "source": "directory"
+  },
+  {
+    "id": "unterfrittenbach-emmenmatt-46-9505-7-7384",
+    "name": "Unterfrittenbach-Emmenmatt",
+    "ort": "Lauperswil",
+    "strasse": "Oberlängenbach 113",
+    "plz": "3438",
+    "lat": 46.950482,
+    "lng": 7.738444,
+    "homepage": "http://www.hgunterfrittenbach-emmenmatt.ch/",
+    "teams": [
+      "Unterfrittenbach-Emmenmatt A",
+      "Unterfrittenbach-Emmenmatt B",
+      "Unterfrittenbach-Emmenmatt C"
     ],
     "playingDirectionDeg": null,
     "source": "directory"
